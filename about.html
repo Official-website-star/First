@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Stratosphere Green Energy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- 复用导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.png.png" alt="Stratosphere Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item active">About Us</a>
+                <a href="products.html" class="nav-item">Product & Services</a>
+                <a href="esg.html" class="nav-item">ESG</a>
+                <a href="careers.html" class="nav-item">Career</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+                <div class="language-dropdown">
+                    <button class="language-btn">Language</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="de">Deutsch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <section class="about-hero">
+            <div class="hero-content">
+                <div class="about-text fade-in">
+                    <h2>About Us</h2>
+                    <p class="intro-text">
+                        <span class="company-name">Stratosphere Green Energy GmbH</span>, headquartered in Germany, 
+                        specializes in providing cutting-edge solutions for renewable energy projects. Leveraging 
+                        the strength of German engineering and the reputation of its technological innovation, 
+                        the company has established a strong presence in major energy storage markets, including 
+                        the United States and the Middle East.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card slide-up">
+                    <h3>Our Mission</h3>
+                    <p>We drive the future of sustainable energy by delivering end-to-end energy storage solutions. Through advanced technology integration and operational optimization, we empower renewable energy projects and enhance power distribution efficiency worldwide.</p>
+                </div>
+                <div class="feature-card slide-up" style="animation-delay: 0.2s;">
+                    <h3>Our Global Reach</h3>
+                    <p>We have established joint ventures in Saudi Arabia, the UAE, and Kuwait, providing customized operations and maintenance (O&M) services for renewable energy infrastructure. These strategic partnerships allow us to address regional challenges while delivering world-class energy solutions.</p>
+                </div>
+                <div class="feature-card slide-up" style="animation-delay: 0.4s;">
+                    <h3>Our Expertise</h3>
+                    <p>With a global team of 200 experienced engineers, we manage and maintain approximately 5 GWh of energy storage battery assets, ensuring reliability, efficiency, and optimal performance across all operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 添加页脚 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Product & Services</a></li>
+                        <li><a href="esg.html">ESG</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Address</h3>
+                    <p>Frankfurt am Main</p>
+                    
+                    <h3 class="email-title">Email</h3>
+                    <a href="mailto:info@stratosphereege.com">info@stratosphereege.com</a>
+                    
+                    <div class="scroll-top">
+                        <button id="scrollToTop" aria-label="Scroll to top">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 4l-8 8h16l-8-8z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <img src="assets/logo.png.png" alt="Stratosphere Logo" class="footer-logo">
+                </div>
+            </div>
+        </footer>
+
+        <!-- 添加脚本 -->
+        <script src="script.js"></script>
+    </main>
+</body>
+</html> 
