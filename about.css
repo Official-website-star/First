@@ -100,6 +100,7 @@
     padding: 2rem 5%;
     background: #f8f9fa;
     margin-top: -1rem;
+    margin-bottom: 0;
 }
 
 .features-grid {
@@ -495,129 +496,5 @@
 
     .mission-section {
         background-attachment: scroll;
-    }
-}
-
-/* Footer Styles */
-.footer {
-    position: relative;
-    background: #f8f9fa;
-    padding: 3rem 5%;
-    margin-top: 0;
-}
-
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(to right,
-        rgba(0,107,63,0.8) 0%,
-        rgba(0,107,63,0.6) 30%,
-        rgba(0,107,63,0.4) 60%,
-        rgba(0,107,63,0.2) 80%,
-        rgba(0,107,63,0.1) 100%
-    );
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-}
-
-.footer-section h3 {
-    color: #006B3F;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-section ul li a {
-    color: #555;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #006B3F;
-    transform: translateX(5px);
-    display: inline-block;
-}
-
-.footer-section p,
-.footer-section a {
-    color: #555;
-    text-decoration: none;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.email-title {
-    margin-top: 2rem;
-}
-
-.footer-logo {
-    height: 50px;
-    object-fit: contain;
-    filter: brightness(0.95);
-}
-
-.scroll-top {
-    margin-top: 2rem;
-}
-
-#scrollToTop {
-    background: #006B3F;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-}
-
-#scrollToTop.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-#scrollToTop:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-section:last-child {
-        justify-content: center;
-    }
-
-    .footer-logo {
-        height: 45px;
     }
 } 

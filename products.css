@@ -15,7 +15,7 @@
     padding: 4rem 5%;
 }
 
-/* 调整背景阴影 */
+/* 调整背景阴影，使其更柔和 */
 .products-hero::before {
     content: '';
     position: absolute;
@@ -25,10 +25,10 @@
     height: 100%;
     background: linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.4) 30%,
-        rgba(0, 0, 0, 0.3) 60%,
-        rgba(0, 0, 0, 0.2) 100%
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.3) 30%,
+        rgba(0, 0, 0, 0.2) 60%,
+        rgba(0, 0, 0, 0.1) 100%
     );
     display: block;
 }
@@ -41,6 +41,21 @@
     text-align: left;
     color: white;
     padding-left: 5%;
+    /* 添加平滑的淡入效果 */
+    opacity: 0;
+    animation: gentleFadeIn 1s ease-out forwards;
+}
+
+/* 更新动画关键帧，使其更平滑 */
+@keyframes gentleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-content h2 {
@@ -75,7 +90,6 @@
     border-radius: 12px;
     overflow: visible;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
     position: relative;
     padding: 2rem 2rem 2rem 5rem;
     border: 1px solid rgba(0,107,63,0.1);
@@ -114,35 +128,23 @@
     margin: 0;
 }
 
-/* Hover Effects */
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,107,63,0.15);
-    border-color: rgba(0,107,63,0.2);
-}
-
 /* Animation Classes */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1s ease forwards;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .slide-up {
     opacity: 0;
-    transform: translateY(30px);
-    animation: slideUp 0.8s ease forwards;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
+    from {
+        opacity: 0;
     }
-}
-
-@keyframes slideUp {
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 

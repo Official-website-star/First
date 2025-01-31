@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="careers.css">
 </head>
 <body>
-    <!-- 复用导航栏 -->
+    <!-- 导航栏 -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -17,17 +17,20 @@
                 </a>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="about.html" class="nav-item">About Us</a>
-                <a href="products.html" class="nav-item">Product & Services</a>
-                <a href="esg.html" class="nav-item">ESG</a>
-                <a href="careers.html" class="nav-item active">Career</a>
-                <a href="contact.html" class="nav-item">Contact Us</a>
+                <a href="index.html" class="nav-item" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-item" data-i18n="nav.about">About Us</a>
+                <a href="products.html" class="nav-item" data-i18n="nav.products">Product & Services</a>
+                <a href="esg.html" class="nav-item" data-i18n="nav.esg">ESG</a>
+                <a href="careers.html" class="nav-item active" data-i18n="nav.careers">Careers</a>
+                <a href="contact.html" class="nav-item" data-i18n="nav.contact">Contact Us</a>
                 <div class="language-dropdown">
-                    <button class="language-btn">Language</button>
+                    <button class="language-btn">
+                        <span data-i18n="nav.language">Language</span>
+                    </button>
                     <div class="dropdown-content">
                         <a href="#" data-lang="en">English</a>
                         <a href="#" data-lang="de">Deutsch</a>
+                        <a href="#" data-lang="ar">العربية</a>
                     </div>
                 </div>
             </div>
@@ -42,70 +45,111 @@
     <main class="careers-main">
         <!-- Hero 区域 -->
         <section class="careers-hero">
-            <div class="hero-overlay"></div>
         </section>
 
         <!-- 公司介绍区域 -->
         <section class="company-intro">
             <div class="intro-content">
-                <h2 class="main-title">Power the future. Innovate with us.</h2>
-                
-                <p>Stratosphere Group is transforming the future of energy through cutting-edge storage solutions. Our mission is to build the next-generation energy infrastructure—one that is smarter, more efficient, and fully integrated with renewable power.</p>
-                
-                <p>Our engineers and analysts work at the intersection of technology and sustainability, optimizing energy systems that power industries, cities, and entire regions. With AI-driven analytics, advanced storage designs, and real-time operational intelligence, we are redefining how energy is stored, traded, and utilized.</p>
-                
-                <p>We are a team of innovators, problem-solvers, and energy enthusiasts, pushing the limits of what's possible in a world transitioning to clean power. Our solutions already support gigawatt-scale projects across the globe, reducing emissions and enhancing grid stability.</p>
-                
-                <p>If you're passionate about shaping the future of energy, we'd love to hear from you.</p>
+                <h2 class="main-title" data-i18n="careers.title">Power the future. Innovate with us.</h2>
+                <p data-i18n="careers.intro">Stratosphere is transforming the future of energy through cutting-edge storage solutions.</p>
+                <p data-i18n="careers.mission">Our mission is to build the next-generation energy infrastructure—one that is smarter, more efficient, and fully integrated with renewable power.</p>
+                <p data-i18n="careers.description">Our engineers and analysts work at the intersection of technology and sustainability, optimizing energy systems that power industries, cities, and entire regions.</p>
+                <p data-i18n="careers.join">If you're passionate about shaping the future of energy, we'd love to hear from you.</p>
             </div>
         </section>
 
         <!-- 职位列表区域 -->
-        <section class="job-listings">
-            <div class="job-card">
-                <h3>Field Engineer</h3>
-                <p>Perform preventative maintenance, troubleshooting and warranty repairs along with commissioning activities on energy storage.</p>
-            </div>
+        <section class="job-listings-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="careers.positions">Open Positions</h2>
+                <div class="job-list">
+                    <!-- 工程师职位 -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <h3 data-i18n="careers.jobs.engineer">Field Engineer</h3>
+                            <button class="apply-btn" data-i18n="careers.apply">Apply Now</button>
+                        </div>
+                        <div class="job-details">
+                            <p class="job-type" data-i18n="careers.fullTime">Full Time</p>
+                            <p class="department" data-i18n="careers.department.engineering">Engineering</p>
+                        </div>
+                        <p class="job-description" data-i18n="careers.jobs.engineerDesc">Perform preventative maintenance, troubleshooting and warranty repairs along with commissioning activities on energy storage.</p>
+                    </div>
 
-            <div class="job-card">
-                <h3>Project Manager</h3>
-                <p>Monitor the contractors on site throughout the construction and carry out regular site inspection.</p>
-            </div>
+                    <!-- 项目经理职位 -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <h3 data-i18n="careers.jobs.manager">Project Manager</h3>
+                            <a href="mailto:info@stratospherege.com" class="apply-btn" data-i18n="careers.apply">Apply Now</a>
+                        </div>
+                        <div class="job-details">
+                            <p class="job-type" data-i18n="careers.fullTime">Full Time</p>
+                            <p class="department" data-i18n="careers.department.projectManagement">Project Management</p>
+                        </div>
+                        <p class="job-description" data-i18n="careers.jobs.managerDesc">Monitor the contractors on site throughout the construction and carry out regular site inspection.</p>
+                    </div>
 
-            <div class="job-card">
-                <h3>Technical Engineer</h3>
-                <p>Lead the technical aspects of the battery energy storage projects and provide expertise to support project development.</p>
+                    <!-- 技术工程师职位 -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <h3 data-i18n="careers.jobs.technical">Technical Engineer</h3>
+                            <a href="mailto:info@stratospherege.com" class="apply-btn" data-i18n="careers.apply">Apply Now</a>
+                        </div>
+                        <div class="job-details">
+                            <p class="job-type" data-i18n="careers.fullTime">Full Time</p>
+                            <p class="department" data-i18n="careers.department.technical">Technical</p>
+                        </div>
+                        <p class="job-description" data-i18n="careers.jobs.technicalDesc">Lead the technical aspects of the battery energy storage projects and provide expertise to support project development.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- 页脚 -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Product & Services</a></li>
-                    <li><a href="#esg">ESG</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">Product & Services</a></li>
+                    <li><a href="esg.html" data-i18n="nav.esg">ESG</a></li>
+                    <li><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
-                <h3>Address</h3>
+                <h3 data-i18n="footer.address">Address</h3>
                 <p>Frankfurt am Main</p>
                 
-                <h3 class="email-title">Email</h3>
-                <a href="mailto:info@stratosphereege.com">info@stratosphereege.com</a>
+                <h3 class="email-title" data-i18n="footer.email">Email</h3>
+                <p><a href="mailto:info@stratospherege.com" class="footer-email">info@stratospherege.com</a></p>
             </div>
 
             <div class="footer-section">
-                <img src="assets/logo.png.png" alt="Stratosphere Logo" class="footer-logo">
+                <img src="assets/logo2.png" alt="Stratosphere Logo" class="footer-logo">
             </div>
         </div>
+        <div class="copyright">
+            <p data-i18n="careers.footer.copyright">Copyright ©2025 Stratosphere. All Rights Reserved.</p>
+        </div>
     </footer>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script src="careers.js"></script>
+
+    <!-- 模态框 -->
+    <div class="modal" id="applyModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 data-i18n="careers.apply">Apply Now</h3>
+            <p class="modal-message" data-i18n="careers.applyMessage">
+                Thank you very much for your interest in our position. You are welcome to submit your resume to 
+                <a href="mailto:info@stratospherege.com" class="modal-email">info@stratospherege.com</a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>

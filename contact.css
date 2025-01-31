@@ -65,8 +65,9 @@
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 0.5rem 0;
     transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
 }
 
 .icon-wrapper {
@@ -93,20 +94,19 @@
 }
 
 .contact-text h3 {
-    color: #666;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--primary-color);
 }
 
 .contact-text p,
 .contact-text a {
-    color: #333;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
-    line-height: 1.4;
 }
 
 .contact-text a:hover {
@@ -114,9 +114,8 @@
 }
 
 .contact-divider {
-    height: 1px;
-    background: #eee;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+    border-top: 1px solid var(--border-color);
 }
 
 .visit-section {

@@ -13,21 +13,24 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/logo.png.png" alt="Stratosphere Logo">
+                    <img src="assets/logo2.png" alt="Stratosphere Logo">
                 </a>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="about.html" class="nav-item">About Us</a>
-                <a href="products.html" class="nav-item">Product & Services</a>
-                <a href="esg.html" class="nav-item active">ESG</a>
-                <a href="careers.html" class="nav-item">Career</a>
-                <a href="contact.html" class="nav-item">Contact Us</a>
+                <a href="index.html" class="nav-item" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-item" data-i18n="nav.about">About Us</a>
+                <a href="products.html" class="nav-item" data-i18n="nav.products">Product & Services</a>
+                <a href="esg.html" class="nav-item active" data-i18n="nav.esg">ESG</a>
+                <a href="careers.html" class="nav-item" data-i18n="nav.careers">Careers</a>
+                <a href="contact.html" class="nav-item" data-i18n="nav.contact">Contact Us</a>
                 <div class="language-dropdown">
-                    <button class="language-btn">Language</button>
+                    <button class="language-btn">
+                        <span data-i18n="nav.language">Language</span>
+                    </button>
                     <div class="dropdown-content">
                         <a href="#" data-lang="en">English</a>
                         <a href="#" data-lang="de">Deutsch</a>
+                        <a href="#" data-lang="ar">العربية</a>
                     </div>
                 </div>
             </div>
@@ -43,8 +46,8 @@
         <!-- Hero Section -->
         <section class="esg-hero">
             <div class="hero-content">
-                <h1>Our Commitment to ESG</h1>
-                <p>At Stratosphere, ESG principles are at the core of our mission, driving sustainability, innovation, and ethical operations.</p>
+                <h1 data-i18n="esg.title">Our Commitment to ESG</h1>
+                <p data-i18n="esg.intro">At Stratosphere, ESG principles are at the core of our mission, driving sustainability, innovation, and ethical operations.</p>
             </div>
         </section>
 
@@ -56,24 +59,24 @@
                     <div class="esg-item">
                         <div class="check-icon">✓</div>
                         <div class="item-content">
-                            <h2>Environmental Stewardship</h2>
-                            <p>We integrate cutting-edge energy storage solutions to reduce carbon emissions, enhance renewable energy efficiency, and contribute to a cleaner, greener future.</p>
+                            <h2 data-i18n="esg.environmental">Environmental Stewardship</h2>
+                            <p data-i18n="esg.environmentalText">We integrate cutting-edge energy storage solutions to reduce carbon emissions, enhance renewable energy efficiency, and contribute to a cleaner, greener future.</p>
                         </div>
                     </div>
 
                     <div class="esg-item">
                         <div class="check-icon">✓</div>
                         <div class="item-content">
-                            <h2>Social Responsibility</h2>
-                            <p>Through global partnerships, we support local economies, foster workforce development, and expand energy access, empowering communities worldwide.</p>
+                            <h2 data-i18n="esg.social">Social Responsibility</h2>
+                            <p data-i18n="esg.socialText">Through global partnerships, we support local economies, foster workforce development, and expand energy access, empowering communities worldwide.</p>
                         </div>
                     </div>
 
                     <div class="esg-item">
                         <div class="check-icon">✓</div>
                         <div class="item-content">
-                            <h2>Strong Governance</h2>
-                            <p>Our commitment to transparency, regulatory compliance, and responsible resource management ensures long-term value creation and trust.</p>
+                            <h2 data-i18n="esg.governance">Strong Governance</h2>
+                            <p data-i18n="esg.governanceText">Our commitment to transparency, regulatory compliance, and responsible resource management ensures long-term value creation and trust.</p>
                         </div>
                     </div>
                 </div>
@@ -84,50 +87,45 @@
                         <img src="assets/esg.png" alt="ESG Logo" class="esg-logo-img">
                     </div>
                     <div class="vision-statement">
-                        <p>By continuously advancing technology and upholding the highest ESG standards, we are shaping a sustainable energy ecosystem for future generations.</p>
+                        <p data-i18n="esg.vision">By continuously advancing technology and upholding the highest ESG standards, we are shaping a sustainable energy ecosystem for future generations.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 页脚 -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Product & Services</a></li>
-                    <li><a href="esg.html">ESG</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                    <li><a href="products.html" data-i18n="nav.products">Product & Services</a></li>
+                    <li><a href="esg.html" data-i18n="nav.esg">ESG</a></li>
+                    <li><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
-                <h3>Address</h3>
+                <h3 data-i18n="footer.address">Address</h3>
                 <p>Frankfurt am Main</p>
                 
-                <h3 class="email-title">Email</h3>
-                <a href="mailto:info@stratosphereege.com">info@stratosphereege.com</a>
-                
-                <div class="scroll-top">
-                    <button id="scrollToTop" aria-label="Scroll to top">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M12 4l-8 8h16l-8-8z" fill="currentColor"/>
-                        </svg>
-                    </button>
-                </div>
+                <h3 class="email-title" data-i18n="footer.email">Email</h3>
+                <p>info@stratospherege.com</p>
             </div>
 
             <div class="footer-section">
-                <img src="assets/logo.png.png" alt="Stratosphere Logo" class="footer-logo">
+                <img src="assets/logo2.png" alt="Stratosphere Logo" class="footer-logo">
             </div>
+        </div>
+        <div class="copyright">
+            <p data-i18n="footer.copyright">Copyright ©2025 Stratosphere. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

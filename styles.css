@@ -42,16 +42,49 @@ body {
 }
 
 .logo img {
-    height: 55px;  /* 增加 logo 大小 */
+    height: 45px;
+    width: auto;
     object-fit: contain;
-    margin-right: 10px;
-    background: transparent;
-    mix-blend-mode: multiply;
-    transition: transform 0.3s ease;  /* 添加过渡效果 */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: logoFloat 3s ease-in-out infinite;
 }
 
+/* Logo hover animation */
 .logo a:hover img {
-    transform: scale(1.05);  /* 悬停时轻微放大效果 */
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.05);
+}
+
+/* Logo floating animation */
+@keyframes logoFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .logo img {
+        height: 35px;
+    }
+    
+    @keyframes logoFloat {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-3px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 }
 
 .nav-links {
@@ -91,56 +124,104 @@ body {
 /* Language Dropdown Styles */
 .language-dropdown {
     position: relative;
-    margin-left: 1rem;
-}
-
-.language-btn {
-    background: #006B3F;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    min-width: 120px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    border-radius: 4px;
-    overflow: hidden;
+    margin-left: 1.5rem;
     z-index: 1000;
 }
 
-.dropdown-content a {
-    color: #333;
-    padding: 0.8rem 1rem;
-    text-decoration: none;
-    display: block;
+.language-btn {
+    background: rgba(0, 107, 63, 0.08);
+    color: #006B3F;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.3px;
 }
 
+.language-btn:hover {
+    background: rgba(0, 107, 63, 0.12);
+}
+
+/* 下拉菜单容器 */
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background: white;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+/* 显示下拉菜单 */
+.language-dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* 下拉菜单选项 */
+.dropdown-content a {
+    color: #333;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* 选项悬停效果 */
 .dropdown-content a:hover {
-    background: #f8f9fa;
+    background: rgba(0, 107, 63, 0.08);
     color: #006B3F;
     padding-left: 1.5rem;
 }
 
-.language-dropdown:hover .dropdown-content {
-    display: block;
-    animation: fadeIn 0.3s ease;
+/* 确保下拉区域有足够的可点击空间 */
+.language-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .language-dropdown {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .language-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        position: relative;
+        top: 0;
+        margin-top: 0.5rem;
+    }
 }
 
 /* Mobile Menu */
@@ -309,81 +390,133 @@ body {
 
 /* Footer Styles */
 .footer {
-    position: relative;
     background: #f8f9fa;
-    padding: 3rem 5%;
-    margin-top: 0;
+    padding: 2rem 5% 2rem;
+    position: relative;
 }
 
-/* 修改渐变分隔线 */
+/* 渐变分隔线 */
 .footer::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 5px;  /* 加粗分隔线 */
     background: linear-gradient(to right,
-        rgba(0,107,63,0.8) 0%,    /* 左侧更深的颜色 */
-        rgba(0,107,63,0.6) 30%,   /* 逐渐变浅 */
-        rgba(0,107,63,0.4) 60%,   /* 继续变浅 */
-        rgba(0,107,63,0.2) 80%,   /* 更浅 */
-        rgba(0,107,63,0.1) 100%   /* 最浅 */
+        #006B3F 0%,    /* 深青色起始 */
+        rgba(0, 107, 63, 0.8) 30%,  /* 增加不透明度 */
+        rgba(0, 107, 63, 0.6) 60%,  /* 增加不透明度 */
+        rgba(0, 107, 63, 0.4) 100%  /* 增加不透明度，浅青色结束 */
     );
 }
 
 .footer-content {
-    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 2rem;
+    padding: 0 1%;  /* 减少左右内边距，从 2% 改为 1% */
 }
 
 .footer-section h3 {
-    color: var(--primary-color);
+    color: #006B3F;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
 }
 
 .footer-section ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
-.footer-section a {
-    color: var(--secondary-color);
+/* Quick Links 动画效果 */
+.footer-section ul li a {
+    color: #333;
     text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-section a:hover {
-    color: var(--primary-color);
-    transform: translateX(5px);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
     display: inline-block;
 }
 
-.email-title {
-    margin-top: 2rem;
+.footer-section ul li a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #006B3F;
 }
 
-/* 更新 Footer Logo 样式 */
+.footer-section ul li a:hover {
+    color: #006B3F;
+    padding-left: 20px;
+    transform: translateX(5px);
+}
+
+.footer-section ul li a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+/* Footer Text Hover Animation */
+.footer-section p {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    transition: transform 0.3s ease;  /* 添加过渡效果 */
+    display: inline-block;  /* 使transform生效 */
+    cursor: default;  /* 显示默认鼠标样式 */
+}
+
+.footer-section p:hover {
+    transform: translateY(-3px);  /* 上浮效果 */
+}
+
+.email-title {
+    margin-top: 1rem;
+}
+
+/* Footer Logo Styles */
 .footer-section:last-child {
     display: flex;
-    justify-content: flex-end;  /* 将logo靠右对齐 */
+    justify-content: flex-end;
     align-items: flex-start;
 }
 
 .footer-logo {
-    height: 50px;  /* 稍微增加logo大小 */
+    height: 37px;  /* 原来是 55px，缩小 1/3 */
+    width: auto;
     object-fit: contain;
-    filter: brightness(0.95);  /* 轻微调整亮度以更好地融入背景 */
-    background: transparent;  /* 确保背景透明 */
+    max-width: 167px;  /* 原来是 250px，缩小 1/3 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        padding: 0 5%;  /* 移动端保持较大的内边距 */
+    }
+
+    .footer-section:last-child {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        height: 30px;  /* 原来是 45px，缩小 1/3 */
+        max-width: 133px;  /* 原来是 200px，缩小 1/3 */
+        margin: 0 auto;
+    }
 }
 
 /* Scroll to Top Button */
@@ -391,46 +524,49 @@ body {
     margin-top: 2rem;
 }
 
-#scrollToTop {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
+.scroll-top-btn {
     width: 40px;
     height: 40px;
-    cursor: pointer;
-    transition: var(--transition);
+    background: #006B3F;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    visibility: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-#scrollToTop.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-#scrollToTop:hover {
+.scroll-top-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 107, 63, 0.2);
 }
 
-/* 移动端响应式调整 */
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+.scroll-top-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.1) 100%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
 
-    .footer-section:last-child {
-        justify-content: center;  /* 移动端居中显示 */
-    }
+.scroll-top-btn:hover::before {
+    transform: translateX(100%);
+}
 
-    .footer-logo {
-        height: 45px;  /* 移动端稍微缩小logo */
-    }
+.scroll-top-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 /* 过渡区域样式 */
@@ -555,4 +691,109 @@ body {
     .stat-item p {
         font-size: 1rem;
     }
-} 
+}
+
+/* Social Media Links */
+.social-title {
+    margin-top: 1rem;
+    color: #006B3F;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    fill: #006B3F;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #006B3F;
+    transform: translateY(-3px);
+}
+
+.social-link:hover .social-icon {
+    fill: #ffffff;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .social-links {
+        justify-content: center;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Copyright Styles */
+.copyright {
+    text-align: left;
+    padding: 1.5rem 0 0.5rem;  /* 移除左右内边距 */
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0, 107, 63, 0.1);
+}
+
+.copyright p {
+    color: #666;
+    font-size: 0.8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1%;  /* 版权信息也使用相同的内边距 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .copyright {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+    
+    .copyright p {
+        font-size: 0.75rem;
+        padding: 0 5%;
+    }
+}
+
+/* Footer Section Styles */
+.footer-section:first-child {
+    padding-left: 0;  /* 确保第一列完全没有左内边距 */
+}
+
+/* Footer Email Link Style */
+.footer-email {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-email:hover {
+    color: #006B3F;
+    text-decoration: none;
+}

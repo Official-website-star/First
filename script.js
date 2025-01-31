@@ -74,96 +74,106 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// 定义语言包
-const translations = {
-    en: {
-        home: "Home",
-        aboutUs: "About Us",
-        products: "Product & Services",
-        esg: "ESG",
-        careers: "Career",
-        contactUs: "Contact Us",
-        heroTitle: "Powering Sustainable Energy Futures with Intelligent Storage Solutions",
-        heroSubtitle: "Innovative energy solutions powering the global shift to renewables—optimized, reliable, and built for a sustainable future.",
-        engineers: "Experienced Engineers",
-        storageAssets: "Energy Storage Assets",
-        countries: "Countries Served",
-        address: "Address",
-        email: "Email",
-        quickLinks: "Quick Links"
-    },
-    de: {
-        home: "Startseite",
-        aboutUs: "Über uns",
-        products: "Produkte & Dienstleistungen",
-        esg: "ESG",
-        careers: "Karriere",
-        contactUs: "Kontakt",
-        heroTitle: "Nachhaltige Energiezukunft mit intelligenten Speicherlösungen",
-        heroSubtitle: "Innovative Energielösungen für die globale Energiewende—optimiert, zuverlässig und für eine nachhaltige Zukunft konzipiert.",
-        engineers: "Erfahrene Ingenieure",
-        storageAssets: "Energiespeicher",
-        countries: "Länder bedient",
-        address: "Adresse",
-        email: "E-Mail",
-        quickLinks: "Schnellzugriff"
+// 当前语言
+let currentLang = localStorage.getItem('language') || 'en';
+
+// 初始化语言
+function initLanguage() {
+    document.documentElement.lang = currentLang;
+    if (currentLang === 'ar') {
+        document.documentElement.dir = 'rtl';
+    } else {
+        document.documentElement.dir = 'ltr';
     }
-};
-
-// 语言切换函数
-function changeLanguage(lang) {
-    // 更新导航链接
-    document.querySelectorAll('.nav-item').forEach(item => {
-        const key = item.getAttribute('data-lang-key');
-        if (key) item.textContent = translations[lang][key];
-    });
-
-    // 更新英雄区域
-    const heroTitle = document.querySelector('.hero-content h1');
-    if (heroTitle) heroTitle.textContent = translations[lang].heroTitle;
-
-    const heroSubtitle = document.querySelector('.hero-content p');
-    if (heroSubtitle) heroSubtitle.textContent = translations[lang].heroSubtitle;
-
-    // 更新统计数据描述
-    document.querySelectorAll('.stat-item p').forEach((item, index) => {
-        if (index === 0) item.textContent = translations[lang].engineers;
-        if (index === 1) item.textContent = translations[lang].storageAssets;
-        if (index === 2) item.textContent = translations[lang].countries;
-    });
-
-    // 更新页脚
-    document.querySelectorAll('.footer-section h3').forEach(item => {
-        if (item.textContent === "Quick Links") item.textContent = translations[lang].quickLinks;
-        if (item.textContent === "Address") item.textContent = translations[lang].address;
-        if (item.textContent === "Email") item.textContent = translations[lang].email;
-    });
-
-    // 存储用户语言偏好
-    localStorage.setItem('preferredLanguage', lang);
+    updateContent();
 }
 
-// 初始化语言选择器
-document.addEventListener('DOMContentLoaded', () => {
-    // 获取语言选择链接
-    const langLinks = document.querySelectorAll('.dropdown-content a');
-    
-    // 添加点击事件
-    langLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const lang = link.getAttribute('data-lang');
-            changeLanguage(lang);
-        });
-
-        // 添加悬停事件
-        link.addEventListener('mouseenter', (e) => {
-            const lang = link.getAttribute('data-lang');
-            changeLanguage(lang);
-        });
+// 更新页面内容
+function updateContent() {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getTranslation(key);
+        if (translation) {
+            element.textContent = translation;
+        }
     });
 
-    // 加载保存的语言偏好
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-    changeLanguage(savedLang);
+    // 更新固定文本内容
+    if (currentLang === 'ar') {
+        // 更新地址显示
+        const addressElements = document.querySelectorAll('[data-address], .footer-section p:not([data-i18n])');
+        addressElements.forEach(element => {
+            if (element.textContent.includes('Frankfurt am Main')) {
+                // 只显示阿拉伯语
+                element.textContent = 'فرانكفورت آم ماين';
+            }
+        });
+        
+        // 更新邮箱显示方向
+        const emailElements = document.querySelectorAll('.footer-email');
+        emailElements.forEach(element => {
+            element.style.direction = 'ltr'; // 保持邮箱地址从左到右显示
+            element.style.unicodeBidi = 'bidi-override';
+        });
+    } else {
+        // 恢复默认地址显示
+        const addressElements = document.querySelectorAll('[data-address], .footer-section p:not([data-i18n])');
+        addressElements.forEach(element => {
+            if (element.textContent.includes('فرانكفورت آم ماين')) {
+                element.textContent = 'Frankfurt am Main';
+            }
+        });
+    }
+
+    // 更新页面标题
+    const pageTitles = {
+        'index.html': 'nav.home',
+        'about.html': 'nav.about',
+        'products.html': 'nav.products',
+        'esg.html': 'nav.esg',
+        'careers.html': 'nav.careers',
+        'contact.html': 'nav.contact'
+    };
+
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const titleKey = pageTitles[currentPage];
+    if (titleKey) {
+        document.title = getTranslation(titleKey) + ' - Stratosphere Green Energy';
+    }
+}
+
+// 获取翻译
+function getTranslation(key) {
+    const keys = key.split('.');
+    let value = translations[currentLang];
+    for (const k of keys) {
+        if (value && value[k]) {
+            value = value[k];
+        } else {
+            return null;
+        }
+    }
+    return value;
+}
+
+// 设置语言
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('language', lang);
+    initLanguage();
+}
+
+// DOM加载完成后初始化
+document.addEventListener('DOMContentLoaded', () => {
+    // 初始化语言
+    initLanguage();
+    
+    // 为所有语言切换按钮添加事件监听
+    const langButtons = document.querySelectorAll('[data-lang]');
+    langButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const lang = button.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
 }); 
