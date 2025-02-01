@@ -44,8 +44,31 @@
 
     <main class="contact-main">
         <section class="contact-hero">
-            <h1 class="fade-in" data-i18n="contact.title">Contact Us</h1>
-            <p class="fade-in-delay" data-i18n="contact.subtitle">We want to hear from you.</p>
+            <h1 data-i18n="contact.title">Contact Us</h1>
+            <div class="hero-message">
+                <div class="hero-text">
+                    <div class="message-box">
+                        <div class="icon-container">
+                            <svg class="message-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </div>
+                        <p class="main-question" data-i18n="contact.hero.question">
+                            Want to learn more about how Stratosphere can power your renewable energy projects?
+                        </p>
+                    </div>
+                    <div class="action-box">
+                        <div class="icon-container">
+                            <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </div>
+                        <p class="sub-text" data-i18n="contact.hero.action">
+                            Get in touch with us today for tailored energy storage solutions and expert operations support.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="contact-content">
@@ -56,18 +79,30 @@
                     <div class="contact-details">
                         <div class="contact-group">
                             <h3 data-i18n="contact.address">Address</h3>
-                            <p class="address-text" data-address>Frankfurt am Main</p>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                </div>
+                                <p class="address-text" data-i18n="footer.addressText">Frankfurt am Main, Germany</p>
+                            </div>
                         </div>
                         
                         <div class="contact-divider"></div>
                         
                         <div class="contact-group">
                             <h3 data-i18n="contact.email">Email</h3>
-                            <p>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
                                 <a href="mailto:info@stratospherege.com" class="footer-email">
                                     info@stratospherege.com
                                 </a>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,7 +137,7 @@
 
             <!-- 语言选择部分 -->
             <div class="visit-section fade-in-delay">
-                <h3 data-i18n="contact.visitWebsites">Visit our websites</h3>
+                <h3 data-i18n="contact.languages.title">Visit our websites</h3>
                 <div class="language-buttons">
                     <a href="index.html" class="lang-btn" data-lang="en">
                         <span class="lang-icon">🌐</span>

@@ -72,6 +72,34 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transition = 'all 0.6s ease-out';
         observer.observe(element);
     });
+
+    // Read More 按钮点击事件
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    if (readMoreBtn) {
+        readMoreBtn.addEventListener('click', function() {
+            const modal = this.closest('.feature-card').querySelector('.modal');
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // 关闭模态框
+    document.querySelectorAll('.close-modal').forEach(closeBtn => {
+        closeBtn.addEventListener('click', function() {
+            this.closest('.modal').classList.remove('show');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // 点击模态框外部关闭
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    });
 });
 
 // 当前语言

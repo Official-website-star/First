@@ -6,26 +6,21 @@
 
 /* Hero Section */
 .careers-hero {
-    min-height: 80vh;
+    height: auto;
     background: url('assets/carees.png') no-repeat center center;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     display: flex;
     align-items: center;
     position: relative;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-bottom: 3rem;
+    aspect-ratio: 1920 / 600;  /* 根据实际图片比例调整 */
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
 }
 
 /* Company Intro Section */
 .company-intro {
-    padding: 3rem 5%;
+    padding: 0 5% 3rem;
     background: white;
 }
 
@@ -72,11 +67,20 @@
 }
 
 .intro-content p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 1.2rem;
-    padding: 0 1rem;
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.2px;
+}
+
+.intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* 添加段落间距 */
+.intro-content p + p {
+    margin-top: 1.2rem;
 }
 
 /* Job Listings Section */
@@ -215,7 +219,10 @@
 
 @media (max-width: 768px) {
     .careers-hero {
-        min-height: 60vh;
+        aspect-ratio: 1920 / 600;  /* 保持相同比例 */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
     }
 
     .company-intro {
@@ -248,7 +255,7 @@
 
 /* Job Listings Section */
 .job-listings-section {
-    padding: 4rem 5%;
+    padding: 2rem 5% 3rem;
     background: #f8f9fa;
 }
 
@@ -259,9 +266,28 @@
 
 .section-title {
     color: #006B3F;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* 添加标题装饰 */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, rgba(0,107,63,0.1), #006B3F, rgba(0,107,63,0.1));
+    border-radius: 2px;
 }
 
 .job-list {
@@ -275,11 +301,23 @@
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #006B3F;
+    position: relative;
+    overflow: hidden;
 }
 
-.job-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+/* 添加顶部装饰线 */
+.job-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right,
+        rgba(0,107,63,0.8) 0%,
+        rgba(0,107,63,0.4) 100%
+    );
 }
 
 .job-header {
@@ -287,6 +325,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    padding-top: 0.5rem;
 }
 
 .job-header h3 {
@@ -297,25 +336,6 @@
 
 .location {
     display: none;
-}
-
-.job-details {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.job-type, .department {
-    color: #555;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-}
-
-.job-type::before, .department::before {
-    content: '•';
-    color: #006B3F;
-    margin-right: 0.5rem;
 }
 
 .job-description {
@@ -352,11 +372,6 @@
         gap: 1rem;
     }
 
-    .job-details {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
     .location {
         align-self: flex-start;
     }
@@ -385,16 +400,11 @@
 
 .modal-content {
     background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
+    padding: 2.5rem;
+    border-radius: 16px;
     position: relative;
-    transform: translateY(-30px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,107,63,0.1);
+    max-width: 600px;
+    width: 90%;
 }
 
 .modal.show .modal-content {
@@ -403,7 +413,7 @@
 
 .modal-content h3 {
     color: #006B3F;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
@@ -435,29 +445,32 @@
 }
 
 .modal-message {
-    margin: 1rem 0;
-    color: #555;
-    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-footer {
+    color: #666;
+    font-size: 0.95rem;
     line-height: 1.6;
-    padding: 0 1.5rem;
+    font-style: italic;
+    border-top: 1px solid rgba(0,107,63,0.1);
+    padding-top: 1.2rem;
+    margin-top: 1.5rem;
 }
 
 .modal-email {
     color: #006B3F;
     text-decoration: none;
     font-weight: 500;
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    background: rgba(0,107,63,0.1);
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .modal-email:hover {
-    background: rgba(0,107,63,0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,107,63,0.1);
+    color: #008B4F;
+    text-decoration: underline;
 }
 
 /* 添加动画效果 */
@@ -474,4 +487,108 @@
 
 .modal.show .modal-content {
     animation: modalFadeIn 0.4s ease forwards;
+}
+
+/* 职位描述展开内容样式 */
+.expanded-content h4 {
+    color: #006B3F;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+}
+
+.expanded-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.expanded-content li {
+    margin-bottom: 1.2rem;
+}
+
+.expanded-content li strong {
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.expanded-content li p {
+    color: #666;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+/* 调整展开按钮样式 */
+.expand-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1px solid rgba(0,107,63,0.2);
+    border-radius: 20px;
+    color: #006B3F;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 展开/折叠功能的基础样式 */
+.expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+    opacity: 0;
+    transition: opacity 0.3s ease-out, max-height 0.8s ease-out;
+}
+
+/* 展开状态 */
+.expandable-section.expanded .expanded-content {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+/* 控制展开/折叠按钮文字显示 */
+.collapse-text {
+    display: none;
+}
+
+.expandable-section.expanded .expand-text {
+    display: none;
+}
+
+.expandable-section.expanded .collapse-text {
+    display: inline;
+}
+
+/* 箭头图标样式及动画 */
+.toggle-icon {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    position: relative;
+    top: -1px;
+}
+
+.expandable-section.expanded .toggle-icon {
+    transform: rotate(-135deg);
+}
+
+.job-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-left-color: #008B5F;
+}
+
+/* 添加悬停时的渐变效果 */
+.job-item:hover::before {
+    background: linear-gradient(to right,
+        rgba(0,139,95,0.8) 0%,
+        rgba(0,139,95,0.4) 100%
+    );
 }

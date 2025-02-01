@@ -39,4 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
             hideModal();
         }
     });
+
+    const expandButtons = document.querySelectorAll('.expand-toggle');
+    
+    expandButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const section = this.closest('.expandable-section');
+            section.classList.toggle('expanded');
+            
+            if(section.classList.contains('expanded')) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    });
 }); 
