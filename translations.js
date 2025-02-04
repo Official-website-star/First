@@ -661,7 +661,7 @@ const translations = {
                     "Unsere fortschrittlichen Energiespeichersysteme sind darauf ausgelegt, die Leistung von Solar-, Wind- und anderen erneuerbaren Energieanlagen zu optimieren und eine zuverlässige und konstante Versorgung mit sauberer Energie sicherzustellen.",
                     "Darüber hinaus erstreckt sich unser Engagement auf die kontinuierliche Forschung und Entwicklung im Bereich der Energiespeichertechnologien, wodurch wir an der Spitze der Umweltinnovation bleiben."
                 ],
-                readMore: "Mehr anzeigen",
+                readMore: "Mehr lesen",
                 readLess: "Weniger anzeigen"
             },
             
@@ -672,7 +672,9 @@ const translations = {
                     "Wir investieren aktiv in die Entwicklung lokaler Talente und schaffen qualifizierte Arbeitsplätze in den Gemeinden, in denen wir tätig sind.",
                     "Durch strategische Partnerschaften mit Bildungseinrichtungen fördern wir die nächste Generation von Energieexperten und Innovatoren.",
                     "Wir setzen uns aktiv für Vielfalt, Chancengleichheit und Inklusion in der Energiebranche ein und fördern eine integrative Arbeitskultur."
-                ]
+                ],
+                readMore: "Mehr lesen",
+                readLess: "Weniger anzeigen"
             },
             governance: {
                 title: "Unternehmensführung",
@@ -681,7 +683,9 @@ const translations = {
                     "Wir halten die höchsten Standards für Unternehmensethik, Compliance und Transparenz in allen Geschäftsbereichen ein.",
                     "Durch regelmäßige interne und externe Audits sowie strenge Überprüfungen gewährleisten wir die kontinuierliche Einhaltung aller relevanten Vorschriften und Standards.",
                     "Wir pflegen einen transparenten und konstruktiven Dialog mit allen Stakeholdern und stellen sicher, dass ihre Interessen in unseren Entscheidungsprozessen berücksichtigt werden."
-                ]
+                ],
+                readMore: "Mehr lesen",
+                readLess: "Weniger anzeigen"
             },
             vision: {
                 text: "Durch kontinuierliches Vorantreiben der Grenzen technologischer Innovation und konsequentes Einhalten höchster ESG-Standards revolutionieren wir Energielösungen und gestalten sorgfältig ein widerstandsfähiges, nachhaltiges Energieökosystem. Dieses dauerhafte Engagement verändert nicht nur die heutige Energielandschaft, sondern legt auch ein solides Fundament für den Wohlstand und das Wohlergehen zukünftiger Generationen."
@@ -1106,8 +1110,8 @@ const translations = {
                     "أنظمة تخزين الطاقة المتطورة لدينا مصممة لتحسين أداء منشآت الطاقة الشمسية وطاقة الرياح وغيرها من مصادر الطاقة المتجددة، مما يضمن إمداداً مستقراً وموثوقاً للطاقة النظيفة.",
                     "علاوة على ذلك، يمتد التزامنا إلى البحث والتطوير المستمر في تقنيات تخزين الطاقة، مما يمكننا من البقاء في طليعة الابتكار البيئي."
                 ],
-                readMore: "اقرأ المزيد",
-                readLess: "اقرأ أقل"
+                readMore: "قراءة المزيد",
+                readLess: "عرض أقل"
             },
             social: {
                 title: "المسؤولية الاجتماعية",
@@ -1116,7 +1120,9 @@ const translations = {
                     "نستثمر بنشاط في تطوير المواهب المحلية وخلق فرص عمل مؤهلة في المجتمعات التي نعمل فيها.",
                     "من خلال شراكات استراتيجية مع المؤسسات التعليمية، نعزز الجيل القادم من خبراء الطاقة والمبتكرين.",
                     "نلتزم بنشاط بالتنوع وتكافؤ الفرص والشمول في قطاع الطاقة، ونعزز ثقافة عمل شاملة."
-                ]
+                ],
+                readMore: "قراءة المزيد",
+                readLess: "عرض أقل"
             },
             governance: {
                 title: "الحوكمة",
@@ -1125,7 +1131,9 @@ const translations = {
                     "نلتزم بأعلى معايير أخلاقيات العمل والامتثال والشفافية في جميع مجالات أعمالنا.",
                     "من خلال عمليات التدقيق الداخلية والخارجية المنتظمة والمراجعات الصارمة، نضمن الامتثال المستمر لجميع اللوائح والمعايير ذات الصلة.",
                     "نحافظ على حوار شفاف وبناء مع جميع أصحاب المصلحة ونضمن مراعاة مصالحهم في عمليات صنع القرار لدينا."
-                ]
+                ],
+                readMore: "قراءة المزيد",
+                readLess: "عرض أقل"
             },
             vision: {
                 text: "من خلال الدفع المستمر لحدود الابتكار التكنولوجي والتمسك الثابت بأعلى معايير ESG، نقوم بإحداث ثورة في حلول الطاقة وبناء نظام طاقة مستدام ومرن بعناية. هذا الالتزام الدائم لا يحول مشهد الطاقة اليوم فحسب، بل يضع أيضًا أساسًا متينًا لازدهار ورفاهية الأجيال القادمة."
