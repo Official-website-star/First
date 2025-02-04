@@ -1,6 +1,5 @@
 const translations = {
     en: {
-        // Navigation
         nav: {
             home: "Home",
             about: "About Us",
@@ -10,36 +9,131 @@ const translations = {
             contact: "Contact Us",
             language: "Language"
         },
-        // Home page
-        home: {
-            hero: {
-                title: "Powering Sustainable Energy Futures with Intelligent Storage Solutions",
-                subtitle: "Innovative energy solutions powering the global shift to renewables — optimized, reliable, and built for a sustainable future."
-            },
-            stats: {
-                engineers: "Experienced Engineers",
-                storage: "Energy Storage Assets",
-                countries: "Countries Served"
+        footer: {
+            quickLinks: "Quick Links",
+            address: "Address",
+            addressText: "Schuhmannstr. 27, 60325 Frankfurt, Deutschland",
+            email: "Email",
+            followUs: "Follow Us",
+            copyright: "Copyright ©2025 Stratosphere. All Rights Reserved.",
+            links: {
+                home: "Home",
+                about: "About Us",
+                products: "Product & Services",
+                esg: "ESG",
+                careers: "Careers",
+                contact: "Contact Us"
             }
-        },
-        about: {
-            title: "About Us",
-            intro: "Stratosphere Green Energy GmbH is a pioneering force in energy storage solutions, dedicated to advancing renewable energy integration worldwide.",
-            whatWeDo: {
-                title: "What We Do",
-                description1: "Stratosphere Green Energy GmbH based in Germany, we harness state-of-the-art German engineering and an outstanding market reputation to develop sustainable and efficient energy solutions. With a strong foothold in key energy storage markets, including the Middle East and the United States, we are committed to accelerating the global shift towards clean energy.",
-                description2: "Our team of 200 skilled engineers manages and maintains approximately 5 GWh of energy storage assets globally, ensuring optimal performance, reliability, and efficiency across diverse energy infrastructures."
-            },
-            mission: "Our Mission",
-            missionText: "We strive to enhance renewable energy adoption by integrating cutting-edge storage technologies, optimizing energy efficiency, and fostering a more sustainable future through innovative and reliable solutions.",
-            reach: "Our Global Reach",
-            reachText: "Stratosphere leverages a global footprint to partner with regional leaders and address diverse market needs. Our joint ventures in the United States, Saudi Arabia, the UAE, and Kuwait deliver tailored O&M services for renewable energy infrastructure, overcoming local challenges while providing premium storage solutions.",
-            expertise: "Our Expertise",
-            expertiseText: "Stratosphere delivers end-to-end energy storage solutions, supporting renewable energy projects and enhancing power distribution systems. Our expertise spans market analysis, technical evaluation, and independent third-party certification, ensuring seamless integration and maximum efficiency."
         },
         products: {
             title: "Product & Services",
             intro: "Stratosphere delivers advanced energy storage solutions, optimizing efficiency, sustainability, and profitability.",
+            services: {
+                assessment: {
+                    title: "Business Case & Market Assessment",
+                    intro: "Our approach to Business Case & Market Assessment involves comprehensive evaluations of energy storage opportunities designed to empower informed investment decisions.",
+                    details: {
+                        market: {
+                            title: "Market Analysis",
+                            text: "Our market assessment framework is tailored to identify key opportunities within the rapidly evolving energy sector. By leveraging advanced analytics and industry insights, we pinpoint strategic niches where energy storage solutions can deliver significant value."
+                        },
+                        planning: {
+                            title: "Business Planning",
+                            text: "We build robust business cases that articulate the economic benefits of each potential project, providing clear, actionable insights and strategic recommendations that support optimal investment decisions."
+                        },
+                        strategy: {
+                            title: "Strategic Integration",
+                            text: "By integrating in-depth market analysis with precise financial modeling and strategic planning, we ensure that every energy storage investment is backed by solid data and forward-thinking strategy."
+                        }
+                    }
+                },
+                design: {
+                    title: "Energy Storage Design & Configuration",
+                    intro: "Our approach to Energy Storage Design & Configuration involves optimizing storage dispatch logic based on circuit demand, assessing storage capacity for maximum cumulative benefits, and conducting cost-benefit analysis.",
+                    details: {
+                        dispatch: {
+                            title: "Storage Dispatch Logic",
+                            text: "We optimize storage dispatch logic to ensure efficient energy utilization and maximize the benefits of energy storage."
+                        },
+                        capacity: {
+                            title: "Storage Capacity Assessment",
+                            text: "We assess storage capacity to ensure that energy storage sites can handle the required energy demands and provide maximum cumulative benefits."
+                        },
+                        costBenefit: {
+                            title: "Cost-Benefit Analysis",
+                            text: "We conduct cost-benefit analysis to evaluate the economic viability of energy storage projects and ensure that they deliver maximum benefits to our clients."
+                        }
+                    }
+                },
+                testing: {
+                    title: "Testing and Certification",
+                    intro: "Our Testing and Certification process involves conducting comprehensive performance and safety testing, integration testing, and verifying compliance with latest industry standards.",
+                    details: {
+                        performance: {
+                            title: "Performance Testing",
+                            text: "We conduct performance testing to evaluate the efficiency and reliability of energy storage systems."
+                        },
+                        safety: {
+                            title: "Safety Testing",
+                            text: "We conduct safety testing to ensure that energy storage systems are safe to operate and handle."
+                        },
+                        integration: {
+                            title: "Integration Testing",
+                            text: "We conduct integration testing to ensure that energy storage systems work seamlessly with other systems and components."
+                        },
+                        compliance: {
+                            title: "Compliance Verification",
+                            text: "We verify that energy storage systems comply with the latest industry standards and regulations."
+                        }
+                    }
+                },
+                trading: {
+                    title: "Energy Trading Strategies",
+                    intro: "Our Energy Trading Strategies involve developing and implementing revenue-maximizing strategies for energy storage facilities.",
+                    details: {
+                        revenue: {
+                            title: "Revenue Maximization",
+                            text: "We develop strategies to maximize revenue for energy storage facilities by optimizing energy trading and utilization."
+                        },
+                        market: {
+                            title: "Market Analysis",
+                            text: "We analyze market trends and conditions to identify opportunities for energy trading and utilization."
+                        },
+                        partnerships: {
+                            title: "Strategic Partnerships",
+                            text: "We establish strategic partnerships with energy trading companies and organizations to facilitate energy trading and utilization."
+                        }
+                    }
+                },
+                maintenance: {
+                    title: "System-Level Maintenance & Emergency Response",
+                    intro: "Our System-Level Maintenance & Emergency Response process involves providing regular O&M services for large-scale energy storage sites, coupled with 24/7 emergency response.",
+                    details: {
+                        regular: {
+                            title: "Regular O&M Services",
+                            text: "We provide regular O&M services to ensure the efficient operation and maintenance of energy storage sites."
+                        },
+                        emergency: {
+                            title: "Emergency Response",
+                            text: "We offer 24/7 emergency response services to address any issues or emergencies that may arise at energy storage sites."
+                        }
+                    }
+                },
+                troubleshooting: {
+                    title: "Specialized Troubleshooting & Revenue Optimization",
+                    intro: "Our Specialized Troubleshooting & Revenue Optimization process involves identifying and resolving complex technical issues in energy storage systems while managing revenue streams.",
+                    details: {
+                        technical: {
+                            title: "Technical Issue Identification",
+                            text: "We identify complex technical issues in energy storage systems that may affect their performance or reliability."
+                        },
+                        revenue: {
+                            title: "Revenue Management",
+                            text: "We manage revenue streams by optimizing energy trading and utilization to maximize revenue for our clients."
+                        }
+                    }
+                }
+            },
             whyChoose: {
                 title: "Why Choose Us?",
                 expertise: {
@@ -58,106 +152,38 @@ const translations = {
                     title: "Commitment to Sustainability",
                     text: "Dedicated to advancing renewable energy and promoting sustainable practices."
                 }
-            },
-            services: {
-                assessment: "Business Case & Market Assessment",
-                assessmentIntro: "Our approach to Business Case & Market Assessment involves comprehensive evaluations of energy storage opportunities designed to empower informed investment decisions.",
-                assessmentMarket: "Our market assessment framework is tailored to identify key opportunities within the rapidly evolving energy sector. By leveraging advanced analytics and industry insights, we pinpoint strategic niches where energy storage solutions can deliver significant value.",
-                assessmentPlanning: "We build robust business cases that articulate the economic benefits of each potential project, providing clear, actionable insights and strategic recommendations that support optimal investment decisions.",
-                assessmentStrategy: "By integrating in-depth market analysis with precise financial modeling and strategic planning, we ensure that every energy storage investment is backed by solid data and forward-thinking strategy.",
-                design: "Energy Storage Design & Configuration",
-                testing: "Testing and Certification",
-                operation: "Operation & Maintenance",
-                monitoring: "Remote Monitoring & Analytics",
-                troubleshooting: "Specialized Troubleshooting & Revenue Optimization",
-                tradingStrategies: {
-                    title: "Energy Trading Strategies",
-                    intro: "Our energy trading strategies encompass the development and implementation of revenue-maximizing strategies for energy storage assets.",
-                    sections: {
-                        revenueMaximization: {
-                            title: "Revenue Maximization",
-                            text: "We develop strategies to maximize revenues for energy storage assets through optimization of energy trading and utilization."
-                        },
-                        marketAnalysis: {
-                            title: "Market Analysis",
-                            text: "We analyze market trends and conditions to identify opportunities for energy trading and utilization."
-                        },
-                        strategicPartnerships: {
-                            title: "Strategic Partnerships",
-                            text: "We establish strategic partnerships with energy trading companies and organizations to facilitate energy trading and utilization."
-                        }
-                    },
-                    benefits: {
-                        title: "Benefits",
-                        list: [
-                            "Optimized Revenue Generation",
-                            "Improved Market Positioning",
-                            "Efficient Resource Utilization",
-                            "Reduced Operating Costs"
-                        ]
-                    }
-                },
-                tradingDetails: {
-                    title: "Energy Trading & Optimization",
-                    intro: "We offer comprehensive energy trading solutions aimed at maximizing the value of your energy storage assets.",
-                    services: {
-                        marketAccess: {
-                            title: "Market Access",
-                            text: "Direct access to energy markets and trading platforms."
-                        },
-                        riskManagement: {
-                            title: "Risk Management",
-                            text: "Development and implementation of strategies for risk minimization."
-                        },
-                        portfolioOptimization: {
-                            title: "Portfolio Optimization",
-                            text: "Optimization of the energy portfolio for maximum return."
-                        }
-                    }
-                }
             }
         },
-        esg: {
-            title: "Our Commitment to ESG",
-            intro: "At Stratosphere, ESG principles are at the core of our mission.",
-            environmental: "Environmental Stewardship",
-            social: "Social Responsibility",
-            governance: "Corporate Governance",
-            visionText: {
-                title: "Unsere Vision",
-                statement: "Durch das kontinuierliche Vorantreiben der Grenzen technologischer Innovation und ein unerschütterliches Engagement für höchste ESG-Standards revolutionieren wir Energielösungen und gestalten sorgfältig ein widerstandsfähiges, nachhaltiges Energieökosystem. Dieses dauerhafte Engagement verändert nicht nur die heutige Energielandschaft, sondern legt auch ein solides Fundament für den Wohlstand und das Wohlergehen zukünftiger Generationen."
-            }
-        },
-        careers: {
+        home: {
             hero: {
-                title: "Power the future. Innovate with us.",
-                mainText: "Stratosphere is revolutionizing the energy landscape with advanced storage solutions. Our goal is to develop next-generation energy infrastructure—intelligent, efficient, and seamlessly integrated with renewable power.",
-                description: "Our team of engineers and analysts operates at the intersection of technology and sustainability, delivering optimized systems that energize industries, cities, and entire regions. If you're driven to shape the future of energy, we invite you to join our dynamic team."
+                title: "Powering Sustainable Energy Futures with Intelligent Storage Solutions",
+                subtitle: "Innovative energy solutions powering the global shift to renewables — optimized, reliable, and built for a sustainable future."
             },
-            openPositions: {
-                title: "Open Positions",
-                fieldManager: {
-                    title: "Field Manager",
-                    type: "Full-time",
-                    location: "Multiple Locations",
-                    description: "The BESS Field Service Technician is responsible for maintaining, troubleshooting, and optimizing energy storage systems across multiple locations. Reporting to the Operations Manager, this role ensures system reliability, performance, and compliance with safety standards.",
-                    responsibilities: [
-                        "Implement preventive and corrective maintenance",
-                        "Troubleshoot energy storage systems",
-                        "Ensure compliance with safety standards",
-                        "Prepare maintenance and performance reports"
-                    ],
-                    requirements: [
-                        "Degree in Electrical Engineering or equivalent",
-                        "3+ years experience in energy systems maintenance",
-                        "Knowledge of BESS systems",
-                        "Excellent communication skills"
-                    ]
-                }
+            stats: {
+                engineers: "Experienced Engineers",
+                storage: "Energy Storage Assets",
+                countries: "Countries Served"
+            }
+        },
+        about: {
+            title: "About Us",
+            intro: "We are a leading provider of innovative energy storage solutions, committed to driving the global transition to sustainable energy.",
+            whatWeDo: {
+                title: "What We Do",
+                text1: "Stratosphere Green Energy GmbH based in Germany, we harness state-of-the-art German engineering and an outstanding market reputation to develop sustainable and efficient energy solutions. With a strong foothold in key energy storage markets, including the Middle East and the United States, we are committed to accelerating the global shift towards clean energy.",
+                text2: "Our team of 200 skilled engineers manages and maintains approximately 5 GWh of energy storage assets globally, ensuring optimal performance, reliability, and efficiency across diverse energy infrastructures."
             },
-            applySection: {
-                button: "Apply Now",
-                message: "Thank you for your interest in our position. Please send your resume to info@stratospherege.com"
+            mission: {
+                title: "Our Mission",
+                text: "We strive to enhance renewable energy adoption by integrating cutting-edge storage technologies, optimizing energy efficiency, and fostering a more sustainable future through innovative and reliable solutions."
+            },
+            globalReach: {
+                title: "Our Global Reach",
+                text: "Stratosphere leverages a global footprint to partner with regional leaders and address diverse market needs. Our joint ventures in the United States, Saudi Arabia, the UAE, and Kuwait deliver tailored O&M services for renewable energy infrastructure, overcoming local challenges while providing premium storage solutions."
+            },
+            expertise: {
+                title: "Our Expertise",
+                text: "Stratosphere delivers end-to-end energy storage solutions, supporting renewable energy projects and enhancing power distribution systems. Our expertise spans market analysis, technical evaluation, and independent third-party certification, ensuring seamless integration and maximum efficiency."
             }
         },
         contact: {
@@ -166,42 +192,242 @@ const translations = {
                 question: "Want to learn more about how Stratosphere can power your renewable energy projects?",
                 action: "Get in touch with us today for tailored energy storage solutions and expert operations support."
             },
-            address: "Address",
-            email: "Email",
-            followUs: "Follow Us",
+            company: {
+                title: "Stratosphere Green Energy GmbH",
+                address: {
+                    title: "Address",
+                    text: "Schuhmannstr. 27, 60325 Frankfurt, Deutschland"
+                },
+                email: {
+                    title: "Email"
+                }
+            },
+            quickLinks: {
+                title: "Quick Links",
+                home: "Home",
+                about: "About Us",
+                products: "Product & Services",
+                esg: "ESG",
+                careers: "Careers",
+                contact: "Contact Us"
+            },
             languages: {
                 title: "Visit our websites",
                 english: "English",
-                german: "German",
-                arabic: "Arabic"
+                german: "Deutsch",
+                arabic: "العربية"
             }
         },
-        footer: {
-            quickLinks: "Quick Links",
-            address: "Address",
-            addressText: "Schuhmannstr. 27, 60325 Frankfurt, Deutschland",
-            email: "Email",
-            followUs: "Follow Us",
-            copyright: "Copyright ©2025 Stratosphere. All Rights Reserved."
+        esg: {
+            title: "Our Commitment to ESG",
+            subtitle: "At Stratosphere, ESG principles are at the core of our mission, driving sustainability, innovation, and ethical operations.",
+            
+            environmental: {
+                title: "Environmental",
+                preview: "At the heart of our Environmental Stewardship is a commitment to integrating state-of-the-art energy storage solutions that not only lower carbon emissions but also significantly enhance the efficiency and reliability of renewable energy systems.",
+                content: "We develop and implement advanced energy storage technologies that support renewable energy integration and reduce carbon footprints. Our solutions contribute to energy efficiency and promote a more sustainable future.",
+                expandedContent: [
+                    "By embracing innovative technologies, we are able to capture excess energy generated from renewable sources, store it effectively, and release it when needed, thereby reducing reliance on fossil fuels and minimizing overall environmental impact.",
+                    "Our cutting-edge energy storage systems are designed to optimize the performance of solar, wind, and other renewable energy installations, ensuring a steady and reliable supply of clean power. This approach not only helps to balance energy demand and supply but also plays a crucial role in stabilizing the grid during periods of high renewable output or unexpected fluctuations.",
+                    "Furthermore, our commitment extends to continuous research and development in energy storage technologies, allowing us to remain at the forefront of environmental innovation. By investing in these advanced solutions, we are not only contributing to a reduction in greenhouse gas emissions but also paving the way for a sustainable, low-carbon future."
+                ],
+                readMore: "Read more",
+                readLess: "Read less"
+            },
+            
+            social: {
+                title: "Social Responsibility",
+                subtitle: "Community & Workforce",
+                preview: "Our commitment to social responsibility is embodied through a network of global partnerships that actively contribute to strengthening local economies, nurturing workforce development, and broadening energy access.",
+                content: "We invest in our employees through comprehensive training programs and foster an inclusive workplace environment. Our commitment to community is demonstrated through local partnerships and renewable energy education initiatives.",
+                expandedContent: [
+                    "We believe that empowering communities begins with investing in the people and resources at the local level. By collaborating with community organizations, educational institutions, and industry leaders across the globe, we create meaningful opportunities for job training, skill enhancement, and career advancement.",
+                    "We also focus on expanding energy access in underserved regions, recognizing that reliable and affordable energy is a cornerstone of community development. Through strategic initiatives and partnerships, we support projects that bring clean, renewable energy solutions to remote areas.",
+                    "By integrating these social initiatives into our business model, we not only contribute to the well-being of communities but also promote a culture of inclusivity and shared prosperity."
+                ],
+                readMore: "Read more",
+                readLess: "Read less"
+            },
+            
+            governance: {
+                title: "Strong Governance",
+                subtitle: "Ethical Business Practices",
+                preview: "Our approach to corporate governance is built on a foundation of unwavering transparency, stringent regulatory compliance, and prudent resource management.",
+                content: "We prioritize transparency and accountability in all business processes. Our governance structure ensures effective oversight and adherence to stringent ethical standards across all operations.",
+                expandedContent: [
+                    "We believe that robust governance practices are essential to sustaining long-term value and fostering trust among our stakeholders. By maintaining open channels of communication and ensuring that all operations adhere to the highest ethical standards, we create an environment where accountability and responsible decision-making are paramount.",
+                    "We continuously refine our governance framework to meet and exceed global regulatory requirements, safeguarding the interests of our investors, customers, employees, and the communities we serve.",
+                    "In addition, our responsible resource management strategies are designed to optimize efficiency and drive sustainable growth."
+                ],
+                readMore: "Read more",
+                readLess: "Read less"
+            },
+            vision: {
+                text: "By continuously pushing the boundaries of technological innovation and steadfastly upholding the highest ESG standards, we are revolutionizing energy solutions and meticulously crafting a resilient, sustainable energy ecosystem. This enduring commitment not only transforms today's energy landscape but also lays a robust foundation for the prosperity and well-being of future generations."
+            }
         },
-        features: {
-            title: "Unsere Kernkompetenzen",
-            innovation: {
-                title: "Innovation",
-                text: "Entwicklung zukunftsweisender Energiespeicherlösungen"
+        careers: {
+            title: "Join Our Team",
+            subtitle: "Be part of the renewable energy revolution",
+            intro: {
+                title: "Power the future. Innovate with us.",
+                text1: "Stratosphere is revolutionizing the energy landscape with advanced storage solutions. Our goal is to develop next-generation energy infrastructure—intelligent, efficient, and seamlessly integrated with renewable power.",
+                text2: "Our team of engineers and analysts operates at the intersection of technology and sustainability, delivering optimized systems that energize industries, cities, and entire regions. If you're driven to shape the future of energy, we invite you to join our dynamic team."
             },
-            reliability: {
-                title: "Zuverlässigkeit",
-                text: "Gewährleistung stabiler und effizienter Energiesysteme"
-            },
-            sustainability: {
-                title: "Nachhaltigkeit",
-                text: "Förderung einer umweltfreundlichen Energiezukunft"
+            positions: {
+                title: "Open Positions",
+                systemEngineer: {
+                    title: "System Engineer",
+                    description: "We are looking for a skilled System Engineer to lead the technical development of our battery energy storage projects. From concept to full energization, you will ensure seamless project execution by providing expert engineering guidance and technical oversight.",
+                    responsibilities: {
+                        title: "Key Responsibilities",
+                        items: [
+                            "System Design: Develop grid-scale battery storage designs, including site planning, single-line diagrams (SLD), power system analysis, grid code compliance, and control frameworks",
+                            "Procurement Support: Provide technical expertise in selecting optimal components and technologies during procurement",
+                            "Tendering & Due Diligence: Assist in EPC tender evaluations and conduct technical due diligence on potential partners and solutions",
+                            "Project Requirements: Define technical specifications and assess site-specific constraints",
+                            "Quality Assurance: Monitor installation quality and system performance",
+                            "Documentation: Create technical reports and project documentation"
+                        ]
+                    },
+                    qualifications: {
+                        title: "Qualifications & Skills",
+                        required: {
+                            title: "Required",
+                            items: [
+                                "3-5 years experience in grid-scale BESS design or HV/EHV utility substations",
+                                "Bachelor's or Master's degree in Electrical Power Engineering, Battery Storage, or a related field",
+                                "Strong understanding of lithium-ion batteries, inverters, and grid integration",
+                                "Knowledge of industry standards and UK Grid Code compliance",
+                                "Familiarity with Transmission & Distribution (T&D) networks",
+                                "Proficiency in DIgSILENT, ETAP, AutoCAD, and Microsoft Office",
+                                "Strong communication and stakeholder management skills"
+                            ]
+                        },
+                        preferred: {
+                            title: "Preferred",
+                            items: [
+                                "Experience working with Distribution Network Operators (DNOs) and managing grid connection processes",
+                                "Commercial awareness in system design cost-effectiveness",
+                                "Ability to stay updated on emerging technologies and industry advancements"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "What We Offer",
+                        items: [
+                            "Competitive Salary: Based on experience and qualifications",
+                            "Career Growth: Ongoing training and professional development opportunities",
+                            "Comprehensive Benefits: Health insurance, pension plans, and generous leave policies",
+                            "Innovative Work Environment: Collaborative and forward-thinking culture",
+                            "Modernste Tools: Access to newest Engineering-Software and Technologies"
+                        ]
+                    },
+                    closing: "If you're an experienced System Engineer passionate about energy storage and grid-scale solutions, we invite you to apply and be part of our dynamic team!",
+                    applyBtn: "Apply Now"
+                },
+                fieldManager: {
+                    title: "Field Manager",
+                    description: "The BESS Field Service Technician is responsible for maintaining, troubleshooting, and optimizing energy storage systems across multiple locations. Reporting to the Operations Manager, this role ensures system reliability, performance, and compliance with safety standards.",
+                    responsibilities: {
+                        title: "Main Responsibilities",
+                        items: [
+                            "Maintenance & Inspections: Conduct routine maintenance, inspections, and troubleshooting to ensure system efficiency",
+                            "System Upgrades: Perform software and firmware updates to enhance reliability",
+                            "Performance Monitoring: Analyze system data to identify and resolve potential issues",
+                            "Customer Support: Provide remote diagnostic support and on-site troubleshooting to minimize downtime",
+                            "Inventory & Compliance: Manage spare parts and ensure adherence to safety regulations",
+                            "Collaboration & Reporting: Work with engineering teams to improve products and maintain detailed service records"
+                        ]
+                    },
+                    qualifications: {
+                        title: "Qualifications",
+                        required: {
+                            title: "Required",
+                            items: [
+                                "Degree/certification in Electrical or Electro-Mechanical Engineering",
+                                "Experience in electrical or multi-skilled maintenance",
+                                "Basic IT proficiency (Word, Outlook, Excel, IP configurations)",
+                                "On-site safety certification",
+                                "Willingness to travel, including overnight or international assignments"
+                            ]
+                        },
+                        preferred: {
+                            title: "Preferred",
+                            items: [
+                                "Experience with Battery Energy Storage Systems (BESS)",
+                                "Knowledge of power electronics (inverters, transformers, etc.)",
+                                "HVAC training (F-Gas certification)",
+                                "Strong IT skills (networking, MODBUS/TCP, remote desktop)",
+                                "Certifications: C&G2391-5, BS7671, or equivalent",
+                                "High voltage authorization"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "What We Offer",
+                        items: [
+                            "Competitive salary & benefits",
+                            "Generous leave & pension plan",
+                            "Full training & career growth opportunities",
+                            "Company vehicle, SIM card, fuel card, and laptop",
+                            "Team-building events & ongoing learning"
+                        ]
+                    },
+                    closing: "If you're passionate about energy storage and meet the qualifications, apply now to join our dynamic team!",
+                    applyBtn: "Apply Now"
+                },
+                projectManager: {
+                    title: "Project Manager",
+                    description: "We are seeking an experienced Project Manager to lead large-scale energy projects from inception to completion. This role ensures on-time, safe, and high-quality project execution while coordinating with clients, contractors, and internal teams.",
+                    responsibilities: {
+                        title: "Key Responsibilities",
+                        items: [
+                            "Site Management: Oversee contractors, enforce safety & environmental regulations, and conduct inspections",
+                            "Issue Resolution: Address on-site challenges, ensuring smooth project progression",
+                            "Reporting & Documentation: Maintain project logs, prepare compliance reports, and provide regular client updates",
+                            "Stakeholder Communication: Serve as the primary client liaison, attending meetings and prioritizing critical issues",
+                            "Media & Compliance: Capture site progress for documentation and promotional purposes"
+                        ]
+                    },
+                    qualifications: {
+                        title: "Qualifications & Skills",
+                        required: {
+                            title: "Required",
+                            items: [
+                                "Strong communication and stakeholder management skills",
+                                "Certifications: SMSTC, CSCS, and First Aid at Work",
+                                "Education: HNC or equivalent in a Construction-related discipline",
+                                "Project Management: Experience in construction and energy sector projects",
+                                "Health & Safety: NEBOSH certification or equivalent",
+                                "Large-Scale Projects: Proven track record in managing multi-contractor energy projects",
+                                "Sector Experience: Exposure to public & private sectors, including DNO collaborations"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "What We Offer",
+                        items: [
+                            "Competitive Salary & Benefits – Including pension, generous leave, and career growth opportunities",
+                            "Company-Provided Essentials – Vehicle, mobile phone, fuel card, and laptop",
+                            "Professional Development – Training, team events & advancement in a dynamic sector"
+                        ]
+                    },
+                    closing: "If you are a results-driven Project Manager with a passion for energy projects, apply now and join our expert team!",
+                    applyBtn: "Apply Now"
+                },
+                applyBtn: "Apply Now",
+                readMore: "Read more",
+                readLess: "Read less",
+                modal: {
+                    title: "How to Apply",
+                    message: "If you are a proactive and experienced professional eager to contribute to impactful energy projects, we encourage you to apply. Please submit your resume and a cover letter outlining your relevant experience to:",
+                    footer: "Stratosphere is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees."
+                }
             }
         }
     },
     de: {
-        // German translations
         nav: {
             home: "Startseite",
             about: "Über uns",
@@ -211,48 +437,37 @@ const translations = {
             contact: "Kontakt",
             language: "Sprache"
         },
-        home: {
-            hero: {
-                title: "Gestaltung nachhaltiger Energiezukunft mit intelligenten Speicherlösungen",
-                subtitle: "Innovative Energielösungen für die globale Energiewende — optimiert, zuverlässig und für eine nachhaltige Zukunft konzipiert."
-            },
-            stats: {
-                engineers: "Erfahrene Ingenieure",
-                storage: "Energiespeicher-Assets",
-                countries: "Betreute Länder"
+        footer: {
+            quickLinks: "Schnellzugriff",
+            address: "Adresse",
+            addressText: "Schuhmannstr. 27, 60325 Frankfurt, Deutschland",
+            email: "E-Mail",
+            copyright: "Copyright ©2025 Stratosphere. Alle Rechte vorbehalten.",
+            links: {
+                home: "Startseite",
+                about: "Über uns",
+                products: "Produkte & Dienstleistungen",
+                esg: "ESG",
+                careers: "Karriere",
+                contact: "Kontakt"
             }
-        },
-        about: {
-            title: "Über uns",
-            intro: "Stratosphere Green Energy GmbH ist eine Pionier-Kraft im Bereich Energiespeicherlösungen, die sich der weltweiten Förderung der Integration erneuerbarer Energien widmet.",
-            whatWeDo: {
-                title: "Was wir tun",
-                description1: "Stratosphere Green Energy GmbH, basierend in Deutschland, nutzt fortschrittliche deutsche Ingenieurtechnologie und eine ausgezeichnete Marktreputation, um nachhaltige und effiziente Energielösungen zu entwickeln. Mit einem starken Fußabdruck in wichtigen Energiespeichermärkten, einschließlich des Nahen Ostens und den Vereinigten Staaten, sind wir dazu verpflichtet, die globale Energiewende zu beschleunigen.",
-                description2: "Unser Team von 200 erfahrenen Ingenieuren verwaltet und wacht 5 GWh an Energiespeicherbatterien global, um optimale Leistung, Zuverlässigkeit und Effizienz über verschiedene Energienetze hinweg zu gewährleisten."
-            },
-            mission: "Unsere Mission",
-            missionText: "Wir setzen uns für die Förderung erneuerbarer Energien ein, indem wir modernste Speichertechnologien integrieren, die Energieeffizienz optimieren und durch innovative und zuverlässige Lösungen eine nachhaltigere Zukunft gestalten.",
-            reach: "Unsere Globale Präsenz",
-            reachText: "Stratosphere nutzt seine globale Präsenz für Partnerschaften mit regionalen Marktführern und die Bewältigung vielfältiger Marktanforderungen. Unsere Joint Ventures in den Vereinigten Staaten, Saudi Arabia, den VAE und Kuwait bieten maßgeschneiderte O&M-Dienstleistungen für erneuerbare Energieinfrastruktur und meistern lokale Herausforderungen bei gleichzeitiger Bereitstellung erstklassiger Speicherlösungen.",
-            expertise: "Unsere Expertise",
-            expertiseText: "Stratosphere bietet ganzheitliche Energiespeicherlösungen, unterstützt erneuerbare Energieprojekte und verbessert Stromverteilungssysteme. Unsere Expertise umfasst Marktanalyse, technische Bewertung und unabhängige Zertifizierung durch Dritte, um eine nahtlose Integration und maximale Effizienz zu gewährleisten."
         },
         products: {
             title: "Produkte & Dienstleistungen",
-            intro: "Stratosphere bietet fortschrittliche Energiespeicherlösungen an, die Effizienz, Nachhaltigkeit und Rentabilität optimieren.",
+            intro: "Stratosphere liefert fortschrittliche Energiespeicherlösungen, die Effizienz, Nachhaltigkeit und Wirtschaftlichkeit optimieren.",
             whyChoose: {
                 title: "Warum uns wählen?",
                 expertise: {
                     title: "Bewährte Expertise",
-                    text: "Gestützt durch deutsche Ingenieursexzellenz und jahrzehntelange Erfahrung im Energiesektor."
+                    text: "Gestützt auf deutsche Ingenieurskunst und jahrzehntelange Erfahrung im Energiesektor."
                 },
                 network: {
                     title: "Globales Netzwerk",
-                    text: "Strategische Partnerschaften in Schlüsselregionen, einschließlich des Nahen Ostens und Nordamerikas."
+                    text: "Strategische Partnerschaften in wichtigen Regionen, einschließlich des Nahen Ostens und Nordamerikas."
                 },
                 solutions: {
                     title: "Maßgeschneiderte Lösungen",
-                    text: "Individuell angepasste Ansätze für die spezifischen Bedürfnisse jedes Marktes und Kunden."
+                    text: "Maßgeschneiderte Ansätze, die auf die spezifischen Bedürfnisse jedes Marktes und Kunden zugeschnitten sind."
                 },
                 sustainability: {
                     title: "Engagement für Nachhaltigkeit",
@@ -260,247 +475,408 @@ const translations = {
                 }
             },
             services: {
-                assessment: "Geschäftsfall & Marktbewertung",
-                assessmentIntro: "Unser Ansatz zur Geschäftsfall- und Marktbewertung umfasst umfassende Bewertungen von Energiespeichermöglichkeiten zur Unterstützung fundierter Investitionsentscheidungen.",
-                assessmentMarket: "Unser Marktbewertungsrahmen ist darauf ausgerichtet, Schlüsselmöglichkeiten im sich schnell entwickelnden Energiesektor zu identifizieren. Durch fortschrittliche Analysen und Brancheneinblicke identifizieren wir strategische Nischen, in denen Energiespeicherlösungen einen erheblichen Mehrwert schaffen können.",
-                assessmentPlanning: "Wir entwickeln fundierte Geschäftsfälle, die den wirtschaftlichen Nutzen jedes potenziellen Projekts aufzeigen und klare, umsetzbare Erkenntnisse und strategische Empfehlungen für optimale Investitionsentscheidungen liefern.",
-                assessmentStrategy: "Durch die Integration von tiefgehender Marktanalyse mit präziser Finanzmodellierung und strategischer Planung stellen wir sicher, dass jede Energiespeicherinvestition durch solide Daten und zukunftsorientierte Strategie untermauert ist.",
-                design: "Energiespeicher Design & Konfiguration",
-                testing: "Prüfung und Zertifizierung",
-                operation: "Betrieb & Wartung",
-                monitoring: "Fernüberwachung & Analytik",
-                troubleshooting: "Spezialisierte Fehlerbehebung & Umsatzoptimierung",
-                tradingStrategies: {
-                    title: "Energiehandelsstrategien",
-                    intro: "Unsere Energiehandelsstrategien umfassen die Entwicklung und Implementierung von umsatzmaximierenden Strategien für Energiespeicheranlagen.",
-                    sections: {
-                        revenueMaximization: {
-                            title: "Umsatzmaximierung",
-                            text: "Wir entwickeln Strategien zur Maximierung der Einnahmen für Energiespeicheranlagen durch Optimierung des Energiehandels und der Nutzung."
-                        },
-                        marketAnalysis: {
+                assessment: {
+                    title: "Geschäftsfall & Marktbewertung",
+                    intro: "Unser Ansatz zur Geschäftsfall- und Marktbewertung umfasst gründliche Analysen von Energiespeichermöglichkeiten, die fundierte Investitionsentscheidungen ermöglichen.",
+                    details: {
+                        market: {
                             title: "Marktanalyse",
-                            text: "Wir analysieren Markttrends und -bedingungen, um Möglichkeiten für Energiehandel und -nutzung zu identifizieren."
+                            text: "Unser Marktbewertungsrahmen ist darauf ausgerichtet, Schlüsselchancen im sich dynamisch entwickelnden Energiesektor zu identifizieren. Durch fortschrittliche Analysen und Brancheneinblicke ermitteln wir strategische Nischen, in denen Energiespeicherlösungen erheblichen Mehrwert schaffen können."
                         },
-                        strategicPartnerships: {
+                        planning: {
+                            title: "Geschäftsplanung",
+                            text: "Wir entwickeln fundierte Geschäftsfälle, die den wirtschaftlichen Nutzen jedes potenziellen Projekts klar darstellen und konkrete, umsetzbare Erkenntnisse sowie strategische Empfehlungen für optimale Investitionsentscheidungen liefern."
+                        },
+                        strategy: {
+                            title: "Strategische Integration",
+                            text: "Durch die Integration von tiefgehender Marktanalyse mit präziser Finanzmodellierung und strategischer Planung stellen wir sicher, dass jede Energiespeicher-Investition durch solide Daten und zukunftsorientierte Strategie untermauert ist."
+                        }
+                    }
+                },
+                assessmentMarket: "Unser Marktbewertungsrahmen ist darauf ausgerichtet, Schlüsselmöglichkeiten im sich schnell entwickelnden Energiesektor zu identifizieren.",
+                assessmentPlanning: "Wir entwickeln robuste Geschäftsfälle, die den wirtschaftlichen Nutzen jedes potenziellen Projekts aufzeigen.",
+                assessmentStrategy: "Durch die Integration von Marktanalyse mit präziser Finanzmodellierung stellen wir sicher, dass jede Investition durch solide Daten untermauert ist.",
+                
+                design: {
+                    title: "Energiespeicher-Design & Konfiguration",
+                    intro: "Unser Ansatz zum Energiespeicher-Design umfasst die Optimierung der Speicherlogik basierend auf dem Strombedarf.",
+                    details: {
+                        dispatch: {
+                            title: "Speicher-Dispatch-Logik",
+                            text: "Wir optimieren die Speicher-Dispatch-Logik für eine effiziente Energienutzung."
+                        },
+                        capacity: {
+                            title: "Speicherkapazitätsbeurteilung",
+                            text: "Wir bewerten die Speicherkapazität, um maximalen kumulativen Nutzen sicherzustellen."
+                        },
+                        costBenefit: {
+                            title: "Kosten-Nutzen-Analyse",
+                            text: "Wir führen Kosten-Nutzen-Analysen durch, um die wirtschaftliche Machbarkeit zu bewerten."
+                        }
+                    }
+                },
+                testing: {
+                    title: "Prüfung und Zertifizierung",
+                    intro: "Unser Prüfungs- und Zertifizierungsprozess umfasst umfassende Leistungs- und Sicherheitstests, Integrationstests und die Überprüfung der Einhaltung aktueller Industriestandards.",
+                    details: {
+                        performance: {
+                            title: "Leistungsprüfung",
+                            text: "Wir führen Leistungstests durch, um die Effizienz und Zuverlässigkeit von Energiespeichersystemen zu bewerten."
+                        },
+                        safety: {
+                            title: "Sicherheitsprüfung",
+                            text: "Wir führen Sicherheitstests durch, um sicherzustellen, dass Energiespeichersysteme sicher zu bedienen und zu handhaben sind."
+                        },
+                        integration: {
+                            title: "Integrationstests",
+                            text: "Wir führen Integrationstests durch, um sicherzustellen, dass Energiespeichersysteme nahtlos mit anderen Systemen und Komponenten zusammenarbeiten."
+                        },
+                        compliance: {
+                            title: "Konformitätsprüfung",
+                            text: "Wir überprüfen, dass Energiespeichersysteme den neuesten Industriestandards und Vorschriften entsprechen."
+                        }
+                    }
+                },
+                trading: {
+                    title: "Energiehandelsstrategien",
+                    intro: "Unsere Energiehandelsstrategien sind darauf ausgerichtet, die Rendite von Energiespeicheranlagen zu maximieren.",
+                    details: {
+                        revenue: {
+                            title: "Ertragsmaximierung",
+                            text: "Wir entwickeln Strategien zur Maximierung der Rendite für Energiespeicheranlagen durch Optimierung des Energiehandels und der Nutzung."
+                        },
+                        market: {
+                            title: "Marktanalyse",
+                            text: "Kontinuierliche Überwachung und Analyse der Energiemärkte für optimale Handelsentscheidungen."
+                        },
+                        partnerships: {
                             title: "Strategische Partnerschaften",
                             text: "Wir etablieren strategische Partnerschaften mit Energiehandelsunternehmen und Organisationen zur Erleichterung des Energiehandels und der Nutzung."
                         }
                     }
                 },
-                tradingDetails: {
-                    title: "Energy Trading & Optimization",
-                    intro: "We offer comprehensive energy trading solutions aimed at maximizing the value of your energy storage assets.",
-                    services: {
-                        marketAccess: {
-                            title: "Market Access",
-                            text: "Direct access to energy markets and trading platforms."
+                maintenance: {
+                    title: "System-Level Wartung & Notfallreaktion",
+                    intro: "Unser System-Level Wartungs- und Notfallreaktionsprozess umfasst regelmäßige O&M-Dienste für große Energiespeicheranlagen, gekoppelt mit 24/7 Notfallreaktion.",
+                    details: {
+                        regular: {
+                            title: "Regelmäßige O&M-Dienste",
+                            text: "Wir bieten regelmäßige O&M-Dienste an, um den effizienten Betrieb und die Wartung von Energiespeicheranlagen sicherzustellen."
                         },
-                        riskManagement: {
-                            title: "Risk Management",
-                            text: "Development and implementation of strategies for risk minimization."
+                        emergency: {
+                            title: "Notfallreaktion",
+                            text: "Wir bieten 24/7 Notfallreaktionsdienste an, um alle Probleme oder Notfälle zu beheben, die an Energiespeicheranlagen auftreten können."
+                        }
+                    }
+                },
+                troubleshooting: {
+                    title: "Spezialisierte Fehlerbehebung & Ertragsoptimierung",
+                    intro: "Unser spezialisierter Fehlerbehebungs- und Ertragsoptimierungsprozess umfasst die Identifizierung und Lösung komplexer technischer Probleme in Energiespeichersystemen bei gleichzeitiger Verwaltung der Ertragsströme.",
+                    details: {
+                        technical: {
+                            title: "Technische Problemidentifizierung",
+                            text: "Wir identifizieren komplexe technische Probleme in Energiespeichersystemen, die ihre Leistung oder Zuverlässigkeit beeinträchtigen können."
                         },
-                        portfolioOptimization: {
-                            title: "Portfolio Optimization",
-                            text: "Optimization of the energy portfolio for maximum return."
+                        revenue: {
+                            title: "Ertragsverwaltung",
+                            text: "Wir verwalten Ertragsströme durch Optimierung des Energiehandels und der Nutzung, um den Ertrag für unsere Kunden zu maximieren."
                         }
                     }
                 }
             }
         },
-        esg: {
-            title: "Unser ESG-Engagement",
-            intro: "Bei Stratosphere stehen ESG-Prinzipien im Mittelpunkt unserer Mission.",
-            mainVision: {
-                title: "Unsere Vision für eine nachhaltige Zukunft",
-                statement: "Durch das kontinuierliche Vorantreiben der Grenzen technologischer Innovation und ein unerschütterliches Engagement für höchste ESG-Standards revolutionieren wir Energielösungen und gestalten sorgfältig ein resilientes, nachhaltiges Energiesystem.",
+        home: {
+            hero: {
+                title: "Nachhaltige Energiezukunft mit intelligenten Speicherlösungen",
+                subtitle: "Innovative Energielösungen für die globale Energiewende — optimiert, zuverlässig und für eine nachhaltige Zukunft gebaut."
             },
-            expandableContent: {
-                environmental: {
-                    preview: "Im Zentrum unserer Umweltverantwortung steht das Engagement für die Integration modernster Energiespeicherlösungen, die nicht nur CO2-Emissionen senken, sondern auch die Effizienz und Zuverlässigkeit erneuerbarer Energiesysteme deutlich verbessern.",
-                    expanded: [
-                        "من خلال استخدام التقنيات المبتكرة، نتمكن من التقاط وتخزين الطاقة الفائضة من المصادر المتجددة وإطلاقها عند الحاجة، مما يقلل الاعتماد على الوقود الأحفوري ويقلل الأثر البيئي الإجمالي.",
-                        "تم تصميم أنظمة تخزين الطاقة المتطورة لدينا لتحسين أداء منشآت الطاقة الشمسية والرياح وغيرها من مصادر الطاقة المتجددة وضمان إمداد موثوق بالطاقة النظيفة.",
-                        "يساهم التزامنا المستمر بالبحث والتطوير في تقنيات تخزين الطاقة ليس فقط في تقليل انبعاثات غازات الاحتباس الحراري، ولكن أيضًا في تمهيد الطريق لمستقبل مستدام."
-                    ]
-                },
-                social: {
-                    preview: "يتجسد التزامنا بالمسؤولية الاجتماعية من خلال شبكة من الشراكات العالمية التي تساهم بنشاط في تعزيز الاقتصادات المحلية، وتنمية القوى العاملة، وتوسيع الوصول إلى الطاقة.",
-                    expanded: [
-                        "نحن مقتنعون بأن تمكين المجتمعات يبدأ بالاستثمار في الأفراد والموارد على المستوى المحلي. من خلال التعاون مع المنظمات المحلية والمؤسسات التعليمية، نخلق فرصًا للتطوير المهني وبناء المهارات.",
-                        "نركز أيضًا على توسيع الوصول إلى الطاقة في المناطق المحرومة من الخدمات، حيث ندرك أن الطاقة الموثوقة وبأسعار معقولة هي أساس تنمية المجتمعات.",
-                        "من خلال دمج هذه المبادرات الاجتماعية في نموذج أعمالنا، نعزز ليس فقط رفاهية المجتمعات، ولكن أيضًا ثقافة الشمول والتقدم المشترك."
-                    ]
-                },
-                governance: {
-                    preview: "يعتمد نهجنا في حوكمة الشركات على أساس الشفافية الثابتة، والامتثال التنظيمي الصارم، وإدارة الموارد الحكيمة.",
-                    expanded: [
-                        "نحن مقتنعون بأن ممارسات الحوكمة السليمة ضرورية لخلق قيمة طويلة الأجل وتعزيز الثقة بين أصحاب المصلحة لدينا.",
-                        "نقوم باستمرار بتحسين إطار الحوكمة لدينا لتلبية وتجاوز المتطلبات التنظيمية العالمية.",
-                        "استراتيجياتنا لإدارة الموارد المسؤولة مصممة لتحسين الكفاءة وتعزيز النمو المستدام."
-                    ]
-                }
-            },
-            readMore: "Mehr lesen",
-            readLess: "Weniger anzeigen",
-            visionStatement: "Durch das Vorantreiben der Grenzen technologischer Innovation und ein unerschütterliches Engagement für höchste ESG-Standards revolutionieren wir Energielösungen und gestalten sorgfältig ein resilientes, nachhaltiges Energiesystem.",
-            expandButton: "Mehr anzeigen",
-            collapseButton: "Weniger anzeigen",
-            learnMore: "Mehr erfahren",
-            sectionTitle: "ESG-Initiativen",
-            impactMetrics: "Wirkungskennzahlen",
-            metrics: {
-                title: "Leistungskennzahlen",
-                environmental: "Umweltkennzahlen",
-                social: "Soziale Kennzahlen",
-                governance: "Governance-Kennzahlen"
-            },
-            impact: {
-                title: "Unsere Wirkung",
-                description: "Wir verpflichten uns zur kontinuierlichen Messung und Verbesserung unserer ESG-Auswirkungen."
-            },
-            visionText: {
-                title: "Unsere Vision",
-                statement: "Durch das kontinuierliche Vorantreiben der Grenzen technologischer Innovation und ein unerschütterliches Engagement für höchste ESG-Standards revolutionieren wir Energielösungen und gestalten sorgfältig ein resilientes, nachhaltiges Energiesystem."
-            },
-            sections: {
-                title: "ESG-Initiativen",
-                environmental: "Environmental Stewardship",
-                social: "Social Responsibility",
-                governance: "Corporate Governance"
-            },
-            buttons: {
-                expand: "Mehr anzeigen",
-                collapse: "Weniger anzeigen",
-                learnMore: "Mehr erfahren"
+            stats: {
+                engineers: "Erfahrene Ingenieure und Experten",
+                storage: "Energiespeicheranlagen im Betrieb",
+                countries: "Länder mit aktiver Präsenz"
             }
         },
-        careers: {
-            hero: {
-                title: "Gestalten Sie die Zukunft. Innovieren Sie mit uns.",
-                mainText: "Stratosphere revolutioniert die Energielandschaft mit fortschrittlichen Speicherlösungen. Unser Ziel ist es, die Energieinfrastruktur der nächsten Generation zu entwickeln - intelligent, effizient und nahtlos in erneuerbare Energien integriert.",
-                description: "Unser Team von Ingenieuren und Analysten arbeitet an der Schnittstelle von Technologie und Nachhaltigkeit und entwickelt optimierte Systeme, die Industrien, Städte und ganze Regionen mit Energie versorgen. Wenn Sie die Energiezukunft mitgestalten möchten, laden wir Sie ein, Teil unseres dynamischen Teams zu werden."
+        about: {
+            title: "Über uns",
+            intro: "Wir sind ein führender Anbieter innovativer Energiespeicherlösungen und setzen uns für den globalen Übergang zu nachhaltiger Energie ein.",
+            whatWeDo: {
+                title: "Was wir tun",
+                text1: "Die Stratosphere Green Energy GmbH mit Sitz in Deutschland nutzt modernste deutsche Ingenieurskunst und einen hervorragenden Marktauftritt, um nachhaltige und effiziente Energielösungen zu entwickeln. Mit einer starken Präsenz in wichtigen Energiespeichermärkten, einschließlich des Nahen Ostens und der Vereinigten Staaten, setzen wir uns für die Beschleunigung des globalen Übergangs zu sauberer Energie ein.",
+                text2: "Unser Team von 200 qualifizierten Ingenieuren verwaltet und wartet weltweit etwa 5 GWh an Energiespeicheranlagen und gewährleistet optimale Leistung, Zuverlässigkeit und Effizienz in verschiedenen Energieinfrastrukturen."
             },
-            openPositions: {
-                title: "Offene Stellen",
-                fieldManager: {
-                    title: "Field Manager",
-                    type: "Vollzeit",
-                    location: "Verschiedene Standorte",
-                    description: "Der BESS Field Service Techniker ist verantwortlich für die Wartung, Fehlerbehebung und Optimierung von Energiespeichersystemen an mehreren Standorten. Berichtet an den Operations Manager, diese Position gewährleistet die Systemzuverlässigkeit, Leistung und Einhaltung von Sicherheitsstandards.",
-                    responsibilities: [
-                        "Durchführung von präventiver und korrektiver Wartung",
-                        "Fehlerbehebung an Energiespeichersystemen",
-                        "Sicherstellung der Einhaltung von Sicherheitsstandards",
-                        "Erstellung von Wartungs- und Leistungsberichten"
-                    ],
-                    requirements: [
-                        "Abschluss in Elektrotechnik oder gleichwertige Qualifikation",
-                        "3+ Jahre Erfahrung in der Wartung von Energiesystemen",
-                        "Kenntnisse von BESS-Systemen",
-                        "Ausgezeichnete Kommunikationsfähigkeiten"
-                    ]
-                }
+            mission: {
+                title: "Unsere Mission",
+                text: "Wir streben danach, die Nutzung erneuerbarer Energien durch die Integration modernster Speichertechnologien zu fördern, die Energieeffizienz zu optimieren und durch innovative und zuverlässige Lösungen eine nachhaltige Zukunft zu gestalten."
             },
-            applySection: {
-                button: "Jetzt bewerben",
-                message: "Vielen Dank für Ihr Interesse an unserer Position. Bitte senden Sie Ihren Lebenslauf an info@stratospherege.com"
+            globalReach: {
+                title: "Unsere globale Reichweite",
+                text: "Stratosphere nutzt seine globale Präsenz, um mit regionalen Führungskräften zusammenzuarbeiten und verschiedene Marktbedürfnisse zu erfüllen. Unsere Joint Ventures in den Vereinigten Staaten, Saudi-Arabien, den VAE und Kuwait bieten maßgeschneiderte O&M-Dienstleistungen für erneuerbare Energieinfrastruktur und meistern lokale Herausforderungen bei der Bereitstellung erstklassiger Speicherlösungen."
+            },
+            expertise: {
+                title: "Unsere Expertise",
+                text: "Stratosphere bietet ganzheitliche Energiespeicherlösungen, unterstützt Projekte für erneuerbare Energien und optimiert Stromverteilungssysteme. Unsere Expertise umfasst Marktanalyse, technische Bewertung und unabhängige Zertifizierung durch Dritte, um eine nahtlose Integration und maximale Effizienz zu gewährleisten."
             }
         },
         contact: {
-            title: "Kontakt",
+            title: "Kontaktieren Sie uns",
             hero: {
                 question: "Möchten Sie mehr darüber erfahren, wie Stratosphere Ihre erneuerbaren Energieprojekte unterstützen kann?",
-                action: "Kontaktieren Sie uns noch heute für maßgeschneiderte Energiespeicherlösungen und professionelle Betriebsunterstützung."
+                action: "Kontaktieren Sie uns noch heute für maßgeschneiderte Energiespeicherlösungen und professionelle Betriebsberatung."
             },
-            address: "Adresse",
-            email: "E-Mail",
-            followUs: "Folgen Sie uns",
+            company: {
+                title: "Stratosphere Green Energy GmbH",
+                address: {
+                    title: "Adresse",
+                    text: "Schuhmannstr. 27, 60325 Frankfurt, Deutschland"
+                },
+                email: {
+                    title: "E-Mail"
+                }
+            },
+            quickLinks: {
+                title: "Schnellzugriff",
+                home: "Startseite",
+                about: "Über uns",
+                products: "Produkte & Dienstleistungen",
+                esg: "ESG",
+                careers: "Karriere",
+                contact: "Kontakt"
+            },
             languages: {
                 title: "Besuchen Sie unsere Websites",
                 english: "Englisch",
                 german: "Deutsch",
                 arabic: "Arabisch"
-            },
-            contactInfo: {
-                title: "Kontaktinformationen",
-                office: "Hauptsitz",
-                phone: "Telefon",
-                email: "E-Mail"
-            },
-            form: {
-                name: "Name",
-                company: "Unternehmen",
-                message: "Nachricht",
-                submit: "Absenden",
-                success: "Ihre Nachricht wurde erfolgreich gesendet.",
-                error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
             }
         },
-        footer: {
-            quickLinks: "Schnellzugriff",
-            address: "Adresse",
-            addressText: "Schuhmannstr. 27, 60325 Frankfurt, Deutschland",
-            email: "E-Mail",
-            followUs: "Folgen Sie uns",
-            copyright: "Urheberrecht ©2025 Stratosphere. Alle Rechte vorbehalten."
+        esg: {
+            title: "Unser Engagement für ESG",
+            subtitle: "Bei Stratosphere stehen ESG-Prinzipien im Mittelpunkt unserer Mission und treiben Nachhaltigkeit, Innovation und ethische Geschäftspraktiken voran.",
+            
+            environmental: {
+                title: "Umwelt",
+                preview: "Im Zentrum unseres Umweltengagements steht die Integration modernster Energiespeicherlösungen, die nicht nur CO2-Emissionen reduzieren, sondern auch die Effizienz und Zuverlässigkeit erneuerbarer Energiesysteme deutlich verbessern.",
+                expandedContent: [
+                    "Durch den Einsatz innovativer Technologien können wir überschüssige Energie aus erneuerbaren Quellen erfassen, effizient speichern und bei Bedarf freisetzen, wodurch die Abhängigkeit von fossilen Brennstoffen reduziert und die Gesamtumweltbelastung minimiert wird.",
+                    "Unsere fortschrittlichen Energiespeichersysteme sind darauf ausgelegt, die Leistung von Solar-, Wind- und anderen erneuerbaren Energieanlagen zu optimieren und eine zuverlässige und konstante Versorgung mit sauberer Energie sicherzustellen.",
+                    "Darüber hinaus erstreckt sich unser Engagement auf die kontinuierliche Forschung und Entwicklung im Bereich der Energiespeichertechnologien, wodurch wir an der Spitze der Umweltinnovation bleiben."
+                ],
+                readMore: "Mehr anzeigen",
+                readLess: "Weniger anzeigen"
+            },
+            
+            social: {
+                title: "Soziales",
+                preview: "Unser soziales Engagement basiert auf der Überzeugung, dass nachhaltige Energielösungen allen Menschen zugutekommen sollten.",
+                expandedContent: [
+                    "Wir investieren aktiv in die Entwicklung lokaler Talente und schaffen qualifizierte Arbeitsplätze in den Gemeinden, in denen wir tätig sind.",
+                    "Durch strategische Partnerschaften mit Bildungseinrichtungen fördern wir die nächste Generation von Energieexperten und Innovatoren.",
+                    "Wir setzen uns aktiv für Vielfalt, Chancengleichheit und Inklusion in der Energiebranche ein und fördern eine integrative Arbeitskultur."
+                ]
+            },
+            governance: {
+                title: "Unternehmensführung",
+                preview: "Unsere Unternehmensführung basiert auf Transparenz, Ethik und Verantwortlichkeit.",
+                expandedContent: [
+                    "Wir halten die höchsten Standards für Unternehmensethik, Compliance und Transparenz in allen Geschäftsbereichen ein.",
+                    "Durch regelmäßige interne und externe Audits sowie strenge Überprüfungen gewährleisten wir die kontinuierliche Einhaltung aller relevanten Vorschriften und Standards.",
+                    "Wir pflegen einen transparenten und konstruktiven Dialog mit allen Stakeholdern und stellen sicher, dass ihre Interessen in unseren Entscheidungsprozessen berücksichtigt werden."
+                ]
+            },
+            vision: {
+                text: "Durch kontinuierliches Vorantreiben der Grenzen technologischer Innovation und konsequentes Einhalten höchster ESG-Standards revolutionieren wir Energielösungen und gestalten sorgfältig ein widerstandsfähiges, nachhaltiges Energieökosystem. Dieses dauerhafte Engagement verändert nicht nur die heutige Energielandschaft, sondern legt auch ein solides Fundament für den Wohlstand und das Wohlergehen zukünftiger Generationen."
+            }
         },
-        features: {
-            title: "Unsere Kernkompetenzen",
-            innovation: {
-                title: "Innovation",
-                text: "Entwicklung zukunftsweisender Energiespeicherlösungen"
+        careers: {
+            title: "Karriere bei uns",
+            subtitle: "Gestalten Sie mit uns die Energiewende",
+            intro: {
+                title: "Gestalten Sie die Zukunft. Innovieren Sie mit uns.",
+                text1: "Stratosphere revolutioniert die Energielandschaft mit fortschrittlichen Speicherlösungen. Unser Ziel ist es, die Energieinfrastruktur der nächsten Generation zu entwickeln – intelligent, effizient und nahtlos in erneuerbare Energiesysteme integriert.",
+                text2: "Unser Team aus Ingenieuren und Analysten arbeitet an der Schnittstelle von Technologie und Nachhaltigkeit. Wir entwickeln optimierte Systeme, die Industrien, Städte und ganze Regionen mit nachhaltiger Energie versorgen. Wenn Sie die Zukunft der Energie mitgestalten möchten, werden Sie Teil unseres dynamischen Teams."
             },
-            reliability: {
-                title: "Zuverlässigkeit",
-                text: "Gewährleistung stabiler und effizienter Energiesysteme"
-            },
-            sustainability: {
-                title: "Nachhaltigkeit",
-                text: "Förderung einer umweltfreundlichen Energiezukunft"
+            positions: {
+                title: "Offene Stellen",
+                systemEngineer: {
+                    title: "System Ingenieur",
+                    description: "Wir suchen einen erfahrenen System Ingenieur für die technische Leitung unserer Batteriespeicherprojekte. Von der Konzeption bis zur vollständigen Inbetriebnahme gewährleisten Sie eine reibungslose Projektdurchführung durch fachkundige technische Beratung und Überwachung.",
+                    responsibilities: {
+                        title: "Hauptaufgaben",
+                        items: [
+                            "Systemdesign: Entwicklung von Batteriespeichersystemen im Netzmaßstab, einschließlich Standortplanung, Einzelleitungsschemas, Energiesystemanalyse, Netzkonformität und Steuerungsrahmen",
+                            "Beschaffungsunterstützung: Technische Expertise bei der Auswahl optimaler Komponenten und Technologien während des Beschaffungsprozesses",
+                            "Ausschreibung & Due Diligence: Assist in EPC-Ausschreibungsbewertungen und Durchführung technischer Due Diligence für potenzielle Partner und Lösungen",
+                            "Projektanforderungen: Definition technischer Spezifikationen und Bewertung standortspezifischer Einschränkungen",
+                            "Quality Assurance: Monitor installation quality and system performance",
+                            "Documentation: Create technical reports and project documentation"
+                        ]
+                    },
+                    qualifications: {
+                        title: "Qualifikationen & Fähigkeiten",
+                        required: {
+                            title: "Required",
+                            items: [
+                                "3-5 Jahre Erfahrung im Bereich BESS-Design oder HV/EHV-Umspannwerke",
+                                "Bachelor- oder Masterabschluss in Elektrotechnik, Batteriespeicher oder einem verwandten Bereich",
+                                "Fundiertes Verständnis von Lithium-Ionen-Batterien, Wechselrichtern und Netzintegration",
+                                "Kenntnisse der Industriestandards und Netzanschlussbedingungen",
+                                "Vertrautheit mit Übertragungs- und Verteilungsnetzen (T&D)",
+                                "Erfahrung mit DIgSILENT, ETAP, AutoCAD und Microsoft Office",
+                                "Ausgeprägte Kommunikations- und Stakeholder-Management-Fähigkeiten"
+                            ]
+                        },
+                        preferred: {
+                            title: "Preferred",
+                            items: [
+                                "Experience working with Distribution Network Operators (DNOs) and managing grid connection processes",
+                                "Commercial awareness in system design cost-effectiveness",
+                                "Ability to stay updated on emerging technologies and industry advancements"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "Was wir bieten",
+                        items: [
+                            "Wettbewerbsfähiges Gehalt: Basierend auf Erfahrung und Qualifikationen",
+                            "Karriereentwicklung: Laufende Schulungen und berufliche Entwicklungsmöglichkeiten",
+                            "Umfassende Leistungen: Krankenversicherung, Rentenplan und großzügige Urlaubsregelungen",
+                            "Innovatives Arbeitsumfeld: Kollaborative und zukunftsorientierte Kultur",
+                            "Modernste Tools: Zugang zu neuester Engineering-Software und Technologien"
+                        ]
+                    },
+                    closing: "Wenn Sie ein erfahrener System Ingenieur sind und sich für Energiespeicherung und Netzlösungen begeistern, laden wir Sie ein, sich zu bewerben und Teil unseres dynamischen Teams zu werden!",
+                    applyBtn: "Jetzt bewerben"
+                },
+                fieldManager: {
+                    title: "Betriebsleiter",
+                    description: "Der BESS Field Service Techniker ist verantwortlich für die Wartung, Fehlerbehebung und Optimierung von Energiespeichersystemen an mehreren Standorten. In dieser Position, die dem Operations Manager unterstellt ist, wird die Systemzuverlässigkeit, -leistung und die Einhaltung von Sicherheitsstandards sichergestellt.",
+                    responsibilities: {
+                        title: "Hauptaufgaben",
+                        items: [
+                            "Wartung & Inspektionen: Durchführung routinemäßiger Wartungen, Inspektionen und Fehlerbehebung zur Gewährleistung der Systemeffizienz",
+                            "System-Upgrades: Durchführung von Software- und Firmware-Updates zur Verbesserung der Zuverlässigkeit",
+                            "Leistungsüberwachung: Analyse von Systemdaten zur Identifizierung und Behebung potenzieller Probleme",
+                            "Kundensupport: Bereitstellung von Remote-Diagnoseunterstützung und Vor-Ort-Fehlerbehebung zur Minimierung von Ausfallzeiten",
+                            "Inventar & Compliance: Verwaltung von Ersatzteilen und Sicherstellung der Einhaltung von Sicherheitsvorschriften",
+                            "Zusammenarbeit & Berichterstattung: Zusammenarbeit mit Entwicklungsteams zur Produktverbesserung und Führung detaillierter Serviceaufzeichnungen"
+                        ]
+                    },
+                    qualifications: {
+                        title: "Qualifikationen",
+                        required: {
+                            title: "Required",
+                            items: [
+                                "Abschluss/Zertifizierung in Elektrotechnik oder Elektromechanik",
+                                "Erfahrung in elektrischer oder multitechnischer Wartung",
+                                "Grundlegende IT-Kenntnisse (Word, Outlook, Excel, IP-Konfigurationen)",
+                                "Arbeitssicherheitszertifizierung",
+                                "Bereitschaft zu Reisen, einschließlich Übernachtungen oder internationaler Einsätze"
+                            ]
+                        },
+                        preferred: {
+                            title: "Preferred",
+                            items: [
+                                "Erfahrung mit Batteriespeichersystemen (BESS)",
+                                "Kenntnisse in Leistungselektronik (Wechselrichter, Transformatoren, etc.)",
+                                "HVAC-Schulung (F-Gas-Zertifizierung)",
+                                "Strong IT skills (networking, MODBUS/TCP, remote desktop)",
+                                "Certifications: C&G2391-5, BS7671, or equivalent",
+                                "Hochspannungsberechtigung"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "Was wir bieten",
+                        items: [
+                            "Wettbewerbsfähiges Gehalt & Zusatzleistungen",
+                            "Großzügiger Urlaub & Rentenplan",
+                            "Umfassende Schulung & Karriereentwicklungsmöglichkeiten",
+                            "Firmenwagen, SIM-Karte, Tankkarte und Laptop",
+                            "Teambuilding-Events & kontinuierliche Weiterbildung"
+                        ]
+                    },
+                    closing: "Wenn Sie sich für Energiespeicherung begeistern und die Qualifikationen erfüllen, bewerben Sie sich jetzt und werden Sie Teil unseres dynamischen Teams!",
+                    applyBtn: "Jetzt bewerben"
+                },
+                projectManager: {
+                    title: "Projektmanager",
+                    description: "Wir suchen einen erfahrenen Projektmanager für die Leitung großer Energieprojekte von der Planung bis zum Abschluss. Diese Position gewährleistet eine termingerechte, sichere und qualitativ hochwertige Projektausführung in Koordination mit Kunden, Auftragnehmern und internen Teams.",
+                    responsibilities: {
+                        title: "Hauptaufgaben",
+                        items: [
+                            "Baustellenmanagement: Überwachung von Auftragnehmern, Durchsetzung von Sicherheits- und Umweltvorschriften und Durchführung von Inspektionen",
+                            "Problemlösung: Bewältigung von Herausforderungen vor Ort zur Gewährleistung eines reibungslosen Projektablaufs",
+                            "Berichterstattung & Dokumentation: Führung von Projektprotokollen, Erstellung von Compliance-Berichten und regelmäßige Kundenaktualisierungen",
+                            "Stakeholder-Kommunikation: Hauptansprechpartner für Kunden, Teilnahme an Besprechungen und Priorisierung kritischer Themen",
+                            "Medien & Compliance: Dokumentation des Baufortschritts für Dokumentations- und Werbezwecke"
+                        ]
+                    },
+                    qualifications: {
+                        title: "Qualifikationen & Fähigkeiten",
+                        required: {
+                            title: "Required",
+                            items: [
+                                "Ausgeprägte Kommunikations- und Stakeholder-Management-Fähigkeiten",
+                                "Zertifizierungen: SMSTC, CSCS und Erste-Hilfe am Arbeitsplatz",
+                                "Ausbildung: HNC oder gleichwertig in einem baubezogenen Fachgebiet",
+                                "Projektmanagement: Erfahrung in Bau- und Energiesektorprojekten",
+                                "Arbeitssicherheit: NEBOSH-Zertifizierung oder gleichwertig",
+                                "Großprojekte: Nachgewiesene Erfahrung im Management von Multi-Contractor-Energieprojekten",
+                                "Branchenerfahrung: Erfahrung im öffentlichen & privaten Sektor, einschließlich VNB-Kooperationen"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "Was wir bieten",
+                        items: [
+                            "Wettbewerbsfähiges Gehalt & Zusatzleistungen – Einschließlich Rente, großzügigem Urlaub und Karrieremöglichkeiten",
+                            "Firmenausstattung – Fahrzeug, Mobiltelefon, Tankkarte und Laptop",
+                            "Berufliche Entwicklung – Schulungen, Teamevents & Aufstiegsmöglichkeiten in einem dynamischen Sektor"
+                        ]
+                    },
+                    closing: "Wenn Sie ein ergebnisorientierter Projektmanager mit Leidenschaft für Energieprojekte sind, bewerben Sie sich jetzt und werden Sie Teil unseres Expertenteams!",
+                    applyBtn: "Jetzt bewerben"
+                },
+                applyBtn: "Jetzt bewerben",
+                readMore: "Mehr lesen",
+                readLess: "Weniger anzeigen",
+                modal: {
+                    title: "Wie Sie sich bewerben können",
+                    message: "Wenn Sie ein proaktiver und erfahrener Fachmann sind, der sich für nachhaltige Energielösungen begeistert, senden Sie bitte Ihren Lebenslauf und ein Anschreiben an careers@stratospherege.com. Bitte geben Sie die Position, für die Sie sich bewerben, in der Betreffzeile an.",
+                    footer: "Stratosphere ist ein Arbeitgeber, der Chancengleichheit bietet. Wir schätzen Vielfalt und begrüßen Bewerbungen von allen qualifizierten Kandidaten, unabhängig von Geschlecht, Alter, ethnischer Herkunft, Religion oder Behinderung."
+                }
             }
         }
     },
     ar: {
-        // Arabic translations
         nav: {
             home: "الرئيسية",
-            about: "من نحن",
+            about: "معلومات عنا",
             products: "المنتجات والخدمات",
-            esg: "الحوكمة البيئية والاجتماعية",
+            esg: "ESG",
             careers: "الوظائف",
             contact: "اتصل بنا",
             language: "اللغة"
         },
-        home: {
-            hero: {
-                title: "تمكين مستقبل الطاقة المستدامة بحلول التخزين الذكية",
-                subtitle: "حلول طاقة مبتكرة تدعم التحول العالمي نحو الطاقة المتجددة — محسنة وموثوقة ومصممة لمستقبل مستدام"
-            },
-            stats: {
-                engineers: "مهندس متخصص",
-                storage: "أصول تخزين الطاقة",
-                countries: "البلدان المخدومة"
+        footer: {
+            quickLinks: "روابط سريعة",
+            address: "العنوان",
+            addressText: "شومان شتراسه ٢٧، ٦٠٣٢٥ فرانكفورت، ألمانيا",
+            email: "البريد الإلكتروني",
+            followUs: "تابعنا",
+            copyright: "حقوق النشر ©2025 Stratosphere. جميع الحقوق محفوظة.",
+            links: {
+                home: "الرئيسية",
+                about: "معلومات عنا",
+                products: "المنتجات والخدمات",
+                esg: "ESG",
+                careers: "الوظائف",
+                contact: "اتصل بنا"
             }
-        },
-        about: {
-            title: "من نحن",
-            intro: "شركة Stratosphere Green Energy GmbH هي قوة رائدة في حلول تخزين الطاقة، مكرسة لتعزيز دمج الطاقة المتجددة على مستوى العالم.",
-            whatWeDo: {
-                title: "ماذا نفعل",
-                description1: "شركة Stratosphere Green Energy GmbH الموجودة في ألمانيا، نستغل تكنولوجيا ألمانية متطورة وسمعة عالمية ممتازة لتطوير حلول الطاقة المستدامة والفعالة. مع حصة قوية في أسواق الطاقة المخزنة الرئيسية، بما في ذلك الشرق الأوسط والولايات المتحدة، نحن ملتزمون بتسريع تحول الطاقة العالمي نحو الطاقة المتجددة.",
-                description2: "فريقنا من 200 مهندس متخصص يدير ويحمي حوالي 5 جيجاواط ساعة من أصول الطاقة المخزنة العالمية، من أجل تحقيق أداء أمثل وثبات وكفاءة في الأنظمة الطاقية المختلفة."
-            },
-            mission: "مهمتنا",
-            missionText: "نسعى لتعزيز اعتماد الطاقة المتجددة من خلال دمج تقنيات التخزين المتطورة، وتحسين كفاءة الطاقة، وتعزيز مستقبل أكثر استدامة من خلال الحلول المبتكرة والموثوقة.",
-            reach: "انتشارنا العالمي",
-            reachText: "تستفيد Stratosphere من تواجدها العالمي للشراكة مع القادة الإقليميين وتلبية احتياجات السوق المتنوعة. تقدم مشاريعنا المشتركة في الولايات المتحدة والمملكة العربية السعودية والإمارات العربية المتحدة والكويت خدمات تشغيل وصيانة مخصصة للبنية التحتية للطاقة المتجددة، متغلبة على التحديات المحلية مع تقديم حلول تخزين متميزة.",
-            expertise: "خبرتنا",
-            expertiseText: "تقدم Stratosphere حلولاً شاملة لتخزين الطاقة، ودعم مشاريع الطاقة المتجددة وتحسين أنظمة توزيع الطاقة. تمتد خبرتنا لتشمل تحليل السوق والتقييم الفني والشهادات المستقلة من طرف ثالث، مما يضمن التكامل السلس والكفاءة القصوى."
         },
         products: {
             title: "المنتجات والخدمات",
-            intro: "تقدم Stratosphere حلول تخزين الطاقة المتقدمة، مع تحسين الكفاءة والاستدامة والربحية.",
+            intro: "تقدم Stratosphere حلول تخزين طاقة متطورة، تحقق التوازن الأمثل بين الكفاءة والاستدامة والجدوى الاقتصادية.",
             whyChoose: {
                 title: "لماذا تختارنا؟",
                 expertise: {
@@ -513,258 +889,422 @@ const translations = {
                 },
                 solutions: {
                     title: "حلول مخصصة",
-                    text: "نهج مصممة خصيصاً لتلبية الاحتياجات الفريدة لكل سوق وعميل."
+                    text: "حلول مصممة خصيصاً لتلبية الاحتياجات الفريدة لكل سوق وعميل."
                 },
                 sustainability: {
                     title: "الالتزام بالاستدامة",
-                    text: "ملتزمون بتعزيز الطاقة المتجددة وتعزيز الممارسات المستدامة."
+                    text: "ملتزمون بتطوير الطاقة المتجددة وتعزيز الممارسات المستدامة."
                 }
             },
             services: {
-                assessment: "تقييم الأعمال والسوق",
-                assessmentIntro: "يتضمن نهجنا في تقييم الأعمال والسوق تقييمات شاملة لفرص تخزين الطاقة مصممة لتمكين قرارات استثمارية مستنيرة.",
-                assessmentMarket: "إطار تقييم السوق لدينا مصمم لتحديد الفرص الرئيسية في قطاع الطاقة سريع التطور. من خلال الاستفادة من التحليلات المتقدمة ورؤى الصناعة، نحدد المجالات الاستراتيجية حيث يمكن لحلول تخزين الطاقة أن تقدم قيمة كبيرة.",
-                assessmentPlanning: "نبني حالات عمل قوية توضح الفوائد الاقتصادية لكل مشروع محتمل، مما يوفر رؤى واضحة وقابلة للتنفيذ وتوصيات استراتيجية تدعم قرارات الاستثمار المثلى.",
-                assessmentStrategy: "من خلال دمج تحليل السوق المتعمق مع النمذجة المالية الدقيقة والتخطيط الاستراتيجي، نضمن أن كل استثمار في تخزين الطاقة مدعوم ببيانات قوية واستراتيجية مستقبلية.",
-                trading: "استراتيجيات تداول الطاقة",
-                tradingIntro: "تتضمن استراتيجيات تداول الطاقة لدينا تطوير وتنفيذ استراتيجيات تعظيم الإيرادات لمنشآت تخزين الطاقة.",
-                tradingRevenue: "نطور استراتيجيات لتعظيم الإيرادات لمنشآت تخزين الطاقة من خلال تحسين تداول الطاقة واستخدامها.",
-                tradingMarket: "نحلل اتجاهات وظروف السوق لتحديد فرص تداول واستخدام الطاقة.",
-                tradingPartnerships: "نؤسس شراكات استراتيجية مع شركات ومنظمات تداول الطاقة لتسهيل تداول واستخدام الطاقة.",
-                testing: "الاختبار والتصديق",
-                testingIntro: "تتضمن عملية الاختبار والتصديق لدينا إجراء اختبارات شاملة للأداء والسلامة، واختبارات التكامل، والتحقق من الامتثال لأحدث معايير الصناعة.",
-                complianceVerification: "نتحقق من امتثال أنظمة تخزين الطاقة لأحدث معايير ولوائح الصناعة.",
-                integrationTesting: "نجري اختبارات التكامل لضمان عمل أنظمة تخزين الطاقة بسلاسة مع الأنظمة والمكونات الأخرى.",
-                safetyTesting: "نجري اختبارات السلامة لضمان أن أنظمة تخزين الطاقة آمنة للتشغيل والتعامل.",
-                performanceTesting: {
-                    title: "اختبار الأداء",
-                    text: "نجري اختبارات الأداء لتقييم كفاءة وموثوقية أنظمة تخزين الطاقة."
-                },
-                maintenance: "صيانة على مستوى النظام والاستجابة للطوارئ",
-                maintenanceIntro: "تتضمن عملية الصيانة والاستجابة للطوارئ على مستوى النظام لدينا تقديم خدمات التشغيل والصيانة المنتظمة لمنشآت تخزين الطاقة الكبيرة مع خدمة الطوارئ على مدار الساعة.",
-                regularServices: "نقدم خدمات التشغيل والصيانة المنتظمة لضمان التشغيل والصيانة الفعالة لمنشآت تخزين الطاقة.",
-                emergencyResponse: "نقدم خدمة الاستجابة للطوارئ على مدار الساعة لمعالجة أي مشاكل أو حالات طوارئ قد تنشأ في منشآت تخزين الطاقة.",
-                troubleshooting: "استكشاف الأخطاء المتخصص وتحسين الإيرادات",
-                troubleshootingIntro: "تحدد عملية استكشاف الأخطاء وتحسين الإيرادات المتخصصة لدينا المشكلات الفنية المعقدة وتحلها مع تحسين تدفقات الإيرادات.",
-                technicalIssue: "نحدد ونحل المشكلات الفنية المعقدة في أنظمة تخزين الطاقة التي قد تؤثر على أدائها أو موثوقيتها.",
-                revenueManagement: "نحسن تدفقات الإيرادات من خلال إدارة تداول واستخدام الطاقة بكفاءة لتعظيم الربحية لعملائنا.",
-                monitoring: "المراقبة عن بعد والتحليلات",
-                monitoringIntro: "تمكن خدمات المراقبة والتحليل عن بعد لدينا من المراقبة الاستباقية للنظام واتخاذ القرارات المستندة إلى البيانات.",
-                realTimeMonitoring: "نقدم مراقبة وتحليل في الوقت الفعلي لأنظمة تخزين الطاقة للحصول على الأداء الأمثل والكشف المبكر عن المشكلات.",
-                dataAnalytics: "توفر أدوات التحليل المتقدمة لدينا رؤى قابلة للتنفيذ لتحسين النظام وزيادة الكفاءة.",
-                designIntro: "يتضمن نهجنا في تصميم وتكوين تخزين الطاقة تحسين منطق توزيع التخزين، وتقييم سعة التخزين، وإجراء تحليل التكلفة والفائدة.",
-                operationIntro: "تضمن خدمات التشغيل والصيانة لدينا الأداء الأمثل وموثوقية منشآت تخزين الطاقة.",
-                monitoringIntro: "تمكن خدمات المراقبة والتحليل عن بعد لدينا من المراقبة الاستباقية للنظام واتخاذ القرارات المستندة إلى البيانات.",
-                troubleshootingIntro: "تحدد عملية استكشاف الأخطاء وتحسين الإيرادات المتخصصة لدينا المشكلات الفنية المعقدة وتحلها مع تحسين تدفقات الإيرادات.",
-                tradingStrategies: {
-                    title: "استراتيجيات تداول الطاقة",
-                    intro: "تشمل استراتيجيات تداول الطاقة لدينا تطوير وتنفيذ استراتيجيات تعظيم الإيرادات لمنشآت تخزين الطاقة.",
-                    sections: {
-                        revenueMaximization: {
-                            title: "تعظيم الإيرادات",
-                            text: "نطور استراتيجيات لتعظيم الإيرادات لمنشآت تخزين الطاقة من خلال تحسين تداول الطاقة واستخدامها."
-                        },
-                        marketAnalysis: {
+                assessment: {
+                    title: "دراسة الجدوى وتقييم السوق",
+                    intro: "نتبع منهجية متكاملة في دراسة الجدوى وتقييم السوق تشمل تحليلات شاملة لفرص تخزين الطاقة، مما يمكّن من اتخاذ قرارات استثمارية مدروسة.",
+                    details: {
+                        market: {
                             title: "تحليل السوق",
-                            text: "نحلل اتجاهات وظروف السوق لتحديد فرص تداول الطاقة واستخدامها."
+                            text: "إطار تقييم السوق لدينا مصمم خصيصاً لتحديد الفرص الرئيسية في قطاع الطاقة المتطور. من خلال التحليلات المتقدمة ورؤى الصناعة، نحدد المجالات الاستراتيجية حيث يمكن لحلول تخزين الطاقة أن تحقق قيمة كبيرة."
                         },
-                        strategicPartnerships: {
+                        planning: {
+                            title: "التخطيط التجاري",
+                            text: "نقوم بإعداد دراسات جدوى متكاملة توضح المنافع الاقتصادية لكل مشروع محتمل، مع تقديم رؤى عملية واضحة وتوصيات استراتيجية تدعم القرارات الاستثمارية المثلى."
+                        },
+                        strategy: {
+                            title: "التكامل الاستراتيجي",
+                            text: "من خلال دمج التحليل المتعمق للسوق مع النمذجة المالية الدقيقة والتخطيط الاستراتيجي، نضمن أن كل استثمار في تخزين الطاقة مدعوم ببيانات قوية واستراتيجية مستقبلية."
+                        }
+                    }
+                },
+                design: {
+                    title: "تصميم وتكوين تخزين الطاقة",
+                    intro: "يتضمن نهجنا في تصميم تخزين الطاقة تحسين منطق التخزين بناءً على الطلب على الطاقة.",
+                    details: {
+                        dispatch: {
+                            title: "منطق توزيع التخزين",
+                            text: "نقوم بتحسين منطق توزيع التخزين لضمان الاستخدام الفعال للطاقة."
+                        },
+                        capacity: {
+                            title: "تقييم سعة التخزين",
+                            text: "نقوم بتقييم سعة التخزين لضمان أقصى قدر من الفوائد التراكمية."
+                        },
+                        costBenefit: {
+                            title: "تحليل التكلفة والعائد",
+                            text: "نجري تحليل التكلفة والعائد لتقييم الجدوى الاقتصادية."
+                        }
+                    }
+                },
+                testing: {
+                    title: "الاختبار والشهادات",
+                    intro: "تتضمن عملية الاختبار والشهادات لدينا إجراء اختبارات شاملة للأداء والسلامة، واختبارات التكامل، والتحقق من الامتثال لأحدث معايير الصناعة.",
+                    details: {
+                        performance: {
+                            title: "اختبار الأداء",
+                            text: "نجري اختبارات الأداء لتقييم كفاءة وموثوقية أنظمة تخزين الطاقة."
+                        },
+                        safety: {
+                            title: "اختبار السلامة",
+                            text: "نجري اختبارات السلامة للتأكد من أن أنظمة تخزين الطاقة آمنة للتشغيل والتعامل."
+                        },
+                        integration: {
+                            title: "اختبار التكامل",
+                            text: "نجري اختبارات التكامل للتأكد من أن أنظمة تخزين الطاقة تعمل بسلاسة مع الأنظمة والمكونات الأخرى."
+                        },
+                        compliance: {
+                            title: "التحقق من الامتثال",
+                            text: "نتحقق من أن أنظمة تخزين الطاقة تتوافق مع أحدث معايير ولوائح الصناعة."
+                        }
+                    }
+                },
+                trading: {
+                    title: "استراتيجيات تداول الطاقة",
+                    intro: "تعمل استراتيجيات تداول الطاقة لدينا على تعظيم العوائد لمنشآت تخزين الطاقة.",
+                    details: {
+                        revenue: {
+                            title: "تعظيم الإيرادات",
+                            text: "نطور استراتيجيات لتعظيم الإيرادات من خلال التحسين."
+                        },
+                        market: {
+                            title: "تحليل السوق",
+                            text: "نحلل اتجاهات السوق لاتخاذ قرارات التداول المثلى."
+                        },
+                        partnerships: {
                             title: "الشراكات الاستراتيجية",
-                            text: "نؤسس شراكات استراتيجية مع شركات ومؤسسات تداول الطاقة لتسهيل تداول الطاقة واستخدامها."
+                            text: "نؤسس شراكات لتسهيل تداول الطاقة."
+                        }
+                    }
+                },
+                maintenance: {
+                    title: "صيانة على مستوى النظام والاستجابة للطوارئ",
+                    intro: "تتضمن عملية الصيانة والاستجابة للطوارئ على مستوى النظام لدينا تقديم خدمات التشغيل والصيانة المنتظمة لمواقع تخزين الطاقة الكبيرة، مع الاستجابة للطوارئ على مدار الساعة لمعالجة أي مشكلات أو حالات طوارئ قد تنشأ في مواقع تخزين الطاقة.",
+                    details: {
+                        regular: {
+                            title: "خدمات التشغيل والصيانة المنتظمة",
+                            text: "نقدم خدمات التشغيل والصيانة المنتظمة لضمان التشغيل والصيانة الفعالة لمواقع تخزين الطاقة."
+                        },
+                        emergency: {
+                            title: "الاستجابة للطوارئ",
+                            text: "نقدم خدمات استجابة للطوارئ على مدار الساعة لمعالجة أي مشكلات أو حالات طوارئ قد تنشأ في مواقع تخزين الطاقة."
+                        }
+                    }
+                },
+                troubleshooting: {
+                    title: "استكشاف الأخطاء المتخصص وتحسين الإيرادات",
+                    intro: "تتضمن عملية استكشاف الأخطاء المتخصص وتحسين الإيرادات لدينا تحديد وحل المشكلات التقنية المعقدة في أنظمة تخزين الطاقة مع إدارة تدفقات الإيرادات.",
+                    details: {
+                        technical: {
+                            title: "تحديد المشكلات التقنية",
+                            text: "نحدد المشكلات التقنية المعقدة في أنظمة تخزين الطاقة التي قد تؤثر على أدائها أو موثوقيتها."
+                        },
+                        revenue: {
+                            title: "إدارة الإيرادات",
+                            text: "ندير تدفقات الإيرادات من خلال تحسين تداول الطاقة واستخدامها لتعظيم الإيرادات لعملائنا."
                         }
                     }
                 }
             },
-            design: {
-                title: "تصميم وتكوين تخزين الطاقة",
-                intro: "يتضمن نهجنا في تصميم وتكوين تخزين الطاقة تحسين منطق توزيع التخزين بناءً على طلب الدائرة، وتقييم سعة التخزين، وإجراء تحليل التكلفة والفائدة.",
-                costBenefit: {
-                    title: "تحليل التكلفة والفائدة",
-                    text: "نجري تحليلات التكلفة والفائدة لتقييم الجدوى الاقتصادية لمشاريع تخزين الطاقة وضمان تحقيقها أقصى فائدة لعملائنا."
+            whyChoose: {
+                title: "لماذا تختارنا؟",
+                expertise: {
+                    title: "خبرة مثبتة",
+                    text: "مدعومة بالتميز الهندسي الألماني وعقود من الخبرة في قطاع الطاقة."
                 },
-                capacityAssessment: {
-                    title: "تقييم سعة التخزين",
-                    text: "نقيم سعة التخزين لضمان قدرة مواقع تخزين الطاقة على التعامل مع متطلبات الطاقة المطلوبة وتوفير أقصى فوائد تراكمية."
+                network: {
+                    title: "شبكة عالمية",
+                    text: "شراكات استراتيجية في المناطق الرئيسية، بما في ذلك الشرق الأوسط وأمريكا الشمالية."
                 },
-                dispatchLogic: {
-                    title: "منطق توزيع التخزين",
-                    text: "نحسن منطق توزيع التخزين لضمان الاستخدام الفعال للطاقة وتعظيم فوائد تخزين الطاقة."
-                }
-            },
-            testing: {
-                title: "الاختبار والتصديق",
-                intro: "تتضمن عملية الاختبار والتصديق لدينا إجراء اختبارات شاملة للأداء والسلامة، واختبارات التكامل، والتحقق من الامتثال لأحدث معايير الصناعة.",
-                complianceVerification: {
-                    title: "التحقق من الامتثال",
-                    text: "نتحقق من امتثال أنظمة تخزين الطاقة لأحدث معايير ولوائح الصناعة."
+                solutions: {
+                    title: "حلول مخصصة",
+                    text: "حلول مصممة خصيصاً لتلبية الاحتياجات الفريدة لكل سوق وعميل."
                 },
-                integrationTesting: {
-                    title: "اختبار التكامل",
-                    text: "نجري اختبارات التكامل لضمان عمل أنظمة تخزين الطاقة بسلاسة مع الأنظمة والمكونات الأخرى."
-                },
-                safetyTesting: {
-                    title: "اختبار السلامة",
-                    text: "نجري اختبارات السلامة لضمان التشغيل والتعامل الآمن مع أنظمة تخزين الطاقة."
-                },
-                performanceTesting: {
-                    title: "اختبار الأداء",
-                    text: "نجري اختبارات الأداء لتقييم كفاءة وموثوقية أنظمة تخزين الطاقة."
+                sustainability: {
+                    title: "الالتزام بالاستدامة",
+                    text: "ملتزمون بتطوير الطاقة المتجددة وتعزيز الممارسات المستدامة."
                 }
             }
         },
-        esg: {
-            title: "التزامنا بمعايير ESG",
-            intro: "في Stratosphere، تشكل مبادئ ESG جوهر مهمتنا.",
-            environmental: "الإشراف البيئي",
-            social: "المسؤولية الاجتماعية",
-            governance: "حوكمة الشركات",
-            mainVision: {
-                title: "رؤيتنا لمستقبل مستدام",
-                statement: "من خلال الدفع المستمر لحدود الابتكار التكنولوجي والالتزام الثابت بأعلى معايير ESG، نقوم بإحداث ثورة في حلول الطاقة وتصميم نظام بيئي للطاقة يتسم بالمرونة والاستدامة بعناية. هذا الالتزام الدائم لا يغير فقط مشهد الطاقة اليوم، بل يضع أيضاً أساساً متيناً لازدهار ورفاهية الأجيال القادمة."
-            },
-            expandableContent: {
-                environmental: {
-                    preview: "في صميم مسؤوليتنا البيئية يكمن التزامنا بدمج حلول تخزين الطاقة المتطورة التي لا تقلل فقط من انبعاثات الكربون ولكن تعزز أيضًا بشكل كبير كفاءة وموثوقية أنظمة الطاقة المتجددة.",
-                    expanded: [
-                        "من خلال استخدام التقنيات المبتكرة، نتمكن من التقاط وتخزين الطاقة الفائضة من المصادر المتجددة وإطلاقها عند الحاجة، مما يقلل الاعتماد على الوقود الأحفوري ويقلل الأثر البيئي الإجمالي.",
-                        "تم تصميم أنظمة تخزين الطاقة المتطورة لدينا لتحسين أداء منشآت الطاقة الشمسية والرياح وغيرها من مصادر الطاقة المتجددة وضمان إمداد موثوق بالطاقة النظيفة.",
-                        "يساهم التزامنا المستمر بالبحث والتطوير في تقنيات تخزين الطاقة ليس فقط في تقليل انبعاثات غازات الاحتباس الحراري، ولكن أيضًا في تمهيد الطريق لمستقبل مستدام."
-                    ]
-                },
-                social: {
-                    preview: "يتجسد التزامنا بالمسؤولية الاجتماعية من خلال شبكة من الشراكات العالمية التي تساهم بنشاط في تعزيز الاقتصادات المحلية، وتنمية القوى العاملة، وتوسيع الوصول إلى الطاقة.",
-                    expanded: [
-                        "نحن مقتنعون بأن تمكين المجتمعات يبدأ بالاستثمار في الأفراد والموارد على المستوى المحلي. من خلال التعاون مع المنظمات المحلية والمؤسسات التعليمية، نخلق فرصًا للتطوير المهني وبناء المهارات.",
-                        "نركز أيضًا على توسيع الوصول إلى الطاقة في المناطق المحرومة من الخدمات، حيث ندرك أن الطاقة الموثوقة وبأسعار معقولة هي أساس تنمية المجتمعات.",
-                        "من خلال دمج هذه المبادرات الاجتماعية في نموذج أعمالنا، نعزز ليس فقط رفاهية المجتمعات، ولكن أيضًا ثقافة الشمول والتقدم المشترك."
-                    ]
-                },
-                governance: {
-                    preview: "يعتمد نهجنا في حوكمة الشركات على أساس الشفافية الثابتة، والامتثال التنظيمي الصارم، وإدارة الموارد الحكيمة.",
-                    expanded: [
-                        "نحن مقتنعون بأن ممارسات الحوكمة السليمة ضرورية لخلق قيمة طويلة الأجل وتعزيز الثقة بين أصحاب المصلحة لدينا.",
-                        "نقوم باستمرار بتحسين إطار الحوكمة لدينا لتلبية وتجاوز المتطلبات التنظيمية العالمية.",
-                        "استراتيجياتنا لإدارة الموارد المسؤولة مصممة لتحسين الكفاءة وتعزيز النمو المستدام."
-                    ]
-                }
-            },
-            readMore: "اقرأ المزيد",
-            readLess: "عرض أقل",
-            visionStatement: "من خلال دفع حدود الابتكار التكنولوجي والالتزام الثابت بأعلى معايير ESG، نقوم بإحداث ثورة في حلول الطاقة وصياغة نظام طاقة مرن ومستدام بعناية.",
-            expandButton: "عرض المزيد",
-            collapseButton: "عرض أقل",
-            learnMore: "اعرف المزيد",
-            sectionTitle: "أقسام ESG",
-            impactMetrics: "مقاييس التأثير",
-            metrics: {
-                title: "مؤشرات الأداء",
-                environmental: "المؤشرات البيئية",
-                social: "المؤشرات الاجتماعية",
-                governance: "مؤشرات الحوكمة"
-            },
-            impact: {
-                title: "تأثيرنا",
-                description: "نحن ملتزمون بقياس وتحسين تأثيرنا البيئي والاجتماعي والحوكمة بشكل مستمر."
-            },
-            visionText: {
-                title: "رؤيتنا",
-                statement: "من خلال الدفع المستمر لحدود الابتكار التكنولوجي والالتزام الثابت بأعلى معايير ESG، نقوم بإحداث ثورة في حلول الطاقة وتصميم نظام بيئي للطاقة يتسم بالمرونة والاستدامة بعناية. هذا الالتزام الدائم لا يغير فقط مشهد الطاقة اليوم، بل يضع أيضاً أساساً متيناً لازدهار ورفاهية الأجيال القادمة."
-            },
-            sections: {
-                title: "أقسام ESG",
-                environmental: "الجانب البيئي",
-                social: "الجانب الاجتماعي",
-                governance: "الجانب الإداري"
-            },
-            buttons: {
-                expand: "عرض المزيد",
-                collapse: "عرض أقل",
-                learnMore: "اكتشف المزيد"
-            }
-        },
-        careers: {
+        home: {
             hero: {
-                title: "صنع مستقبلك. ابتكر معنا.",
-                mainText: "تقوم Stratosphere بإحداث ثورة في مشهد الطاقة من خلال حلول التخزين المتقدمة. هدفنا هو تطوير البنية التحتية للطاقة من الجيل القادم - ذكية وفعالة ومتكاملة بسلاسة مع الطاقة المتجددة.",
-                description: "يعمل فريقنا من المهندسين والمحللين في نقطة التقاء التكنولوجيا والاستدامة، حيث نقوم بتطوير أنظمة محسنة تزود الصناعات والمدن والمناطق بأكملها بالطاقة. إذا كنت متحمساً لتشكيل مستقبل الطاقة، ندعوك للانضمام إلى فريقنا الديناميكي."
+                title: "تمكين مستقبل الطاقة المستدامة بحلول التخزين الذكية",
+                subtitle: "حلول طاقة مبتكرة تقود التحول العالمي نحو الطاقة المتجددة — محسّنة وموثوقة ومصممة لمستقبل مستدام."
             },
-            openPositions: {
-                title: "الوظائف المتاحة",
-                fieldManager: {
-                    title: "مدير ميداني",
-                    type: "دوام كامل",
-                    location: "مواقع متعددة",
-                    description: "فني خدمة BESS الميداني مسؤول عن صيانة وإصلاح وتحسين أنظمة تخزين الطاقة عبر مواقع متعددة. يقدم التقارير إلى مدير العمليات، ويضمن هذا الدور موثوقية النظام وأدائه والامتثال لمعايير السلامة.",
-                    responsibilities: [
-                        "تنفيذ الصيانة الوقائية والتصحيحية",
-                        "استكشاف الأخطاء وإصلاحها في أنظمة تخزين الطاقة",
-                        "ضمان الامتثال لمعايير السلامة",
-                        "إعداد تقارير الصيانة والأداء"
-                    ],
-                    requirements: [
-                        "درجة في الهندسة الكهربائية أو ما يعادلها",
-                        "خبرة 3+ سنوات في صيانة أنظمة الطاقة",
-                        "معرفة بأنظمة BESS",
-                        "مهارات تواصل ممتازة"
-                    ]
-                }
+            stats: {
+                engineers: "مهندس وخبير متخصص",
+                storage: "جيجاواط ساعة من سعة التخزين",
+                countries: "دولة نعمل فيها"
+            }
+        },
+        about: {
+            title: "معلومات عنا",
+            intro: "نحن شركة رائدة في تقديم حلول تخزين الطاقة المبتكرة، ملتزمون بقيادة التحول العالمي نحو الطاقة المستدامة.",
+            whatWeDo: {
+                title: "ماذا نفعل",
+                text1: "شركة Stratosphere Green Energy GmbH ومقرها في ألمانيا، نستخدم أحدث التقنيات الهندسية الألمانية وسمعتنا المتميزة في السوق لتطوير حلول طاقة مستدامة وفعالة. مع وجودنا القوي في أسواق تخزين الطاقة الرئيسية، بما في ذلك الشرق الأوسط والولايات المتحدة، نحن ملتزمون بتسريع التحول العالمي نحو الطاقة النظيفة.",
+                text2: "يقوم فريقنا المكون من 200 مهندس متخصص بإدارة وصيانة ما يقرب من 5 جيجاواط ساعة من أصول تخزين الطاقة عالمياً، مما يضمن الأداء الأمثل والموثوقية والكفاءة عبر البنى التحتية للطاقة المتنوعة."
             },
-            applySection: {
-                button: "قدم الآن",
-                message: "شكراً لاهتمامك بوظيفتنا. يرجى إرسال سيرتك الذاتية إلى info@stratospherege.com"
+            mission: {
+                title: "مهمتنا",
+                text: "نسعى لتعزيز استخدام الطاقة المتجددة من خلال دمج أحدث تقنيات التخزين، وتحسين كفاءة الطاقة، وبناء مستقبل أكثر استدامة من خلال حلولنا المبتكرة والموثوقة."
+            },
+            globalReach: {
+                title: "انتشارنا العالمي",
+                text: "تستثمر Stratosphere في تواجدها العالمي للشراكة مع القادة الإقليميين وتلبية احتياجات السوق المتنوعة. تقدم مشاريعنا المشتركة في الولايات المتحدة والمملكة العربية السعودية والإمارات العربية المتحدة والكويت خدمات تشغيل وصيانة مخصصة للبنية التحتية للطاقة المتجددة، متجاوزين التحديات المحلية مع تقديم حلول تخزين متميزة."
+            },
+            expertise: {
+                title: "خبرتنا",
+                text: "تقدم Stratosphere حلول تخزين الطاقة المتكاملة، مع دعم مشاريع الطاقة المتجددة وتطوير أنظمة توزيع الطاقة. تشمل خبرتنا تحليل السوق والتقييم التقني والشهادات المستقلة من جهات خارجية، مما يضمن التكامل السلس والكفاءة القصوى."
             }
         },
         contact: {
             title: "اتصل بنا",
             hero: {
-                question: "هل تريد معرفة المزيد عن كيف يمكن لـ Stratosphere تمكين مشاريع الطاقة المتجددة الخاصة بك؟",
-                action: "تواصل معنا اليوم للحصول على حلول تخزين الطاقة المخصصة ودعم العمليات الخبير."
+                question: "هل تريد معرفة المزيد عن كيف يمكن لـ Stratosphere أن تدعم مشاريع الطاقة المتجددة الخاصة بك؟",
+                action: "تواصل معنا اليوم للحصول على حلول تخزين طاقة مخصصة واستشارات تشغيلية متخصصة."
             },
-            address: "العنوان",
-            email: "البريد الإلكتروني",
-            followUs: "تتبعنا",
+            company: {
+                title: "Stratosphere Green Energy GmbH",
+                address: {
+                    title: "العنوان",
+                    text: "شومان شتراسه ٢٧\n٦٠٣٢٥ فرانكفورت\nألمانيا"
+                },
+                email: {
+                    title: "البريد الإلكتروني"
+                }
+            },
+            quickLinks: {
+                title: "روابط سريعة",
+                home: "الرئيسية",
+                about: "معلومات عنا",
+                products: "المنتجات والخدمات",
+                esg: "ESG",
+                careers: "الوظائف",
+                contact: "اتصل بنا"
+            },
             languages: {
-                title: "زوروا مواقعنا",
+                title: "زيارة مواقعنا",
                 english: "الإنجليزية",
                 german: "الألمانية",
                 arabic: "العربية"
             },
-            contactInfo: {
-                title: "معلومات الاتصال",
-                office: "المقر الرئيسي",
-                phone: "الهاتف",
-                email: "البريد الإلكتروني"
+            mainQuestion: {
+                title: "هل لديك أسئلة؟",
+                text: "نحن هنا للمساعدة والإجابة على استفساراتك"
             },
-            form: {
-                name: "الاسم",
-                company: "الشركة",
-                message: "الرسالة",
-                submit: "إرسال",
-                success: "تم إرسال رسالتك بنجاح.",
-                error: "حدث خطأ. يرجى المحاولة مرة أخرى لاحقاً."
+            action: {
+                title: "ابدأ معنا",
+                text: "تواصل معنا اليوم لبدء رحلتك نحو حلول الطاقة المستدامة"
             }
         },
-        footer: {
-            quickLinks: "روابط سريعة",
-            address: "العنوان",
-            addressText: "شومانشتراسه 27، 60325 فرانكفورت، ألمانيا",
-            email: "البريد الإلكتروني",
-            followUs: "تتبعنا",
-            copyright: "حقوق النشر ©2025 Stratosphere. جميع الحقوق محفوظة."
+        esg: {
+            title: "التزامنا بمعايير ESG",
+            subtitle: "في Stratosphere، تشكل مبادئ ESG جوهر مهمتنا، حيث تقود الاستدامة والابتكار والممارسات الأخلاقية",
+            
+            environmental: {
+                title: "البيئة",
+                preview: "في صميم التزامنا البيئي يكمن دمج حلول تخزين الطاقة المتطورة التي لا تقلل من انبعاثات الكربون فحسب، بل تعزز أيضاً كفاءة وموثوقية أنظمة الطاقة المتجددة بشكل كبير.",
+                expandedContent: [
+                    "من خلال تبني التقنيات المبتكرة، نتمكن من التقاط الطاقة الزائدة المولدة من المصادر المتجددة، وتخزينها بكفاءة، وإطلاقها عند الحاجة، مما يقلل الاعتماد على الوقود الأحفوري ويخفض الأثر البيئي الإجمالي.",
+                    "أنظمة تخزين الطاقة المتطورة لدينا مصممة لتحسين أداء منشآت الطاقة الشمسية وطاقة الرياح وغيرها من مصادر الطاقة المتجددة، مما يضمن إمداداً مستقراً وموثوقاً للطاقة النظيفة.",
+                    "علاوة على ذلك، يمتد التزامنا إلى البحث والتطوير المستمر في تقنيات تخزين الطاقة، مما يمكننا من البقاء في طليعة الابتكار البيئي."
+                ],
+                readMore: "اقرأ المزيد",
+                readLess: "اقرأ أقل"
+            },
+            social: {
+                title: "المسؤولية الاجتماعية",
+                preview: "تستند مسؤوليتنا الاجتماعية على الإيمان بأن حلول الطاقة المستدامة يجب أن تفيد الجميع.",
+                expandedContent: [
+                    "نستثمر بنشاط في تطوير المواهب المحلية وخلق فرص عمل مؤهلة في المجتمعات التي نعمل فيها.",
+                    "من خلال شراكات استراتيجية مع المؤسسات التعليمية، نعزز الجيل القادم من خبراء الطاقة والمبتكرين.",
+                    "نلتزم بنشاط بالتنوع وتكافؤ الفرص والشمول في قطاع الطاقة، ونعزز ثقافة عمل شاملة."
+                ]
+            },
+            governance: {
+                title: "الحوكمة",
+                preview: "تستند حوكمة شركتنا على الشفافية والأخلاق والمساءلة.",
+                expandedContent: [
+                    "نلتزم بأعلى معايير أخلاقيات العمل والامتثال والشفافية في جميع مجالات أعمالنا.",
+                    "من خلال عمليات التدقيق الداخلية والخارجية المنتظمة والمراجعات الصارمة، نضمن الامتثال المستمر لجميع اللوائح والمعايير ذات الصلة.",
+                    "نحافظ على حوار شفاف وبناء مع جميع أصحاب المصلحة ونضمن مراعاة مصالحهم في عمليات صنع القرار لدينا."
+                ]
+            },
+            vision: {
+                text: "من خلال الدفع المستمر لحدود الابتكار التكنولوجي والتمسك الثابت بأعلى معايير ESG، نقوم بإحداث ثورة في حلول الطاقة وبناء نظام طاقة مستدام ومرن بعناية. هذا الالتزام الدائم لا يحول مشهد الطاقة اليوم فحسب، بل يضع أيضًا أساسًا متينًا لازدهار ورفاهية الأجيال القادمة."
+            }
         },
-        features: {
-            title: "كفاءاتنا الأساسية",
-            innovation: {
-                title: "الابتكار",
-                text: "تطوير حلول تخزين الطاقة المستقبلية"
+        careers: {
+            title: "انضم إلى فريقنا",
+            subtitle: "ساهم في تشكيل مستقبل الطاقة المتجددة",
+            intro: {
+                title: "شكّل المستقبل. ابتكر معنا.",
+                text1: "تقوم Stratosphere بإحداث ثورة في مشهد الطاقة من خلال حلول التخزين المتطورة. هدفنا هو تطوير البنية التحتية للطاقة للجيل القادم – ذكية وفعالة ومتكاملة بسلاسة مع أنظمة الطاقة المتجددة.",
+                text2: "يعمل فريقنا من المهندسين والمحللين في نقطة التقاء التكنولوجيا والاستدامة. نطور أنظمة محسنة تزود الصناعات والمدن والمناطق بأكملها بالطاقة المستدامة. إذا كنت ترغب في المساهمة في تشكيل مستقبل الطاقة، انضم إلى فريقنا الديناميكي."
             },
-            reliability: {
-                title: "الموثوقية",
-                text: "ضمان أنظمة طاقة مستقرة وفعالة"
-            },
-            sustainability: {
-                title: "الاستدامة",
-                text: "تعزيز مستقبل طاقة صديق للبيئة"
+            positions: {
+                title: "الوظائف المتاحة",
+                systemEngineer: {
+                    title: "مهندس نظم",
+                    description: "نبحث عن مهندس نظم ماهر لقيادة التطوير التقني لمشاريع تخزين الطاقة. من التصميم إلى التشغيل الكامل، ستضمن تنفيذ المشروع بسلاسة من خلال توفير التوجيه الهندسي والإشراف التقني.",
+                    responsibilities: {
+                        title: "المسؤوليات الرئيسية",
+                        items: [
+                            "تصميم النظام: تطوير تصاميم تخزين البطاريات على نطاق الشبكة، بما في ذلك تخطيط الموقع، ومخططات الخط الواحد، وتحليل نظام الطاقة، والامتثال لقواعد الشبكة، وأطر التحكم",
+                            "دعم المشتريات: تقديم الخبرة التقنية في اختيار المكونات والتقنيات المثلى أثناء الشراء",
+                            "المناقصات والعناية الواجبة: المساعدة في تقييم مناقصات EPC وإجراء العناية الواجبة التقنية للشركاء والحلول المحتملين",
+                            "متطلبات المشروع: تحديد المواصفات التقنية وتقييم القيود الخاصة بالموقع",
+                            "ضمان الجودة: مراقبة جودة التركيب وأداء النظام",
+                            "التوثيق: إنشاء التقارير التقنية ووثائق المشروع"
+                        ]
+                    },
+                    qualifications: {
+                        title: "المؤهلات والمهارات",
+                        required: {
+                            title: "المطلوب",
+                            items: [
+                                "3-5 سنوات خبرة في تصميم BESS على نطاق الشبكة أو محطات الجهد العالي",
+                                "بكالوريوس أو ماجستير في هندسة الطاقة الكهربائية أو تخزين البطاريات أو مجال ذي صلة",
+                                "فهم قوي لبطاريات الليثيوم أيون والعواكس وتكامل الشبكة",
+                                "معرفة بمعايير الصناعة والامتثال لقواعد الشبكة",
+                                "الإلمام بشبكات النقل والتوزيع",
+                                "الكفاءة في DIgSILENT وETAP وAutoCAD وMicrosoft Office",
+                                "مهارات قوية في التواصل وإدارة أصحاب المصلحة"
+                            ]
+                        },
+                        preferred: {
+                            title: "المؤهلات المفضلة",
+                            items: [
+                                "خبرة في أنظمة تخزين الطاقة بالبطاريات (BESS)",
+                                "معرفة بإلكترونيات القدرة (العواكس، المحولات، إلخ)",
+                                "تدريب في أنظمة التكييف (شهادة F-Gas)",
+                                "مهارات تقنية متقدمة (الشبكات، MODBUS/TCP، سطح المكتب عن بُعد)",
+                                "الشهادات: C&G2391-5، BS7671، أو ما يعادلها",
+                                "تصريح التعامل مع الجهد العالي"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "ما نقدمه",
+                        items: [
+                            "راتب تنافسي: بناءً على الخبرة والمؤهلات",
+                            "النمو المهني: فرص التدريب المستمر والتطوير المهني",
+                            "مزايا شاملة: تأمين صحي، خطط تقاعد، وسياسات إجازات سخية",
+                            "بيئة عمل مبتكرة: ثقافة تعاونية وتفكير مستقبلي",
+                            "أدوات متطورة: الوصول إلى أحدث برامج وتقنيات الهندسة"
+                        ]
+                    },
+                    closing: "إذا كنت مهندس نظم ذو خبرة وشغوف بتخزين الطاقة وحلول الشبكة، ندعوك للتقدم وأن تكون جزءاً من فريقنا الديناميكي!",
+                    applyBtn: "تقدم الآن"
+                },
+                fieldManager: {
+                    title: "مدير ميداني",
+                    description: "فني خدمة BESS الميداني مسؤول عن صيانة وإصلاح وتحسين أنظمة تخزين الطاقة عبر مواقع متعددة. يضمن هذا الدور موثوقية النظام وأدائه والامتثال لمعايير السلامة.",
+                    responsibilities: {
+                        title: "المسؤوليات الرئيسية",
+                        items: [
+                            "الصيانة والفحص: إجراء الصيانة الروتينية والفحوصات وإصلاح الأعطال لضمان كفاءة النظام",
+                            "تحديثات النظام: تنفيذ تحديثات البرامج والبرامج الثابتة لتحسين الموثوقية",
+                            "مراقبة الأداء: تحليل بيانات النظام لتحديد وحل المشكلات المحتملة",
+                            "دعم العملاء: تقديم الدعم التشخيصي عن بعد وإصلاح الأعطال في الموقع لتقليل وقت التعطل",
+                            "المخزون والامتثال: إدارة قطع الغيار وضمان الالتزام بلوائح السلامة",
+                            "التعاون وإعداد التقارير: العمل مع فرق الهندسة لتحسين المنتجات والحفاظ على سجلات الخدمة المفصلة"
+                        ]
+                    },
+                    qualifications: {
+                        title: "المؤهلات والمهارات",
+                        required: {
+                            title: "المطلوب",
+                            items: [
+                                "مهارات التواصل وإدارة أصحاب المصلحة",
+                                "الشهادات: SMSTC، CSCS ومساعدة الأولوية في المكان",
+                                "التدريب: مؤهل HNC أو مكافئ في مجال البناء",
+                                "إدارة المشروع: خبرة في مشاريع البناء والطاقة",
+                                "السلامة المهنية: NEBOSH أو مكافئ",
+                                "المشاريع الكبيرة: خبرة مؤكدة في إدارة مشاريع الطاقة المتعددة",
+                                "خبرة الصناعة: خبرة في القطاع العام والخاص بما في ذلك مشاركات VNB"
+                            ]
+                        },
+                        preferred: {
+                            title: "المؤهلات المفضلة",
+                            items: [
+                                "خبرة في أنظمة تخزين الطاقة بالبطاريات (BESS)",
+                                "معرفة بإلكترونيات القدرة (العواكس، المحولات، إلخ)",
+                                "تدريب في أنظمة التكييف (شهادة F-Gas)",
+                                "مهارات تقنية متقدمة (الشبكات، MODBUS/TCP، سطح المكتب عن بُعد)",
+                                "الشهادات: C&G2391-5، BS7671، أو ما يعادلها",
+                                "تصريح التعامل مع الجهد العالي"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "ما نقدمه",
+                        items: [
+                            "راتب تنافسي & المزايا",
+                            "خطة معاش مرنة ومعاش تقاعد",
+                            "فرص تدريب وتطوير مهني",
+                            "سيارة الشركة، بطاقة SIM، بطاقة خزانة وكمبيوتر لوحي",
+                            "أحداث الفريق وتطوير مهارات التدريب المستمر"
+                        ]
+                    },
+                    closing: "إذا كنت مهندس خدمة على الميدان ومهتم بتخزين الطاقة والمواصفات، يرجى التقدم وأن تكون جزءاً من فريقنا الديناميكي!",
+                    applyBtn: "تقدم الآن"
+                },
+                projectManager: {
+                    title: "مدير مشروع",
+                    description: "نبحث عن مدير مشروع ذو خبرة لقيادة مشاريع الطاقة الكبيرة من التخطيط إلى الإنجاز. يضمن هذا المنصب تنفيذ المشروع في الوقت المحدد وبشكل آمن وبجودة عالية بالتنسيق مع العملاء والمقاولين والفرق الداخلية.",
+                    responsibilities: {
+                        title: "المسؤوليات الرئيسية",
+                        items: [
+                            "إدارة الموقع: مراقبة عملاء والمقاولين وتنفيذ المشاريع",
+                            "حل المشكلات: حل المشكلات المحلية لضمان تنفيذ المشروع بدون إصلاح",
+                            "التقارير والتوثيق: إدارة مواعيد المشروع وإنشاء تقارير الامتثال وتحديث العملاء المستمر",
+                            "التواصل: الشريك الرئيسي لعملاء ومشاركة في اجتماعات وترتيب الأولويات",
+                            "الوسائط والامتثال: إنشاء تقرير التقدم لأغراض التوثيق والتسويق"
+                        ]
+                    },
+                    qualifications: {
+                        title: "المؤهلات والمهارات",
+                        required: {
+                            title: "المطلوب",
+                            items: [
+                                "مهارات التواصل وإدارة أصحاب المصلحة",
+                                "الشهادات: SMSTC، CSCS ومساعدة الأولوية في المكان",
+                                "التدريب: مؤهل HNC أو مكافئ في مجال البناء",
+                                "إدارة المشروع: خبرة في مشاريع البناء والطاقة",
+                                "السلامة المهنية: NEBOSH أو مكافئ",
+                                "المشاريع الكبيرة: خبرة مؤكدة في إدارة مشاريع الطاقة المتعددة",
+                                "خبرة الصناعة: خبرة في القطاع العام والخاص بما في ذلك مشاركات VNB"
+                            ]
+                        },
+                        preferred: {
+                            title: "المؤهلات المفضلة",
+                            items: [
+                                "خبرة في أنظمة تخزين الطاقة بالبطاريات (BESS)",
+                                "معرفة بإلكترونيات القدرة (العواكس، المحولات، إلخ)",
+                                "تدريب في أنظمة التكييف (شهادة F-Gas)",
+                                "مهارات تقنية متقدمة (الشبكات، MODBUS/TCP، سطح المكتب عن بُعد)",
+                                "الشهادات: C&G2391-5، BS7671، أو ما يعادلها",
+                                "تصريح التعامل مع الجهد العالي"
+                            ]
+                        }
+                    },
+                    benefits: {
+                        title: "ما نقدمه",
+                        items: [
+                            "راتب تنافسي & المزايا – بما في ذلك معاش، معاش مرن، وفرص تطوير مهني",
+                            "المواصفات: سيارة، موبايل، بطاقة خزانة وكمبيوتر لوحي",
+                            "التطوير المهني: تدريبات، أحداث الفريق وفرص الارتقاء في مجال ديناميكي"
+                        ]
+                    },
+                    closing: "إذا كنت مدير مشروع موجه بالنتائج ومهتم بمشاريع الطاقة، يرجى التقدم وأن تكون جزءاً من فريقنا الخبير!",
+                    applyBtn: "تقدم الآن"
+                },
+                applyBtn: "تقدم الآن",
+                readMore: "اقرأ المزيد",
+                readLess: "اقرأ أقل",
+                modal: {
+                    title: "كيفية التقديم",
+                    message: "إذا كنت محترفاً نشطاً وذو خبرة متحمساً لحلول الطاقة المستدامة، يرجى إرسال سيرتك الذاتية وخطاب تعريف إلى careers@stratospherege.com. يرجى تحديد المنصب الذي تتقدم له في سطر الموضوع.",
+                    footer: "Stratosphere هي شركة توفر تكافؤ الفرص. نحن نقدر التنوع ونرحب بالطلبات من جميع المرشحين المؤهلين بغض النظر عن الجنس أو العمر أو العرق أو الدين أو الإعاقة."
+                }
             }
         }
     }

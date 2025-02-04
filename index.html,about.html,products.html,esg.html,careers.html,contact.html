@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // 在页面加载前设置语言和方向
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+        document.documentElement.lang = savedLanguage;
+        document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
+    </script>
+    <title>Stratosphere Green Energy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <header>
     <nav class="navbar">
         <div class="logo">
@@ -17,9 +32,9 @@
                     <span data-i18n="nav.language">Language</span>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#" data-lang="en">English</a>
-                    <a href="#" data-lang="de">Deutsch</a>
-                    <a href="#" data-lang="ar">العربية</a>
+                    <a href="#" onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                    <a href="#" onclick="changeLanguage('de'); return false;" data-lang="de">Deutsch</a>
+                    <a href="#" onclick="changeLanguage('ar'); return false;" data-lang="ar">العربية</a>
                 </div>
             </div>
         </div>
@@ -37,18 +52,18 @@
             <div class="footer-section">
                 <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Product & Services</a></li>
-                    <li><a href="esg.html">ESG</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.html" data-i18n="footer.links.home">Home</a></li>
+                    <li><a href="about.html" data-i18n="footer.links.about">About Us</a></li>
+                    <li><a href="products.html" data-i18n="footer.links.products">Product & Services</a></li>
+                    <li><a href="esg.html" data-i18n="footer.links.esg">ESG</a></li>
+                    <li><a href="careers.html" data-i18n="footer.links.careers">Careers</a></li>
+                    <li><a href="contact.html" data-i18n="footer.links.contact">Contact Us</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
                 <h3 data-i18n="footer.address">Address</h3>
-                <p>Frankfurt am Main</p>
+                <p id="address-text" class="address-text" data-i18n="footer.addressText">Schuhmannstr. 27, 60325 Frankfurt, Deutschland</p>
                 
                 <h3 data-i18n="footer.email">Email</h3>
                 <p>info@stratospherege.com</p>

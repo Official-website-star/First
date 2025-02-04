@@ -124,6 +124,7 @@ body {
 /* Language Dropdown Styles */
 .language-dropdown {
     position: relative;
+    display: inline-block;
     margin-left: 1.5rem;
     z-index: 1000;
 }
@@ -137,48 +138,43 @@ body {
     cursor: pointer;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .language-btn:hover {
     background: rgba(0, 107, 63, 0.12);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 107, 63, 0.15);
 }
 
-/* 下拉菜单容器 */
 .dropdown-content {
     visibility: hidden;
     opacity: 0;
     position: absolute;
     top: calc(100% + 5px);
     right: 0;
-    background: white;
+    background-color: #fff;
     min-width: 160px;
-    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    z-index: 1;
+    border-radius: 8px;
     transform: translateY(-10px);
+    transition: all 0.3s ease;
     pointer-events: none;
 }
 
-/* 显示下拉菜单 */
-.language-dropdown:hover .dropdown-content {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-/* 下拉菜单选项 */
 .dropdown-content a {
     color: #333;
     padding: 0.8rem 1.2rem;
     text-decoration: none;
     display: block;
-    transition: all 0.2s ease;
+    text-align: left;
     font-size: 0.95rem;
+    transition: all 0.2s ease;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -186,11 +182,21 @@ body {
     border-bottom: none;
 }
 
-/* 选项悬停效果 */
+[dir="rtl"] .dropdown-content a {
+    text-align: right;
+}
+
 .dropdown-content a:hover {
     background: rgba(0, 107, 63, 0.08);
     color: #006B3F;
     padding-left: 1.5rem;
+}
+
+.language-dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* 确保下拉区域有足够的可点击空间 */
@@ -796,4 +802,149 @@ body {
 .footer-email:hover {
     color: #006B3F;
     text-decoration: none;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.language-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.language-option.active {
+    background: rgba(0, 107, 63, 0.08);
+    color: #006B3F;
+}
+
+/* 语言选择区域样式 */
+.language-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem 0;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.language-section h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.language-option:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-color: rgba(0, 107, 63, 0.2);
+}
+
+.globe-icon {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.language-option:hover .globe-icon {
+    transform: rotate(20deg);
+    opacity: 1;
+}
+
+/* 语言选项动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .language-section {
+        margin-top: 3rem;
+        padding: 1.5rem 0;
+    }
+
+    .language-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .language-buttons {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .language-option {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* 地址文本样式 */
+.address-text {
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* 阿拉伯语环境下的地址文本样式 */
+[dir="rtl"] .address-text {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+/* 确保数字和特殊字符的正确显示 */
+[dir="rtl"] .address-text {
+    unicode-bidi: bidi-override;
+}
+
+/* 阿拉伯语环境下的页脚链接样式 */
+[dir="rtl"] .footer-section ul {
+    padding-right: 0;
+}
+
+[dir="rtl"] .footer-section ul li {
+    text-align: right;
+}
+
+[dir="rtl"] .footer-section ul li a {
+    font-family: 'Arial', sans-serif;
 }

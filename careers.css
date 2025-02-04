@@ -5,17 +5,46 @@
 }
 
 /* Hero Section */
-.careers-hero {
-    height: auto;
-    background: url('assets/carees.png') no-repeat center center;
-    background-size: contain;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 3rem;
-    aspect-ratio: 1920 / 600;  /* 根据实际图片比例调整 */
+.hero-section {
     width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1920 / 600;  /* 设置图片比例 */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    max-width: 100%;
+}
+
+@media (min-width: 1920px) {
+    .hero-section {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+    }
+    
+    .hero-image {
+        aspect-ratio: 16 / 9;  /* 移动端调整比例 */
+    }
 }
 
 /* Company Intro Section */
@@ -217,42 +246,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .careers-hero {
-        aspect-ratio: 1920 / 600;  /* 保持相同比例 */
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-    }
-
-    .company-intro {
-        padding: 4rem 5%;
-    }
-
-    .intro-content .main-title {
-        font-size: 2rem;
-        padding: 1.2rem 1.5rem;
-    }
-
-    .intro-content p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .job-listings {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .job-card {
-        padding: 2rem;
-    }
-
-    .job-card h3 {
-        font-size: 1.4rem;
-    }
-}
-
 /* Job Listings Section */
 .job-listings-section {
     padding: 2rem 5% 3rem;
@@ -326,6 +319,8 @@
     align-items: center;
     margin-bottom: 1rem;
     padding-top: 0.5rem;
+    gap: 1rem;
+    flex-wrap: nowrap;
 }
 
 .job-header h3 {
@@ -345,22 +340,27 @@
 }
 
 .apply-btn {
-    background: #f5f5f5;
-    color: #333;
     padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 0.9rem;
+    background-color: #006400;
+    color: white;
     border: none;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 120px;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .apply-btn:hover {
-    background: #e8e8e8;
+    background-color: #004d00;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* 响应式调整 */
@@ -385,91 +385,82 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal.show {
     display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 1;
 }
 
 .modal-content {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    position: relative;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
     max-width: 600px;
     width: 90%;
+    margin: 1rem;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .modal.show .modal-content {
     transform: translateY(0);
 }
 
-.modal-content h3 {
-    color: #006B3F;
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
 .modal-close {
     position: absolute;
-    top: 1rem;
     right: 1rem;
+    top: 1rem;
     background: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    color: #999;
-    padding: 0.5rem;
-    line-height: 1;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #666;
+    transition: color 0.3s ease;
 }
 
 .modal-close:hover {
     color: #006B3F;
-    background: rgba(0,107,63,0.1);
-    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 1rem 0;
 }
 
 .modal-message {
-    color: #444;
-    line-height: 1.8;
-    font-size: 1.05rem;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.1rem;
 }
 
 .modal-footer {
     color: #666;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    font-style: italic;
-    border-top: 1px solid rgba(0,107,63,0.1);
-    padding-top: 1.2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
     margin-top: 1.5rem;
+    font-style: italic;
 }
 
 .modal-email {
     color: #006B3F;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
 }
 
 .modal-email:hover {
-    color: #008B4F;
     text-decoration: underline;
 }
 
@@ -535,6 +526,11 @@
     transition: all 0.3s ease;
 }
 
+.expand-toggle:hover {
+    background: rgba(0,107,63,0.05);
+    transform: translateY(-2px);
+}
+
 /* 展开/折叠功能的基础样式 */
 .expanded-content {
     max-height: 0;
@@ -591,4 +587,12 @@
         rgba(0,139,95,0.8) 0%,
         rgba(0,139,95,0.4) 100%
     );
+}
+
+[dir="rtl"] .apply-btn {
+    font-family: 'Arial', sans-serif;
+}
+
+[dir="rtl"] .modal-content {
+    text-align: right;
 }

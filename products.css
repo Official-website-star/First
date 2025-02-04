@@ -996,7 +996,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    width: 250px;
+    width: 200px;  /* 减少 1/5 (从 250px 减至 200px) */
     height: auto;
     position: absolute;
     right: 1.5rem;
@@ -1025,7 +1025,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    width: 200px;  /* 原来是250px，缩小1/5后是200px */
+    width: 160px;  /* 减少 1/5 (从 200px 减至 160px) */
     height: auto;
     position: absolute;
     right: 1.5rem;
@@ -1055,4 +1055,14 @@
     color: #006B3F;
     font-size: 2.2rem;
     font-weight: 600;
+}
+
+/* 添加语言切换过渡效果 */
+.language-switching [data-i18n] {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+[data-i18n] {
+    transition: opacity 0.3s ease;
 }

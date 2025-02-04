@@ -103,105 +103,186 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 当前语言
-let currentLang = localStorage.getItem('language') || 'en';
+let currentLang = 'en';  // 默认设置为英语
 
-// 初始化语言
-function initLanguage() {
-    document.documentElement.lang = currentLang;
-    if (currentLang === 'ar') {
-        document.documentElement.dir = 'rtl';
-    } else {
-        document.documentElement.dir = 'ltr';
-    }
-    updateContent();
-}
-
-// 更新页面内容
-function updateContent() {
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        const translation = getTranslation(key);
-        if (translation) {
-            element.textContent = translation;
-        }
-    });
-
-    // 更新固定文本内容
-    if (currentLang === 'ar') {
-        // 更新地址显示
-        const addressElements = document.querySelectorAll('[data-address], .footer-section p:not([data-i18n])');
-        addressElements.forEach(element => {
-            if (element.textContent.includes('Frankfurt am Main')) {
-                // 只显示阿拉伯语
-                element.textContent = 'فرانكفورت آم ماين';
-            }
-        });
-        
-        // 更新邮箱显示方向
-        const emailElements = document.querySelectorAll('.footer-email');
-        emailElements.forEach(element => {
-            element.style.direction = 'ltr'; // 保持邮箱地址从左到右显示
-            element.style.unicodeBidi = 'bidi-override';
-        });
-    } else {
-        // 恢复默认地址显示
-        const addressElements = document.querySelectorAll('[data-address], .footer-section p:not([data-i18n])');
-        addressElements.forEach(element => {
-            if (element.textContent.includes('فرانكفورت آم ماين')) {
-                element.textContent = 'Frankfurt am Main';
-            }
-        });
-    }
-
-    // 更新页面标题
-    const pageTitles = {
-        'index.html': 'nav.home',
-        'about.html': 'nav.about',
-        'products.html': 'nav.products',
-        'esg.html': 'nav.esg',
-        'careers.html': 'nav.careers',
-        'contact.html': 'nav.contact'
-    };
-
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const titleKey = pageTitles[currentPage];
-    if (titleKey) {
-        document.title = getTranslation(titleKey) + ' - Stratosphere Green Energy';
-    }
-}
-
-// 获取翻译
-function getTranslation(key) {
-    const keys = key.split('.');
-    let value = translations[currentLang];
-    for (const k of keys) {
-        if (value && value[k]) {
-            value = value[k];
-        } else {
-            return null;
-        }
-    }
-    return value;
+// 如果本地存储有语言设置，则使用存储的语言
+if (localStorage.getItem('language')) {
+    currentLang = localStorage.getItem('language');
+} else {
+    localStorage.setItem('language', 'en');  // 如果没有设置，存储默认语言
 }
 
 // 设置语言
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('language', lang);
-    initLanguage();
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    forceUpdateContent();
+}
+
+// 重置所有翻译状态
+function resetTranslations() {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        element.removeAttribute('data-current-lang');
+    });
+}
+
+// 强制更新所有文本内容
+function forceUpdateContent() {
+    // 清除可能的缓存
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        element.textContent = '';
+    });
+    
+    // 更新所有带有 data-i18n 属性的元素
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getTranslation(key, currentLang);
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+
+    // 特殊处理邮箱链接，保持其原有的href属性
+    document.querySelectorAll('a[href^="mailto:"]').forEach(element => {
+        element.href = element.href; // 保持mailto链接不变
+    });
+}
+
+// 更新语言按钮状态
+function updateLanguageButtons() {
+    document.querySelectorAll('[data-lang]').forEach(button => {
+        button.classList.toggle('active', button.getAttribute('data-lang') === currentLang);
+    });
+    
+    const languageBtn = document.querySelector('.language-btn span');
+    if (languageBtn) {
+        const translation = translations[currentLang]?.nav?.language;
+        if (translation) {
+            languageBtn.textContent = translation;
+        }
+    }
+}
+
+// 初始化语言
+function initLanguage() {
+    document.documentElement.lang = currentLang;
+    forceUpdateContent();
+}
+
+// 获取翻译
+function getTranslation(key, lang) {
+    try {
+        const keys = key.split('.');
+        let value = translations[lang];
+        
+        for (const k of keys) {
+            if (value && value[k]) {
+                value = value[k];
+            } else {
+                // 如果找不到翻译，尝试使用英语作为后备
+                if (lang !== 'en') {
+                    return getTranslation(key, 'en');
+                }
+                console.warn(`Translation missing for key: ${key} in language: ${lang}`);
+                return null;
+            }
+        }
+        return value;
+    } catch (error) {
+        console.error(`Error getting translation for key: ${key}`, error);
+        // 发生错误时尝试使用英语
+        if (lang !== 'en') {
+            return getTranslation(key, 'en');
+        }
+        return null;
+    }
 }
 
 // DOM加载完成后初始化
 document.addEventListener('DOMContentLoaded', () => {
-    // 初始化语言
-    initLanguage();
+    // 设置初始语言
+    const savedLang = localStorage.getItem('language') || 'en';
+    setLanguage(savedLang);
     
     // 为所有语言切换按钮添加事件监听
     const langButtons = document.querySelectorAll('[data-lang]');
     langButtons.forEach(button => {
         button.addEventListener('click', (e) => {
+            e.preventDefault();
             const lang = button.getAttribute('data-lang');
             setLanguage(lang);
         });
+    });
+});
+
+function changeLanguage(lang) {
+    // 保存选择的语言到 localStorage
+    localStorage.setItem('selectedLanguage', lang);
+    
+    // 设置语言和方向
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    
+    // 更新语言按钮文本
+    const languageBtn = document.querySelector('.language-btn span');
+    if (languageBtn) {
+        const translation = translations[lang].nav.language;
+        languageBtn.textContent = translation;
+    }
+    
+    // 更新所有翻译内容
+    updatePageContent(lang);
+}
+
+// 页面加载时初始化语言设置
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取保存的语言设置，如果没有则默认使用英语
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    
+    // 设置语言和方向
+    document.documentElement.lang = savedLanguage;
+    document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
+    
+    // 更新语言按钮文本
+    const languageBtn = document.querySelector('.language-btn span');
+    if (languageBtn) {
+        const translation = translations[savedLanguage].nav.language;
+        languageBtn.textContent = translation;
+    }
+    
+    // 更新所有翻译内容
+    updatePageContent(savedLanguage);
+});
+
+// 更新页面内容的函数
+function updatePageContent(lang) {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getTranslation(key, lang);
+        if (translation) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translation;
+            } else {
+                element.textContent = translation;
+                // 特殊处理地址文本
+                if (key === 'footer.addressText') {
+                    element.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+                    element.style.textAlign = lang === 'ar' ? 'right' : 'left';
+                    element.style.display = 'block';
+                }
+            }
+        }
+    });
+}
+
+// 为语言切换按钮添加事件监听
+document.querySelectorAll('.dropdown-content a[data-lang]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        changeLanguage(lang);
     });
 }); 

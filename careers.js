@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 显示模态框
     function showModal() {
         modal.classList.add('show');
+        // 强制更新翻译
+        updateTranslations();
         document.body.style.overflow = 'hidden'; // 防止背景滚动
     }
     
@@ -15,13 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     }
     
-    // 为所有应用按钮添加点击事件
-    applyButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            showModal();
-        });
-    });
+    // 打开模态框函数
+    window.openModal = function(position) {
+        showModal();
+    };
     
     // 点击关闭按钮关闭模态框
     closeBtn.addEventListener('click', hideModal);
@@ -52,4 +51,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // 更新翻译函数
+    function updateTranslations() {
+        const elements = modal.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const translation = getTranslation(key, currentLang);
+            if (translation) {
+                element.textContent = translation;
+            }
+        });
+    }
 }); 

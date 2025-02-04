@@ -28,9 +28,9 @@
                         <span data-i18n="nav.language">Language</span>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#" data-lang="en">English</a>
-                        <a href="#" data-lang="de">Deutsch</a>
-                        <a href="#" data-lang="ar">العربية</a>
+                        <a href="#" onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                        <a href="#" onclick="changeLanguage('de'); return false;" data-lang="de">Deutsch</a>
+                        <a href="#" onclick="changeLanguage('ar'); return false;" data-lang="ar">العربية</a>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
         <section class="esg-hero">
             <div class="hero-content">
                 <h1 data-i18n="esg.title">Our Commitment to ESG</h1>
-                <p data-i18n="esg.intro">At Stratosphere, ESG principles are at the core of our mission, driving sustainability, innovation, and ethical operations.</p>
+                <p data-i18n="esg.subtitle">At Stratosphere, ESG principles are at the core of our mission, driving sustainability, innovation, and ethical operations.</p>
             </div>
         </section>
 
@@ -59,18 +59,18 @@
                     <div class="esg-item expandable-section">
                         <div class="check-icon">✓</div>
                         <div class="item-content">
-                            <h2 data-i18n="esg.environmental">Environmental Stewardship</h2>
+                            <h2 data-i18n="esg.environmental.title">Environmental</h2>
                             <div class="content-wrapper">
-                                <div class="preview-text">At the heart of our Environmental Stewardship is a commitment to integrating state-of-the-art energy storage solutions that not only lower carbon emissions but also significantly enhance the efficiency and reliability of renewable energy systems.</div>
+                                <div class="preview-text" data-i18n="esg.environmental.preview">At the heart of our Environmental Stewardship is a commitment to integrating state-of-the-art energy storage solutions that not only lower carbon emissions but also significantly enhance the efficiency and reliability of renewable energy systems.</div>
                                 <div class="expanded-content">
-                                    <p>By embracing innovative technologies, we are able to capture excess energy generated from renewable sources, store it effectively, and release it when needed, thereby reducing reliance on fossil fuels and minimizing overall environmental impact.</p>
-                                    <p>Our cutting-edge energy storage systems are designed to optimize the performance of solar, wind, and other renewable energy installations, ensuring a steady and reliable supply of clean power. This approach not only helps to balance energy demand and supply but also plays a crucial role in stabilizing the grid during periods of high renewable output or unexpected fluctuations.</p>
-                                    <p>Furthermore, our commitment extends to continuous research and development in energy storage technologies, allowing us to remain at the forefront of environmental innovation. By investing in these advanced solutions, we are not only contributing to a reduction in greenhouse gas emissions but also paving the way for a sustainable, low-carbon future. This proactive approach to environmental management reinforces our dedication to creating a cleaner, greener future for generations to come.</p>
+                                    <p data-i18n="esg.environmental.expandedContent.0">By embracing innovative technologies, we are able to capture excess energy generated from renewable sources, store it effectively, and release it when needed, thereby reducing reliance on fossil fuels and minimizing overall environmental impact.</p>
+                                    <p data-i18n="esg.environmental.expandedContent.1">Our cutting-edge energy storage systems are designed to optimize the performance of solar, wind, and other renewable energy installations, ensuring a steady and reliable supply of clean power. This approach not only helps to balance energy demand and supply but also plays a crucial role in stabilizing the grid during periods of high renewable output or unexpected fluctuations.</p>
+                                    <p data-i18n="esg.environmental.expandedContent.2">Furthermore, our commitment extends to continuous research and development in energy storage technologies, allowing us to remain at the forefront of environmental innovation. By investing in these advanced solutions, we are not only contributing to a reduction in greenhouse gas emissions but also paving the way for a sustainable, low-carbon future. This proactive approach to environmental management reinforces our dedication to creating a cleaner, greener future for generations to come.</p>
                                 </div>
                             </div>
                             <button class="expand-toggle">
-                                <span class="expand-text">Read more</span>
-                                <span class="collapse-text">Read less</span>
+                                <span class="expand-text" data-i18n="esg.environmental.readMore">Read more</span>
+                                <span class="collapse-text" data-i18n="esg.environmental.readLess">Read less</span>
                                 <span class="toggle-icon"></span>
                             </button>
                         </div>
@@ -79,18 +79,18 @@
                     <div class="esg-item expandable-section">
                         <div class="check-icon">✓</div>
                         <div class="item-content">
-                            <h2 data-i18n="esg.social">Social Responsibility</h2>
+                            <h2 data-i18n="esg.social.title">Social Responsibility</h2>
                             <div class="content-wrapper">
-                                <div class="preview-text">Our commitment to social responsibility is embodied through a network of global partnerships that actively contribute to strengthening local economies, nurturing workforce development, and broadening energy access.</div>
+                                <div class="preview-text" data-i18n="esg.social.preview">Our commitment to social responsibility is embodied through a network of global partnerships that actively contribute to strengthening local economies, nurturing workforce development, and broadening energy access.</div>
                                 <div class="expanded-content">
-                                    <p>We believe that empowering communities begins with investing in the people and resources at the local level. By collaborating with community organizations, educational institutions, and industry leaders across the globe, we work to create meaningful opportunities for job training, skill enhancement, and career advancement, ensuring that individuals are equipped to meet the evolving demands of a modern, sustainable economy.</p>
-                                    <p>We also focus on expanding energy access in underserved regions, recognizing that reliable and affordable energy is a cornerstone of community development. Through strategic initiatives and partnerships, we support projects that bring clean, renewable energy solutions to remote areas, thereby enhancing quality of life and fostering economic growth. Our efforts aim to reduce energy poverty, stimulate local entrepreneurship, and create a positive ripple effect that extends well beyond the energy sector.</p>
-                                    <p>By integrating these social initiatives into our business model, we not only contribute to the well-being of communities but also promote a culture of inclusivity and shared prosperity. We are dedicated to ensuring that our growth and success translate into tangible benefits for people worldwide, empowering communities to thrive in a rapidly changing global landscape.</p>
+                                    <p data-i18n="esg.social.expandedContent.0">We believe that empowering communities begins with investing in the people and resources at the local level. By collaborating with community organizations, educational institutions, and industry leaders across the globe, we work to create meaningful opportunities for job training, skill enhancement, and career advancement, ensuring that individuals are equipped to meet the evolving demands of a modern, sustainable economy.</p>
+                                    <p data-i18n="esg.social.expandedContent.1">We also focus on expanding energy access in underserved regions, recognizing that reliable and affordable energy is a cornerstone of community development. Through strategic initiatives and partnerships, we support projects that bring clean, renewable energy solutions to remote areas, thereby enhancing quality of life and fostering economic growth. Our efforts aim to reduce energy poverty, stimulate local entrepreneurship, and create a positive ripple effect that extends well beyond the energy sector.</p>
+                                    <p data-i18n="esg.social.expandedContent.2">By integrating these social initiatives into our business model, we not only contribute to the well-being of communities but also promote a culture of inclusivity and shared prosperity. We are dedicated to ensuring that our growth and success translate into tangible benefits for people worldwide, empowering communities to thrive in a rapidly changing global landscape.</p>
                                 </div>
                             </div>
                             <button class="expand-toggle">
-                                <span class="expand-text">Read more</span>
-                                <span class="collapse-text">Read less</span>
+                                <span class="expand-text" data-i18n="esg.social.readMore">Read more</span>
+                                <span class="collapse-text" data-i18n="esg.social.readLess">Read less</span>
                                 <span class="toggle-icon"></span>
                             </button>
                         </div>
@@ -99,19 +99,19 @@
                     <div class="esg-item expandable-section">
                         <div class="check-icon">✓</div>
                         <div class="item-content">
-                            <h2 data-i18n="esg.governance">Strong Governance</h2>
+                            <h2 data-i18n="esg.governance.title">Strong Governance</h2>
                             <div class="content-wrapper">
-                                <div class="preview-text">Our approach to corporate governance is built on a foundation of unwavering transparency, stringent regulatory compliance, and prudent resource management.</div>
+                                <div class="preview-text" data-i18n="esg.governance.preview">Our approach to corporate governance is built on a foundation of unwavering transparency, stringent regulatory compliance, and prudent resource management.</div>
                                 <div class="expanded-content">
-                                    <p>We believe that robust governance practices are essential to sustaining long-term value and fostering trust among our stakeholders. By maintaining open channels of communication and ensuring that all operations adhere to the highest ethical standards, we create an environment where accountability and responsible decision-making are paramount.</p>
-                                    <p>We continuously refine our governance framework to meet and exceed global regulatory requirements, safeguarding the interests of our investors, customers, employees, and the communities we serve. This commitment to compliance not only minimizes risk but also reinforces our dedication to operating with integrity and fairness in every aspect of our business.</p>
-                                    <p>In addition, our responsible resource management strategies are designed to optimize efficiency and drive sustainable growth. Through careful planning, monitoring, and allocation of resources, we ensure that our business practices contribute to a resilient, value-driven enterprise. This holistic approach to corporate governance enables us to navigate complex market dynamics effectively while upholding the trust and confidence of our stakeholders.</p>
-                                    <p>Ultimately, our strong governance principles lay the groundwork for long-term success and innovation, positioning us as a leader in our industry and a trusted partner in the global marketplace.</p>
+                                    <p data-i18n="esg.governance.expandedContent.0">We believe that robust governance practices are essential to sustaining long-term value and fostering trust among our stakeholders. By maintaining open channels of communication and ensuring that all operations adhere to the highest ethical standards, we create an environment where accountability and responsible decision-making are paramount.</p>
+                                    <p data-i18n="esg.governance.expandedContent.1">We continuously refine our governance framework to meet and exceed global regulatory requirements, safeguarding the interests of our investors, customers, employees, and the communities we serve. This commitment to compliance not only minimizes risk but also reinforces our dedication to operating with integrity and fairness in every aspect of our business.</p>
+                                    <p data-i18n="esg.governance.expandedContent.2">In addition, our responsible resource management strategies are designed to optimize efficiency and drive sustainable growth. Through careful planning, monitoring, and allocation of resources, we ensure that our business practices contribute to a resilient, value-driven enterprise. This holistic approach to corporate governance enables us to navigate complex market dynamics effectively while upholding the trust and confidence of our stakeholders.</p>
+                                    <p data-i18n="esg.governance.expandedContent.3">Ultimately, our strong governance principles lay the groundwork for long-term success and innovation, positioning us as a leader in our industry and a trusted partner in the global marketplace.</p>
                                 </div>
                             </div>
                             <button class="expand-toggle">
-                                <span class="expand-text">Read more</span>
-                                <span class="collapse-text">Read less</span>
+                                <span class="expand-text" data-i18n="esg.governance.readMore">Read more</span>
+                                <span class="collapse-text" data-i18n="esg.governance.readLess">Read less</span>
                                 <span class="toggle-icon"></span>
                             </button>
                         </div>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     <div class="vision-statement">
-                        <p class="vision-text">By continuously pushing the boundaries of technological innovation and steadfastly upholding the highest ESG standards, we are revolutionizing energy solutions and meticulously crafting a resilient, sustainable energy ecosystem. This enduring commitment not only transforms today's energy landscape but also lays a robust foundation for the prosperity and well-being of future generations.</p>
+                        <p class="vision-text" data-i18n="esg.vision.text">By continuously pushing the boundaries of technological innovation and steadfastly upholding the highest ESG standards, we are revolutionizing energy solutions and meticulously crafting a resilient, sustainable energy ecosystem. This enduring commitment not only transforms today's energy landscape but also lays a robust foundation for the prosperity and well-being of future generations.</p>
                     </div>
                 </div>
             </div>
