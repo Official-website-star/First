@@ -163,6 +163,24 @@ const translations = {
                 engineers: "Experienced Engineers",
                 storage: "Energy Storage Assets",
                 countries: "Countries Served"
+            },
+            vision: {
+                innovation: {
+                    title: "Embracing a Future of Innovation",
+                    text: "At Stratosphere GE, we view every challenge as a stepping stone to innovation. Our philosophy centers on reimagining conventional boundaries and creating solutions that not only address today's needs but also anticipate the opportunities of tomorrow. By blending deep industry insights with a passion for creativity, we empower our partners to move beyond the ordinary and redefine what's possible."
+                },
+                collaboration: {
+                    title: "A Collaborative Spirit at the Core",
+                    text: "Our approach is built on the belief that the most powerful ideas emerge when diverse perspectives come together. We foster an environment where collaboration is more than just a strategy—it's a mindset. This commitment to teamwork allows us to draw on a rich tapestry of expertise and experience, ensuring that every project is informed by thoughtful analysis, strategic planning, and a genuine desire to make a lasting impact."
+                },
+                precision: {
+                    title: "Precision, Passion, and Progress",
+                    text: "In an era marked by rapid change, staying ahead means continuously refining your craft. At Stratosphere GE, we merge technical precision with an entrepreneurial spirit, striving to deliver outcomes that are as robust as they are innovative. Our dedicated team is driven by a relentless pursuit of excellence, constantly seeking out new methodologies and technologies that pave the way for sustainable growth and forward momentum."
+                },
+                future: {
+                    title: "Charting a Course Toward Tomorrow",
+                    text: "Looking forward, we remain committed to pushing the envelope and exploring uncharted territories. Every initiative we undertake is a journey—a collaborative exploration of possibilities that ultimately leads to breakthrough solutions and lasting success. We invite you to join us as we navigate this evolving landscape, turning visionary ideas into realities that transform industries and elevate experiences."
+                }
             }
         },
         about: {
@@ -183,7 +201,7 @@ const translations = {
             },
             expertise: {
                 title: "Our Expertise",
-                text: "Stratosphere delivers end-to-end energy storage solutions, supporting renewable energy projects and enhancing power distribution systems. Our expertise spans market analysis, technical evaluation, and independent third-party certification, ensuring seamless integration and maximum efficiency."
+                text: "Stratosphere offers comprehensive, end-to-end energy storage solutions, supporting renewable energy projects and strengthening power distribution networks. Our expertise spans market analysis, technical evaluation, and independent third-party certification, ensuring seamless integration and maximum operational efficiency."
             }
         },
         contact: {
@@ -594,6 +612,24 @@ const translations = {
                 engineers: "Erfahrene Ingenieure und Experten",
                 storage: "Energiespeicheranlagen im Betrieb",
                 countries: "Länder mit aktiver Präsenz"
+            },
+            vision: {
+                innovation: {
+                    title: "Eine Zukunft der Innovation gestalten",
+                    text: "Bei Stratosphere GE betrachten wir jede Herausforderung als Sprungbrett zur Innovation. Unsere Philosophie konzentriert sich darauf, konventionelle Grenzen neu zu denken und Lösungen zu schaffen, die nicht nur die heutigen Bedürfnisse erfüllen, sondern auch die Chancen von morgen vorwegnehmen. Durch die Verbindung von tiefgreifenden Branchenkenntnissen mit Kreativität ermöglichen wir unseren Partnern, über das Gewöhnliche hinauszugehen und neue Maßstäbe zu setzen."
+                },
+                collaboration: {
+                    title: "Kollaborativer Geist im Kern",
+                    text: "Unser Ansatz basiert auf der Überzeugung, dass die wirkungsvollsten Ideen entstehen, wenn verschiedene Perspektiven zusammenkommen. Wir schaffen ein Umfeld, in dem Zusammenarbeit mehr als nur eine Strategie ist – es ist eine Denkweise. Dieses Engagement für Teamarbeit ermöglicht es uns, aus einem reichen Fundus an Expertise und Erfahrung zu schöpfen und sicherzustellen, dass jedes Projekt von durchdachter Analyse, strategischer Planung und dem aufrichtigen Wunsch geprägt ist, nachhaltige Wirkung zu erzielen."
+                },
+                precision: {
+                    title: "Präzision, Leidenschaft und Fortschritt",
+                    text: "In einer Zeit des schnellen Wandels bedeutet Vorsprung, sein Handwerk kontinuierlich zu verfeinern. Bei Stratosphere GE verbinden wir technische Präzision mit unternehmerischem Geist und streben nach Ergebnissen, die ebenso robust wie innovativ sind. Unser engagiertes Team wird von einem unermüdlichen Streben nach Exzellenz angetrieben und sucht ständig nach neuen Methoden und Technologien, die den Weg für nachhaltiges Wachstum und Fortschritt ebnen."
+                },
+                future: {
+                    title: "Kurs auf die Zukunft",
+                    text: "Mit Blick nach vorn bleiben wir unserem Engagement treu, Grenzen zu überschreiten und unbekanntes Terrain zu erkunden. Jede Initiative, die wir unternehmen, ist eine Reise – eine gemeinsame Erkundung von Möglichkeiten, die letztlich zu bahnbrechenden Lösungen und nachhaltigem Erfolg führt. Wir laden Sie ein, uns auf dieser Reise zu begleiten, während wir visionäre Ideen in Realitäten verwandeln, die Branchen transformieren und Erfahrungen auf ein neues Niveau heben."
+                }
             }
         },
         about: {
@@ -614,7 +650,7 @@ const translations = {
             },
             expertise: {
                 title: "Unsere Expertise",
-                text: "Stratosphere bietet ganzheitliche Energiespeicherlösungen, unterstützt Projekte für erneuerbare Energien und optimiert Stromverteilungssysteme. Unsere Expertise umfasst Marktanalyse, technische Bewertung und unabhängige Zertifizierung durch Dritte, um eine nahtlose Integration und maximale Effizienz zu gewährleisten."
+                text: "Stratosphere bietet umfassende, ganzheitliche Energiespeicherlösungen, unterstützt Projekte für erneuerbare Energien und stärkt Stromverteilungsnetze. Unsere Expertise umfasst Marktanalyse, technische Bewertung und unabhängige Zertifizierung durch Dritte, um eine nahtlose Integration und maximale betriebliche Effizienz zu gewährleisten."
             }
         },
         contact: {
@@ -658,37 +694,36 @@ const translations = {
                 preview: "Im Zentrum unseres Umweltengagements steht die Integration modernster Energiespeicherlösungen, die nicht nur CO2-Emissionen reduzieren, sondern auch die Effizienz und Zuverlässigkeit erneuerbarer Energiesysteme deutlich verbessern.",
                 expandedContent: [
                     "Durch den Einsatz innovativer Technologien können wir überschüssige Energie aus erneuerbaren Quellen erfassen, effizient speichern und bei Bedarf freisetzen, wodurch die Abhängigkeit von fossilen Brennstoffen reduziert und die Gesamtumweltbelastung minimiert wird.",
-                    "Unsere fortschrittlichen Energiespeichersysteme sind darauf ausgelegt, die Leistung von Solar-, Wind- und anderen erneuerbaren Energieanlagen zu optimieren und eine zuverlässige und konstante Versorgung mit sauberer Energie sicherzustellen.",
-                    "Darüber hinaus erstreckt sich unser Engagement auf die kontinuierliche Forschung und Entwicklung im Bereich der Energiespeichertechnologien, wodurch wir an der Spitze der Umweltinnovation bleiben."
+                    "أنظمة تخزين الطاقة المتطورة لدينا مصممة لتحسين أداء منشآت الطاقة الشمسية وطاقة الرياح وغيرها من مصادر الطاقة المتجددة، مما يضمن إمداداً مستقراً وموثوقاً للطاقة النظيفة.",
+                    "علاوة على ذلك، يمتد التزامنا إلى البحث والتطوير المستمر في تقنيات تخزين الطاقة، مما يمكننا من البقاء في طليعة الابتكار البيئي."
                 ],
-                readMore: "Mehr lesen",
-                readLess: "Weniger anzeigen"
+                readMore: "قراءة المزيد",
+                readLess: "عرض أقل"
             },
-            
             social: {
-                title: "Soziales",
-                preview: "Unser soziales Engagement basiert auf der Überzeugung, dass nachhaltige Energielösungen allen Menschen zugutekommen sollten.",
+                title: "المسؤولية الاجتماعية",
+                preview: "تستند مسؤوليتنا الاجتماعية على الإيمان بأن حلول الطاقة المستدامة يجب أن تفيد الجميع.",
                 expandedContent: [
-                    "Wir investieren aktiv in die Entwicklung lokaler Talente und schaffen qualifizierte Arbeitsplätze in den Gemeinden, in denen wir tätig sind.",
-                    "Durch strategische Partnerschaften mit Bildungseinrichtungen fördern wir die nächste Generation von Energieexperten und Innovatoren.",
-                    "Wir setzen uns aktiv für Vielfalt, Chancengleichheit und Inklusion in der Energiebranche ein und fördern eine integrative Arbeitskultur."
+                    "نستثمر بنشاط في تطوير المواهب المحلية وخلق فرص عمل مؤهلة في المجتمعات التي نعمل فيها.",
+                    "من خلال شراكات استراتيجية مع المؤسسات التعليمية، نعزز الجيل القادم من خبراء الطاقة والمبتكرين.",
+                    "نلتزم بنشاط بالتنوع وتكافؤ الفرص والشمول في قطاع الطاقة، ونعزز ثقافة عمل شاملة."
                 ],
-                readMore: "Mehr lesen",
-                readLess: "Weniger anzeigen"
+                readMore: "قراءة المزيد",
+                readLess: "عرض أقل"
             },
             governance: {
-                title: "Unternehmensführung",
-                preview: "Unsere Unternehmensführung basiert auf Transparenz, Ethik und Verantwortlichkeit.",
+                title: "الحوكمة",
+                preview: "تستند حوكمة شركتنا على الشفافية والأخلاق والمساءلة.",
                 expandedContent: [
-                    "Wir halten die höchsten Standards für Unternehmensethik, Compliance und Transparenz in allen Geschäftsbereichen ein.",
-                    "Durch regelmäßige interne und externe Audits sowie strenge Überprüfungen gewährleisten wir die kontinuierliche Einhaltung aller relevanten Vorschriften und Standards.",
-                    "Wir pflegen einen transparenten und konstruktiven Dialog mit allen Stakeholdern und stellen sicher, dass ihre Interessen in unseren Entscheidungsprozessen berücksichtigt werden."
+                    "نلتزم بأعلى معايير أخلاقيات العمل والامتثال والشفافية في جميع مجالات أعمالنا.",
+                    "من خلال عمليات التدقيق الداخلية والخارجية المنتظمة والمراجعات الصارمة، نضمن الامتثال المستمر لجميع اللوائح والمعايير ذات الصلة.",
+                    "نحافظ على حوار شفاف وبناء مع جميع أصحاب المصلحة ونضمن مراعاة مصالحهم في عمليات صنع القرار لدينا."
                 ],
-                readMore: "Mehr lesen",
-                readLess: "Weniger anzeigen"
+                readMore: "قراءة المزيد",
+                readLess: "عرض أقل"
             },
             vision: {
-                text: "Durch kontinuierliches Vorantreiben der Grenzen technologischer Innovation und konsequentes Einhalten höchster ESG-Standards revolutionieren wir Energielösungen und gestalten sorgfältig ein widerstandsfähiges, nachhaltiges Energieökosystem. Dieses dauerhafte Engagement verändert nicht nur die heutige Energielandschaft, sondern legt auch ein solides Fundament für den Wohlstand und das Wohlergehen zukünftiger Generationen."
+                text: "من خلال الدفع المستمر لحدود الابتكار التكنولوجي والتمسك الثابت بأعلى معايير ESG، نقوم بإحداث ثورة في حلول الطاقة وبناء نظام طاقة مستدام ومرن بعناية. هذا الالتزام الدائم لا يحول مشهد الطاقة اليوم فحسب، بل يضع أيضًا أساسًا متينًا لازدهار ورفاهية الأجيال القادمة."
             }
         },
         careers: {
@@ -906,8 +941,7 @@ const translations = {
                     intro: "نتبع منهجية متكاملة في دراسة الجدوى وتقييم السوق تشمل تحليلات شاملة لفرص تخزين الطاقة، مما يمكّن من اتخاذ قرارات استثمارية مدروسة.",
                     details: {
                         market: {
-                            title: "تحليل السوق",
-                            text: "إطار تقييم السوق لدينا مصمم خصيصاً لتحديد الفرص الرئيسية في قطاع الطاقة المتطور. من خلال التحليلات المتقدمة ورؤى الصناعة، نحدد المجالات الاستراتيجية حيث يمكن لحلول تخزين الطاقة أن تحقق قيمة كبيرة."
+                            title: "تحليل السوق",                            text: "إطار تقييم السوق لدينا مصمم خصيصاً لتحديد الفرص الرئيسية في قطاع الطاقة المتطور. من خلال التحليلات المتقدمة ورؤى الصناعة، نحدد المجالات الاستراتيجية حيث يمكن لحلول تخزين الطاقة أن تحقق قيمة كبيرة."
                         },
                         planning: {
                             title: "التخطيط التجاري",
@@ -1035,6 +1069,24 @@ const translations = {
                 engineers: "مهندس وخبير متخصص",
                 storage: "جيجاواط ساعة من سعة التخزين",
                 countries: "دولة نعمل فيها"
+            },
+            vision: {
+                innovation: {
+                    title: "نحتضن مستقبل الابتكار",
+                    text: "في Stratosphere GE، نرى كل تحدٍ كخطوة نحو الابتكار. تتمحور فلسفتنا حول إعادة تصور الحدود التقليدية وابتكار حلول لا تلبي احتياجات اليوم فحسب، بل تستبق فرص الغد. من خلال مزج الرؤى العميقة للصناعة مع شغف الإبداع، نمكّن شركائنا من تجاوز المألوف وإعادة تعريف ما هو ممكن."
+                },
+                collaboration: {
+                    title: "روح التعاون في صميم عملنا",
+                    text: "يعتمد نهجنا على الإيمان بأن أقوى الأفكار تنبثق عندما تجتمع وجهات النظر المتنوعة. نحن نعزز بيئة يكون فيها التعاون أكثر من مجرد استراتيجية - إنه عقلية. يتيح لنا هذا الالتزام بالعمل الجماعي الاستفادة من نسيج غني من الخبرات والتجارب، مما يضمن أن كل مشروع يسترشد بتحليل متعمق وتخطيط استراتيجي ورغبة حقيقية في إحداث تأثير دائم."
+                },
+                precision: {
+                    title: "الدقة والشغف والتقدم",
+                    text: "في عصر يتسم بالتغير السريع، يعني البقاء في المقدمة تحسين مهاراتنا باستمرار. في Stratosphere GE، نجمع بين الدقة التقنية والروح الريادية، ونسعى جاهدين لتحقيق نتائج قوية ومبتكرة. يدفع فريقنا المتفاني السعي الدؤوب نحو التميز، ويبحث باستمرار عن منهجيات وتقنيات جديدة تمهد الطريق للنمو المستدام والتقدم المستمر."
+                },
+                future: {
+                    title: "رسم مسار نحو الغد",
+                    text: "نظراً إلى المستقبل، نظل ملتزمين بدفع الحدود واستكشاف المجالات غير المطروقة. كل مبادرة نتخذها هي رحلة - استكشاف تعاوني للإمكانيات يؤدي في النهاية إلى حلول رائدة ونجاح دائم. ندعوكم للانضمام إلينا ونحن نبحر في هذا المشهد المتطور، محولين الأفكار المبتكرة إلى حقائق تحول الصناعات وترتقي بالتجارب."
+                }
             }
         },
         about: {
@@ -1055,7 +1107,7 @@ const translations = {
             },
             expertise: {
                 title: "خبرتنا",
-                text: "تقدم Stratosphere حلول تخزين الطاقة المتكاملة، مع دعم مشاريع الطاقة المتجددة وتطوير أنظمة توزيع الطاقة. تشمل خبرتنا تحليل السوق والتقييم التقني والشهادات المستقلة من جهات خارجية، مما يضمن التكامل السلس والكفاءة القصوى."
+                text: "تقدم Stratosphere حلولاً شاملة ومتكاملة لتخزين الطاقة، مع دعم مشاريع الطاقة المتجددة وتعزيز شبكات توزيع الطاقة. تشمل خبرتنا تحليل السوق والتقييم التقني والشهادات المستقلة من جهات خارجية، مما يضمن التكامل السلس وأقصى كفاءة تشغيلية."
             }
         },
         contact: {

@@ -120,52 +120,59 @@
 }
 
 .contact-content {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 5%;
+    padding: 2rem 5%;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
-    padding: 0 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    width: 100%;
+    margin: 0;
+    padding: 0 5%;
 }
 
 .contact-card, .quick-links-card {
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
+    min-height: 300px;
+    justify-content: flex-start;
+}
+
+.contact-card {
+    margin-left: auto;
+}
+
+.quick-links-card {
+    margin-right: auto;
 }
 
 .contact-card h2, .quick-links-card h2 {
     color: #006B3F;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     font-weight: 600;
     text-align: center;
-    white-space: nowrap;
-    padding: 0 1rem;
 }
 
 .contact-details {
     width: 100%;
-    max-width: 450px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .contact-group {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .contact-item {
@@ -308,48 +315,34 @@
 
 /* Quick Links Styles */
 .links-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    align-items: center;
+    gap: 1rem;
 }
 
 .quick-link-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    color: #444;
+    width: 80%;
+    padding: 0.8rem 1.5rem;
+    color: #555;
     text-decoration: none;
-    font-size: 1rem;
+    text-align: center;
     transition: all 0.3s ease;
     border-radius: 8px;
-    position: relative;
-    border-bottom: 1px solid #eee;
-    padding-left: 3.5rem;
-}
-
-.quick-link-item:last-child {
-    border-bottom: none;
-}
-
-.link-icon {
-    position: absolute;
-    left: 2rem;
-    font-size: 1rem;
-    color: #006B3F;
-    opacity: 0.3;
-    transition: all 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .quick-link-item:hover {
-    background: #f0f9f4;
+    background: rgba(0, 107, 63, 0.05);
     color: #006B3F;
-    padding-left: 4rem;
+    transform: translateY(-2px);
 }
 
-.quick-link-item:hover .link-icon {
-    opacity: 1;
-    transform: translateX(-0.5rem);
+/* 分隔线样式 */
+.quick-link-item:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 107, 63, 0.1);
+    padding-bottom: 1rem;
 }
 
 /* Responsive Design */
@@ -388,29 +381,34 @@
     
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0;
+        gap: 1.5rem;
+        padding: 0 1rem;
     }
     
     .contact-card, .quick-links-card {
-        padding: 1.5rem;
         width: 100%;
+        margin: 0 auto;
+        min-height: 250px;
+        padding: 2rem;
     }
     
-    .contact-card h2 {
-        font-size: 1.1rem;
+    .contact-card h2, .quick-links-card h2 {
+        font-size: 1.3rem;
         margin-bottom: 1.5rem;
-        white-space: normal;
-        padding: 0;
     }
     
     .contact-details {
-        gap: 1.5rem;
+        gap: 2rem;
+    }
+    
+    .contact-group h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
     }
     
     .address-text,
     .footer-email {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
     
     .contact-icon {
@@ -419,8 +417,9 @@
     }
     
     .quick-link-item {
-        padding: 0.8rem 1.5rem 0.8rem 3rem;
-        font-size: 0.95rem;
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
     }
     
     .language-buttons {
@@ -494,18 +493,19 @@
 }
 
 .address-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #333;
-    line-height: 1.5;
-    margin: 0;
+    line-height: 1.6;
+    margin: 0.5rem 0;
 }
 
 .footer-email {
     color: #006B3F;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
-    white-space: nowrap;
+    display: inline-block;
+    margin-top: 0.5rem;
 }
 
 .footer-email:hover {
@@ -516,18 +516,8 @@
 .contact-group h3 {
     color: #006B3F;
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 600;
-}
-
-/* 调整左侧卡片宽度 */
-.contact-card {
-    margin-left: auto;
-}
-
-/* 调整右侧卡片宽度 */
-.quick-links-card {
-    margin-right: auto;
 }
 
 /* 添加分隔线容器 */
