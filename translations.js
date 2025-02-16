@@ -202,6 +202,19 @@ const translations = {
             expertise: {
                 title: "Our Expertise",
                 text: "Stratosphere offers comprehensive, end-to-end energy storage solutions, supporting renewable energy projects and strengthening power distribution networks. Our expertise spans market analysis, technical evaluation, and independent third-party certification, ensuring seamless integration and maximum operational efficiency."
+            },
+            management: {
+                title: "Our Management",
+                perner: {
+                    name: "Michał Perner",
+                    title: "Director",
+                    bio: "As a seasoned entrepreneur with deep expertise in the healthcare industry, Mr. Perner has consistently driven business success on a global scale. Known for his strategic acumen and ability to identify growth opportunities, he has built and acquired high-value assets that transform companies into industry leaders. Over the years, he has established trusted partnerships with investors and clients, ensuring the delivery of outstanding results and exceeding expectations.\n\nHis leadership experience spans diverse executive roles, including Managing Director at GEQuality Ltd and Executive Vice President at Meyra Group, where he played a pivotal role in scaling businesses from local operations to global ventures. Passionate about optimizing P&L performance and making strategic decisions that benefit both companies and stakeholders, Mr. Perner remains focused on driving sustainable growth and fostering innovation."
+                },
+                narinx: {
+                    name: "Dirk Narinx",
+                    title: "Director",
+                    bio: "With over 30 years of experience at Solystic, Mr. Narinx stands out as a highly skilled Senior Engineer, contributing to groundbreaking projects in the fields of mechanical, electrical, civil, and software engineering. His extensive career is marked by a strong focus on delivering innovative solutions that optimize performance, reduce costs, and enhance efficiency across complex systems.\n\nMr. Narinx's journey with Solystic took him across Italy, the UK, India, and China, where he led major international projects, adapting to diverse work environments and ensuring seamless project execution in different cultural settings. His global perspective and hands-on experience allowed him to solve unique challenges while managing cross-functional teams and driving project success at every level."
+                }
             }
         },
         contact: {
@@ -651,6 +664,19 @@ const translations = {
             expertise: {
                 title: "Unsere Expertise",
                 text: "Stratosphere bietet umfassende, ganzheitliche Energiespeicherlösungen, unterstützt Projekte für erneuerbare Energien und stärkt Stromverteilungsnetze. Unsere Expertise umfasst Marktanalyse, technische Bewertung und unabhängige Zertifizierung durch Dritte, um eine nahtlose Integration und maximale betriebliche Effizienz zu gewährleisten."
+            },
+            management: {
+                title: "Unsere Geschäftsführung",
+                perner: {
+                    name: "Michał Perner",
+                    title: "Direktor",
+                    bio: "Als erfahrener Unternehmer mit fundierter Expertise in der Gesundheitsbranche hat Herr Perner kontinuierlich geschäftliche Erfolge auf globaler Ebene erzielt. Bekannt für seinen strategischen Scharfsinn und die Fähigkeit, Wachstumschancen zu identifizieren, hat er hochwertige Vermögenswerte aufgebaut und erworben, die Unternehmen zu Branchenführern machen. Im Laufe der Jahre hat er vertrauensvolle Partnerschaften mit Investoren und Kunden aufgebaut und dabei herausragende Ergebnisse erzielt und Erwartungen übertroffen.\n\nSeine Führungserfahrung umfasst verschiedene Führungspositionen, darunter Geschäftsführer bei GEQuality Ltd und Executive Vice President bei der Meyra Group, wo er eine Schlüsselrolle bei der Skalierung von Unternehmen von lokalen Operationen zu globalen Ventures spielte. Mit Leidenschaft für die Optimierung der GuV-Performance und strategische Entscheidungen, die sowohl Unternehmen als auch Stakeholdern zugutekommen, bleibt Herr Perner darauf fokussiert, nachhaltiges Wachstum voranzutreiben und Innovation zu fördern."
+                },
+                narinx: {
+                    name: "Dirk Narinx",
+                    title: "Direktor",
+                    bio: "Mit über 30 Jahren Erfahrung bei Solystic zeichnet sich Herr Narinx als hochqualifizierter Senior Engineer aus, der zu bahnbrechenden Projekten in den Bereichen Mechanik, Elektrotechnik, Bauingenieurwesen und Softwareentwicklung beigetragen hat. Seine umfangreiche Karriere ist geprägt von einem starken Fokus auf die Entwicklung innovativer Lösungen, die die Leistung optimieren, Kosten reduzieren und die Effizienz komplexer Systeme steigern.\n\nHerr Narinx' Werdegang bei Solystic führte ihn durch Italien, Großbritannien, Indien und China, wo er bedeutende internationale Projekte leitete, sich an verschiedene Arbeitsumgebungen anpasste und eine reibungslose Projektdurchführung in unterschiedlichen kulturellen Kontexten sicherstellte. Seine globale Perspektive und praktische Erfahrung ermöglichten es ihm, einzigartige Herausforderungen zu meistern und dabei funktionsübergreifende Teams zu leiten und den Projekterfolg auf allen Ebenen voranzutreiben."
+                }
             }
         },
         contact: {
@@ -1108,6 +1134,19 @@ const translations = {
             expertise: {
                 title: "خبرتنا",
                 text: "تقدم Stratosphere حلولاً شاملة ومتكاملة لتخزين الطاقة، مع دعم مشاريع الطاقة المتجددة وتعزيز شبكات توزيع الطاقة. تشمل خبرتنا تحليل السوق والتقييم التقني والشهادات المستقلة من جهات خارجية، مما يضمن التكامل السلس وأقصى كفاءة تشغيلية."
+            },
+            management: {
+                title: "فريق الإدارة",
+                perner: {
+                    name: "ميخال بيرنر",
+                    title: "مدير",
+                    bio: "كرجل أعمال متمرس يتمتع بخبرة عميقة في صناعة الرعاية الصحية، حقق السيد بيرنر نجاحاً مستمراً في الأعمال على المستوى العالمي. معروف بحنكته الاستراتيجية وقدرته على تحديد فرص النمو، قام ببناء واستحواذ أصول عالية القيمة تحول الشركات إلى قادة في الصناعة. على مر السنين، أسس شراكات موثوقة مع المستثمرين والعملاء، مما يضمن تحقيق نتائج متميزة وتجاوز التوقعات.\n\nتمتد خبرته القيادية عبر أدوار تنفيذية متنوعة، بما في ذلك منصب المدير العام في GEQuality Ltd ونائب الرئيس التنفيذي في مجموعة Meyra، حيث لعب دوراً محورياً في توسيع نطاق الأعمال من العمليات المحلية إلى المشاريع العالمية. شغوف بتحسين أداء الأرباح والخسائر واتخاذ القرارات الاستراتيجية التي تفيد كلاً من الشركات وأصحاب المصلحة، يظل السيد بيرنر مركزاً على دفع النمو المستدام وتعزيز الابتكار."
+                },
+                narinx: {
+                    name: "ديرك نارينكس",
+                    title: "مدير",
+                    bio: "مع أكثر من 30 عاماً من الخبرة في شركة Solystic، يبرز السيد نارينكس كمهندس أول عالي المهارة، ساهم في مشاريع رائدة في مجالات الهندسة الميكانيكية والكهربائية والمدنية والبرمجيات. تتميز مسيرته المهنية الواسعة بتركيز قوي على تقديم حلول مبتكرة تحسن الأداء وتقلل التكاليف وتعزز كفاءة الأنظمة المعقدة.\n\nقادت رحلة السيد نارينكس مع Solystic عبر إيطاليا والمملكة المتحدة والهند والصين، حيث قاد مشاريع دولية كبرى، متكيفاً مع بيئات عمل متنوعة وضامناً تنفيذ المشاريع بسلاسة في مختلف الإعدادات الثقافية. مكنته نظرته العالمية وخبرته العملية من حل التحديات الفريدة مع إدارة الفرق متعددة الوظائف ودفع نجاح المشروع على جميع المستويات."
+                }
             }
         },
         contact: {

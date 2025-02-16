@@ -1285,3 +1285,1134 @@ body {
         color: #eee;
     }
 }
+
+/* 管理团队部分样式调整 */
+.management-section {
+    padding: 4rem 5%;
+    background: transparent;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.management-container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 
+        0 4px 20px rgba(0,0,0,0.05),
+        0 0 0 1px rgba(0,107,63,0.1);
+}
+
+.section-title {
+    color: #006B3F;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    /* 移除底部边框 */
+    border-bottom: none;
+}
+
+/* 移除标题装饰线 */
+.section-title::after {
+    display: none;
+}
+
+/* 移除标题上方装饰线 */
+.section-title::before {
+    display: none;
+}
+
+/* 保留左侧竖线和其他所有样式 */
+.management-header {
+    margin-bottom: 1.8rem;
+    position: relative;
+    padding-left: 1.2rem;
+    border-left: 3px solid #006B3F;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.management-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: visible;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 添加人物剪影装饰 */
+.management-card::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 80px;
+    height: 80px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23006B3F" opacity="0.1" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.08;
+    transition: all 0.4s ease;
+}
+
+/* 添加装饰性背景 */
+.management-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(0,107,63,0.03) 0%, transparent 100%);
+    border-radius: 0 16px 0 150px;
+    z-index: 0;
+}
+
+.management-header {
+    margin-bottom: 1.8rem;
+    position: relative;
+    padding-left: 1.2rem;
+    border-left: 3px solid #006B3F;
+    z-index: 1;
+}
+
+.manager-name {
+    color: #006B3F;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+/* 添加名字下划线动画 */
+.manager-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #006B3F, transparent);
+    transition: width 0.3s ease;
+}
+
+.management-card:hover .manager-name::after {
+    width: 100%;
+}
+
+.manager-title {
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+/* 添加职位前的图标 */
+.manager-title::before {
+    content: '•';
+    position: absolute;
+    left: -1rem;
+    color: #006B3F;
+    opacity: 0.5;
+}
+
+.manager-bio {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    background: linear-gradient(to right, 
+        rgba(255,255,255,0.8) 0%,
+        rgba(255,255,255,0.95) 50%,
+        rgba(255,255,255,0.8) 100%
+    );
+}
+
+/* 卡片悬停效果 */
+.management-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,107,63,0.1);
+}
+
+.management-card:hover::before {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.12;
+}
+
+.management-card:hover::after {
+    background: linear-gradient(135deg, rgba(0,107,63,0.05) 0%, transparent 100%);
+}
+
+/* 添加动画进入效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.management-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.management-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .management-container {
+        padding: 2.5rem;
+    }
+    
+    .management-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .management-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .management-card {
+        padding: 2rem;
+    }
+
+    .manager-name {
+        font-size: 1.6rem;
+    }
+
+    .manager-bio {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* Products & Services 页面响应式布局 */
+@media (max-width: 768px) {
+    /* 产品服务主标题 */
+    .products-hero {
+        padding: 2rem 1rem;
+    }
+
+    .products-hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .products-hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    /* 服务卡片网格布局 */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-intro {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+
+    /* 服务详情部分 */
+    .service-details {
+        padding: 1.2rem;
+    }
+
+    .detail-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .detail-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .detail-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* 列表样式调整 */
+    .detail-list {
+        padding-left: 1rem;
+    }
+
+    .detail-list li {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    /* 按钮样式调整 */
+    .read-more-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* 超小屏幕适配 */
+@media (max-width: 480px) {
+    .products-hero {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .products-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .services-grid {
+        padding: 1rem 0.8rem;
+    }
+
+    .service-card {
+        padding: 1.2rem;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .service-details {
+        padding: 1rem;
+    }
+
+    /* 调整卡片装饰元素 */
+    .service-card::before {
+        width: 40px;
+        height: 40px;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .service-card::after {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* 处理横屏模式 */
+@media (max-height: 600px) and (orientation: landscape) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .service-card {
+        padding: 1.2rem;
+    }
+
+    .service-details {
+        padding: 1rem;
+    }
+}
+
+/* 展开/收起内容的动画优化 */
+@media (max-width: 768px) {
+    .service-details {
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+    }
+
+    .detail-section {
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .service-card.collapsed .service-details {
+        max-height: 0;
+    }
+
+    .service-card.collapsed .detail-section {
+        opacity: 0;
+    }
+}
+
+/* ESG 页面响应式布局 */
+@media (max-width: 768px) {
+    /* ESG 主标题部分 */
+    .esg-hero {
+        padding: 2rem 1rem;
+    }
+
+    .esg-hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .esg-hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    /* ESG 卡片网格布局 */
+    .esg-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .esg-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .esg-card-header {
+        margin-bottom: 1.2rem;
+    }
+
+    .esg-card-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .esg-card-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* ESG 内容部分 */
+    .esg-content {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .esg-list {
+        padding-left: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    .esg-list li {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* 图标和装饰元素调整 */
+    .esg-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+
+    .esg-card::before {
+        width: 60px;
+        height: 60px;
+        top: 1.5rem;
+        right: 1.5rem;
+        opacity: 0.08;
+    }
+
+    /* 可持续发展目标部分 */
+    .sustainability-goals {
+        padding: 1.5rem 1rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .goal-item {
+        padding: 1rem;
+    }
+
+    .goal-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.8rem;
+    }
+
+    .goal-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .goal-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* 超小屏幕适配 */
+@media (max-width: 480px) {
+    .esg-hero {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .esg-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .esg-grid {
+        padding: 1rem 0.8rem;
+    }
+
+    .esg-card {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .esg-card-title {
+        font-size: 1.3rem;
+    }
+
+    .esg-card-subtitle {
+        font-size: 1rem;
+    }
+
+    /* 可持续发展目标在超小屏幕上改为单列 */
+    .goals-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .goal-item {
+        padding: 0.8rem;
+    }
+
+    /* 调整装饰元素 */
+    .esg-card::before {
+        width: 40px;
+        height: 40px;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+/* 处理横屏模式 */
+@media (max-height: 600px) and (orientation: landscape) {
+    .esg-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+    }
+
+    .esg-card {
+        padding: 1.2rem;
+        margin-bottom: 0;
+    }
+}
+
+/* 动画效果优化 */
+@media (max-width: 768px) {
+    .esg-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .esg-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .goal-item {
+        transition: transform 0.3s ease;
+    }
+
+    .goal-item:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* Careers 页面响应式布局 */
+@media (max-width: 768px) {
+    /* 职业机会主标题部分 */
+    .careers-hero {
+        padding: 2rem 1rem;
+    }
+
+    .careers-hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .careers-hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    /* 职位列表部分 */
+    .jobs-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .job-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .job-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .job-location {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .job-type {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    /* 职位描述部分 */
+    .job-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+
+    .requirements-list {
+        padding-left: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    .requirements-list li {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* 按钮样式调整 */
+    .apply-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 弹窗样式调整 */
+    .modal-content {
+        width: 90%;
+        max-width: none;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .modal-header {
+        padding-bottom: 1rem;
+    }
+
+    .modal-title {
+        font-size: 1.3rem;
+    }
+
+    .modal-body {
+        padding: 1rem 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .modal-footer {
+        padding-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .close-btn {
+        font-size: 1.5rem;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+/* 超小屏幕适配 */
+@media (max-width: 480px) {
+    .careers-hero {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .careers-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .jobs-section {
+        padding: 1rem 0.8rem;
+    }
+
+    .job-card {
+        padding: 1.2rem;
+    }
+
+    .job-title {
+        font-size: 1.3rem;
+    }
+
+    /* 调整职位卡片装饰元素 */
+    .job-card::before {
+        width: 40px;
+        height: 40px;
+        top: 1rem;
+        right: 1rem;
+        opacity: 0.08;
+    }
+
+    /* 优化标签显示 */
+    .job-tags {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .job-tag {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* 调整弹窗内容 */
+    .modal-content {
+        padding: 1.2rem;
+        margin: 0.8rem;
+    }
+}
+
+/* 处理横屏模式 */
+@media (max-height: 600px) and (orientation: landscape) {
+    .jobs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .job-card {
+        padding: 1.2rem;
+    }
+
+    /* 弹窗位置调整 */
+    .modal-content {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+/* 动画效果优化 */
+@media (max-width: 768px) {
+    .job-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .job-card:hover {
+        transform: translateY(-3px);
+    }
+
+    /* 优化弹窗动画 */
+    .modal {
+        transition: opacity 0.3s ease;
+    }
+
+    .modal-content {
+        transition: transform 0.3s ease;
+    }
+}
+
+/* Contact 页面响应式布局 */
+@media (max-width: 768px) {
+    /* 联系我们主标题部分 */
+    .contact-hero {
+        padding: 2rem 1rem;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    /* 联系信息和表单布局 */
+    .contact-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* 联系信息部分 */
+    .contact-info {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-item {
+        margin-bottom: 1.2rem;
+    }
+
+    .info-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-content {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .info-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.8rem;
+    }
+
+    /* 表单部分 */
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-label {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .form-textarea {
+        min-height: 120px;
+    }
+
+    /* 提交按钮 */
+    .submit-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    /* 地图容器 */
+    .map-container {
+        height: 250px;
+        margin-top: 1.5rem;
+    }
+}
+
+/* 超小屏幕适配 */
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section {
+        padding: 1rem 0.8rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1.2rem;
+    }
+
+    .info-title {
+        font-size: 1.1rem;
+    }
+
+    .info-content {
+        font-size: 0.95rem;
+    }
+
+    .form-title {
+        font-size: 1.3rem;
+    }
+
+    /* 调整表单元素间距 */
+    .form-group {
+        margin-bottom: 0.8rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    /* 调整地图高度 */
+    .map-container {
+        height: 200px;
+    }
+}
+
+/* 处理横屏模式 */
+@media (max-height: 600px) and (orientation: landscape) {
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1.2rem;
+    }
+
+    .map-container {
+        height: 180px;
+    }
+}
+
+/* 表单验证提示优化 */
+@media (max-width: 768px) {
+    .form-group.error .error-message {
+        font-size: 0.85rem;
+        padding: 0.3rem 0;
+    }
+
+    .form-group.success .form-input {
+        padding-right: 2rem;
+    }
+
+    /* 加载动画调整 */
+    .loading-spinner {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* 成功提交消息弹窗 */
+@media (max-width: 768px) {
+    .success-modal {
+        padding: 1.2rem;
+        width: 90%;
+        max-width: none;
+    }
+
+    .success-message {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .close-modal {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* 全局内容区域调整 */
+@media (max-width: 768px) {
+    /* 为固定导航栏预留空间 */
+    .main-content {
+        padding-top: 60px;
+    }
+
+    /* 通用容器样式 */
+    .container {
+        padding: 1rem;
+        overflow-x: hidden;
+    }
+
+    /* 通用标题样式 */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 通用卡片样式 */
+    .card {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 页面特定优化 */
+@media (max-width: 768px) {
+    /* Home 页面 */
+    .hero-section {
+        padding-top: 80px;
+    }
+
+    .vision-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* About 页面 */
+    .management-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .management-card {
+        height: auto;
+        overflow: visible;
+    }
+
+    .manager-bio {
+        max-height: none;
+        overflow: visible;
+    }
+
+    /* Products 页面 */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-details {
+        height: auto;
+        overflow: visible;
+    }
+
+    /* ESG 页面 */
+    .esg-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Careers 页面 */
+    .jobs-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Contact 页面 */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* 超小屏幕特别优化 */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 16px; /* 防止iOS自动缩放 */
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-height: 600px) and (orientation: landscape) {
+    .modal-content {
+        max-height: 90vh;
+    }
+
+    .services-grid,
+    .management-grid,
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 触摸交互优化 */
+@media (max-width: 768px) {
+    /* 确保触摸目标足够大 */
+    button,
+    .nav-item,
+    .form-submit {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* 改善滚动体验 */
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 优化点击状态 */
+    a:active,
+    button:active {
+        opacity: 0.7;
+    }
+}
