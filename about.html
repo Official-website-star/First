@@ -11,14 +11,19 @@
     <!-- 复用导航栏 -->
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo.png.png" alt="Stratosphere Logo">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/logo.png.png" alt="Stratosphere Logo" class="nav-logo">
                 </a>
             </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <a href="index.html" class="nav-item" data-i18n="nav.home">Home</a>
-                <a href="about.html" class="nav-item active" data-i18n="nav.about">About Us</a>
+                <a href="about.html" class="nav-item" data-i18n="nav.about">About Us</a>
                 <a href="products.html" class="nav-item" data-i18n="nav.products">Product & Services</a>
                 <a href="esg.html" class="nav-item" data-i18n="nav.esg">ESG</a>
                 <a href="careers.html" class="nav-item" data-i18n="nav.careers">Careers</a>
@@ -33,11 +38,6 @@
                         <a href="#" data-lang="ar">العربية</a>
                     </div>
                 </div>
-            </div>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
         </nav>
     </header>
