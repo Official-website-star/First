@@ -15,10 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 汉堡菜单点击事件
-    navToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
+    if (navToggle) {
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            console.log('Toggle clicked'); // 调试用
+        });
+    }
 
     // 语言选择器点击事件
     languageBtn.addEventListener('click', function(e) {
@@ -27,15 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 点击页面其他地方关闭下拉菜单
-    document.addEventListener('click', function() {
-        dropdownContent.classList.remove('active');
+    document.addEventListener('click', function(e) {
+        if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
     });
 
     // 点击导航链接后关闭菜单
     document.querySelectorAll('.nav-item').forEach(item => {
         item.addEventListener('click', () => {
-            navLinks.classList.remove('active');
             navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
         });
     });
 
