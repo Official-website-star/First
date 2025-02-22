@@ -30,17 +30,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 语言选择器点击事件
-    languageBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        dropdownContent.classList.toggle('active');
+    // 语言按钮点击事件
+    if (languageBtn) {
+        languageBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.classList.toggle('active');
+            dropdownContent.classList.toggle('active');
+        });
+    }
+
+    // 语言选择事件
+    const languageLinks = document.querySelectorAll('.dropdown-content a');
+    languageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            changeLanguage(lang);
+            
+            // 更新按钮文本
+            languageBtn.textContent = this.textContent;
+            
+            // 关闭下拉菜单
+            dropdownContent.classList.remove('active');
+            languageBtn.classList.remove('active');
+            
+            // 如果在移动端，同时关闭导航菜单
+            if (window.innerWidth <= 768) {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
     });
 
-    // 点击页面其他地方关闭下拉菜单
+    // 点击页面其他地方关闭语言下拉菜单
     document.addEventListener('click', function(e) {
-        if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-            navToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+        if (!languageBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+            languageBtn.classList.remove('active');
+            dropdownContent.classList.remove('active');
         }
     });
 
@@ -58,4 +85,28 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownContent.addEventListener('click', function(e) {
         e.stopPropagation();
     });
+});
+
+// 语言切换函数
+function changeLanguage(lang) {
+    // 保存语言选择到本地存储
+    localStorage.setItem('selectedLanguage', lang);
+    
+    // 加载对应语言的翻译
+    loadTranslations(lang);
+}
+
+// 加载页面时检查并应用已保存的语言设置
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+        changeLanguage(savedLanguage);
+        
+        // 更新语言按钮文本
+        const languageBtn = document.querySelector('.language-btn');
+        const selectedLang = document.querySelector(`[data-lang="${savedLanguage}"]`);
+        if (languageBtn && selectedLang) {
+            languageBtn.textContent = selectedLang.textContent;
+        }
+    }
 }); 
