@@ -14,13 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 汉堡菜单点击事件
-    if (navToggle) {
-        navToggle.addEventListener('click', function(e) {
-            e.preventDefault();
+    // 添加汉堡菜单点击事件
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            // 切换按钮和导航菜单的激活状态
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
-            console.log('Toggle clicked'); // 调试用
+            
+            // 设置导航菜单的高度
+            if (navLinks.classList.contains('active')) {
+                navLinks.style.height = 'calc(100vh - 60px)';
+            } else {
+                navLinks.style.height = '0';
+            }
         });
     }
 
@@ -38,11 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 点击导航链接后关闭菜单
-    document.querySelectorAll('.nav-item').forEach(item => {
+    // 点击导航链接时关闭菜单
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
         item.addEventListener('click', () => {
             navToggle.classList.remove('active');
             navLinks.classList.remove('active');
+            navLinks.style.height = '0';
         });
     });
 
