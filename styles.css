@@ -2518,14 +2518,14 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        height: 60px;
+        height: 50px; /* 减小导航栏高度 */
         background: white;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1.2rem;
+        padding: 0 1rem;
         z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
     /* Logo样式 */
@@ -2534,14 +2534,14 @@ body {
     }
 
     .nav-logo {
-        height: 35px;
+        height: 30px; /* 减小logo大小 */
         width: auto;
     }
 
-    /* 汉堡菜单按钮 */
+    /* 汉堡菜单按钮样式优化 */
     .nav-toggle {
-        width: 22px;
-        height: 16px;
+        width: 18px;  /* 减小按钮尺寸 */
+        height: 14px; /* 减小按钮尺寸 */
         position: relative;
         background: transparent;
         border: none;
@@ -2550,12 +2550,13 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-right: 0.5rem;
     }
 
     .nav-toggle span {
         display: block;
         width: 100%;
-        height: 2px;
+        height: 1.5px; /* 减小线条粗细 */
         background-color: #006B3F;
         border-radius: 1px;
         transition: transform 0.3s ease, opacity 0.3s ease;
@@ -2563,7 +2564,7 @@ body {
 
     /* 汉堡菜单动画 */
     .nav-toggle.active span:first-child {
-        transform: translateY(7px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
     }
 
     .nav-toggle.active span:nth-child(2) {
@@ -2571,40 +2572,42 @@ body {
     }
 
     .nav-toggle.active span:last-child {
-        transform: translateY(-7px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
     }
 
-    /* 导航菜单容器 */
+    /* 导航菜单容器 - 改为右侧展开 */
     .nav-links {
         position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        height: 0;
+        top: 50px; /* 匹配导航栏新高度 */
+        right: -70%; /* 初始位置在屏幕右侧外 */
+        width: 70%; /* 宽度设为屏幕的70% */
+        height: calc(100vh - 50px);
         background: white;
         overflow: hidden;
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease;
         display: flex;
         flex-direction: column;
         align-items: center;
         z-index: 999;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     }
 
     /* 导航菜单展开状态 */
     .nav-links.active {
-        height: calc(100vh - 60px);
-        padding: 1rem 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transform: translateX(-100%); /* 向左移动显示 */
+        height: auto;
+        max-height: calc(100vh - 50px);
+        overflow-y: auto;
     }
 
     /* 导航链接样式 */
     .nav-item {
         width: 100%;
-        padding: 1rem 0;
+        padding: 0.8rem 1.5rem;
         color: #333;
         text-decoration: none;
-        text-align: center;
-        font-size: 1.1rem;
+        text-align: left; /* 左对齐 */
+        font-size: 1rem;
         border-bottom: 1px solid rgba(0,0,0,0.05);
         transition: all 0.3s ease;
     }
@@ -2612,6 +2615,7 @@ body {
     .nav-item:hover {
         background: rgba(0,107,63,0.05);
         color: #006B3F;
+        padding-left: 2rem; /* 悬停时缩进 */
     }
 
     .nav-item.active {
@@ -2623,43 +2627,35 @@ body {
     /* 语言选择器 */
     .language-dropdown {
         width: 100%;
-        padding: 0.5rem 0;
+        padding: 0.5rem 1.5rem;
         border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .language-btn {
         width: 100%;
-        padding: 0.8rem 0;
-        text-align: center;
+        padding: 0.3rem 0;
+        text-align: left;
         background: none;
         border: none;
         color: #333;
-        font-size: 1.1rem;
+        font-size: 1rem;
         cursor: pointer;
     }
 
-    .dropdown-content {
+    /* 遮罩层 */
+    .nav-overlay {
         display: none;
+        position: fixed;
+        top: 50px;
+        left: 0;
         width: 100%;
-        background: rgba(0,0,0,0.02);
+        height: 100vh;
+        background: rgba(0,0,0,0.3);
+        z-index: 998;
     }
 
-    .dropdown-content.active {
+    .nav-overlay.active {
         display: block;
-    }
-
-    .dropdown-content a {
-        display: block;
-        padding: 0.8rem 0;
-        color: #333;
-        text-decoration: none;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-        background: rgba(0,107,63,0.05);
-        color: #006B3F;
     }
 }
 
