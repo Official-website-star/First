@@ -2,17 +2,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const languageBtn = document.querySelector('.language-btn');
 
+    // 创建遮罩层
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    // 汉堡按钮点击事件
     mobileMenuBtn.addEventListener('click', function() {
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
         
         // 切换body滚动
         if (navLinks.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
+            // 关闭导航菜单时同时关闭语言下拉菜单
+            languageDropdown.classList.remove('active');
         }
+    });
+
+    // 点击遮罩层关闭导航菜单
+    overlay.addEventListener('click', function() {
+        mobileMenuBtn.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        languageDropdown.classList.remove('active');
     });
 
     // Language switcher
@@ -117,11 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 获取语言下拉菜单
-    const languageDropdown = document.querySelector('.language-dropdown');
-    const languageBtn = document.querySelector('.language-btn');
-
-    // 在移动端点击语言按钮时展开/收起语言选项
+    // 语言按钮点击事件
     languageBtn.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
             e.preventDefault();

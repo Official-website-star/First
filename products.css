@@ -551,8 +551,10 @@
     }
 
     .service-item {
+        position: relative;
         padding: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        overflow: visible;  /* 允许内容溢出，以便正确显示图片 */
     }
 
     .service-header {
@@ -570,6 +572,10 @@
         margin-left: 1rem;
     }
 
+    .service-intro {
+        margin-bottom: 1.5rem;
+    }
+
     .service-intro p {
         font-size: 1rem;
         line-height: 1.6;
@@ -577,21 +583,28 @@
     }
 
     .service-details {
-        margin-right: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        margin: 0;
     }
 
     .detail-block {
-        margin-bottom: 1.2rem;
+        padding: 1rem;
+        background: rgba(0, 107, 63, 0.05);
+        border-radius: 8px;
     }
 
     .detail-block h4 {
         font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
+        color: #006B3F;
     }
 
     .detail-block p {
         font-size: 1rem;
         line-height: 1.6;
+        color: #333;
     }
 
     .service-header::before {
