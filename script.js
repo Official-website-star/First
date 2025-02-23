@@ -43,16 +43,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const lang = this.getAttribute('data-lang');
             const text = this.textContent;
             
+            // 更新按钮文本（根据语言显示不同文本）
+            const languageTexts = {
+                'en': 'Language',
+                'de': 'Sprache',
+                'ar': 'اللغة'
+            };
+            languageBtn.querySelector('span').textContent = languageTexts[lang];
+            
             // 更新语言
             document.documentElement.lang = lang;
             
-            // 更新按钮文本
-            const languageBtn = document.querySelector('.language-btn span');
-            if (languageBtn) {
-                languageBtn.textContent = text;
-            }
-            
-            // 关闭导航菜单
+            // 关闭下拉菜单和导航菜单
+            languageDropdown.classList.remove('active');
             navLinks.classList.remove('active');
             mobileMenuBtn.classList.remove('active');
         });
