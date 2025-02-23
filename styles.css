@@ -3013,87 +3013,43 @@ body {
         flex-direction: column;
     }
 
-    /* Language Dropdown 移动端特殊样式 */
+    /* Language 部分样式简化 */
     .language-dropdown {
         width: 100%;
-        position: static;  /* 改为静态定位 */
-        margin: 0;
-        background: #f0f7f4;  /* 浅绿色背景 */
-        border: none;
+        border-bottom: 1px solid #eee;
     }
 
+    /* Language 按钮样式 */
     .language-btn {
         width: 100%;
         padding: 15px 25px;
         text-align: left;
-        background: transparent;
+        background: none;
         border: none;
         color: #333;
         font-size: 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
+        pointer-events: none; /* 禁用按钮点击 */
     }
 
-    /* 移除原有的按钮样式 */
-    .language-btn:hover {
-        background: transparent;
-        transform: none;
-        box-shadow: none;
-    }
-
-    /* 下拉箭头 */
-    .language-btn::after {
-        content: '';
-        width: 10px;
-        height: 10px;
-        border-right: 2px solid #333;
-        border-bottom: 2px solid #333;
-        transform: rotate(45deg);
-        transition: transform 0.3s ease;
-    }
-
-    .language-dropdown.active .language-btn::after {
-        transform: rotate(-135deg);
-    }
-
-    /* 语言选项下拉菜单 */
+    /* 语言选项直接显示 */
     .dropdown-content {
-        display: none;
-        position: static;  /* 改为静态定位 */
+        display: block !important; /* 强制显示 */
         width: 100%;
         background: white;
-        visibility: visible;
-        opacity: 1;
-        transform: none;
-        box-shadow: none;
-        pointer-events: auto;
-        border-radius: 0;
-        min-width: auto;
     }
 
-    .language-dropdown.active .dropdown-content {
-        display: block;
-    }
-
+    /* 语言选项样式 */
     .dropdown-content a {
+        display: block;
         padding: 12px 35px;
         color: #333;
         font-size: 16px;
         border-top: 1px solid #eee;
-        text-align: left;
-        transition: none;
+        text-decoration: none;
     }
 
-    .dropdown-content a:hover {
+    .dropdown-content a:hover,
+    .dropdown-content a:active {
         background: #f5f5f5;
-        padding-left: 35px;  /* 移除hover时的padding变化 */
-    }
-
-    /* 移除原有的hover效果 */
-    .language-dropdown:hover .dropdown-content {
-        visibility: hidden;
-        opacity: 0;
     }
 }

@@ -41,8 +41,20 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
-            // 这里添加语言切换逻辑
-            console.log('Switching to:', lang);
+            const text = this.textContent;
+            
+            // 更新语言
+            document.documentElement.lang = lang;
+            
+            // 更新按钮文本
+            const languageBtn = document.querySelector('.language-btn span');
+            if (languageBtn) {
+                languageBtn.textContent = text;
+            }
+            
+            // 关闭导航菜单
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
         });
     });
 
@@ -142,32 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         e.stopPropagation();
         languageDropdown.classList.toggle('active');
-    });
-
-    // 语言选项点击事件
-    languageLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const lang = this.getAttribute('data-lang');
-            const text = this.textContent;
-            
-            // 更新按钮文本
-            languageBtn.querySelector('span').textContent = text;
-            
-            // 更新语言
-            document.documentElement.lang = lang;
-            
-            // 关闭下拉菜单
-            languageDropdown.classList.remove('active');
-            
-            // 如果在移动端，同时关闭导航菜单
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-            }
-        });
     });
 
     // 点击其他区域关闭下拉菜单
