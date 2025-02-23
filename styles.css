@@ -2512,130 +2512,117 @@ body {
 
 /* 移动端导航栏优化 */
 @media (max-width: 768px) {
-    /* 汉堡菜单按钮样式优化 */
+    /* 导航栏容器 */
+    .navbar {
+        height: 42px;
+        padding: 0 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 汉堡菜单按钮 */
     .nav-toggle {
-        width: 24px;  /* 调整按钮宽度 */
-        height: 20px; /* 调整按钮高度 */
+        width: 24px;
+        height: 20px;
         position: relative;
         background: transparent;
         border: none;
         cursor: pointer;
         padding: 0;
         margin-right: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* 居中对齐 */
-        gap: 6px; /* 线条间距 */
-    }
-
-    /* 汉堡菜单线条 */
-    .nav-toggle span {
-        display: block;
-        width: 24px; /* 线条宽度 */
-        height: 2px; /* 线条高度 */
-        background-color: #333; /* 深灰色线条 */
-        border-radius: 1px;
-        transition: all 0.3s ease;
-    }
-
-    /* 汉堡菜单激活状态动画 */
-    .nav-toggle.active span:first-child {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .nav-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active span:last-child {
-        transform: translateY(-8px) rotate(-45deg);
+        z-index: 1001; /* 确保按钮始终在最上层 */
     }
 
     /* 导航菜单容器 */
     .nav-links {
         position: fixed;
-        top: 45px; /* 增加顶部距离，确保汉堡按钮完全显示 */
-        right: -45%;
-        width: 45%;
+        top: 42px;
+        right: -35%; /* 减小宽度 */
+        width: 35%; /* 减小宽度 */
         height: auto;
-        max-height: 70vh;
+        max-height: calc(100vh - 42px);
         background: white;
-        overflow: hidden;
+        overflow-y: auto;
         transition: transform 0.3s ease;
         display: flex;
         flex-direction: column;
         z-index: 999;
         box-shadow: -1px 2px 4px rgba(0,0,0,0.08);
-        padding: 0.3rem 0; /* 减少整体内边距 */
+        padding: 0.2rem 0; /* 减少内边距 */
     }
 
     .nav-links.active {
         transform: translateX(-100%);
     }
 
-    /* 导航链接样式 */
+    /* 导航项目样式 */
     .nav-item {
         width: 100%;
-        padding: 0.35rem 1rem; /* 减少上下内边距 */
+        padding: 0.25rem 0.8rem; /* 减少内边距 */
         color: #333;
         text-decoration: none;
-        text-align: left; /* 文字左对齐 */
-        font-size: 0.92rem; /* 稍微减小字体 */
+        text-align: left;
+        font-size: 0.9rem;
         border-bottom: 1px solid rgba(0,0,0,0.03);
         transition: all 0.2s ease;
         margin: 0;
-        line-height: 1.1; /* 减少行高 */
+        line-height: 1;
+        height: 32px; /* 固定高度 */
         display: flex;
         align-items: center; /* 垂直居中 */
-    }
-
-    .nav-item:hover {
-        background: rgba(0,107,63,0.03);
-        color: #006B3F;
-    }
-
-    .nav-item.active {
-        color: #006B3F;
-        font-weight: 500;
     }
 
     /* 语言选择器 */
     .language-dropdown {
         width: 100%;
-        padding: 0.35rem 1rem;
+        padding: 0.25rem 0.8rem;
         border-bottom: 1px solid rgba(0,0,0,0.03);
+        position: relative; /* 添加相对定位 */
     }
 
     .language-btn {
         width: 100%;
+        height: 32px;
         padding: 0;
-        text-align: left; /* 左对齐 */
+        text-align: left;
         background: none;
         border: none;
         color: #333;
-        font-size: 0.92rem;
+        font-size: 0.9rem;
         cursor: pointer;
         display: flex;
-        align-items: center; /* 垂直居中 */
-        justify-content: space-between; /* 在右侧添加箭头 */
+        align-items: center;
+        justify-content: space-between;
     }
 
     .language-btn::after {
         content: '▼';
         font-size: 0.7rem;
-        margin-left: 0.5rem;
         transition: transform 0.2s ease;
+        margin-left: 5px;
     }
 
     .language-btn.active::after {
         transform: rotate(180deg);
     }
 
-    /* 语言下拉内容 */
+    /* 语言下拉菜单 */
     .dropdown-content {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        background: rgba(0,0,0,0.02);
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
 
     .dropdown-content.active {
@@ -2643,19 +2630,40 @@ body {
     }
 
     .dropdown-content a {
-        display: block;
-        padding: 0.35rem 1.2rem; /* 稍微缩进 */
+        display: flex;
+        align-items: center;
+        height: 32px;
+        padding: 0 0.8rem;
         color: #333;
         text-decoration: none;
-        text-align: left;
-        font-size: 0.92rem;
-        transition: all 0.2s ease;
-        line-height: 1.1;
+        font-size: 0.9rem;
+        transition: background 0.2s ease;
     }
 
     .dropdown-content a:hover {
         background: rgba(0,107,63,0.03);
         color: #006B3F;
+    }
+
+    /* 确保内容区域不被导航栏遮挡 */
+    main {
+        padding-top: 42px;
+    }
+
+    /* 遮罩层 - 可选，用于突出导航菜单 */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 42px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 42px);
+        background: rgba(0,0,0,0.3);
+        z-index: 998;
+    }
+
+    .nav-overlay.active {
+        display: block;
     }
 }
 

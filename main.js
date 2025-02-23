@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 点击页面其他地方关闭语言下拉菜单
     document.addEventListener('click', function(e) {
-        if (!languageBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+        if (!languageBtn.contains(e.target)) {
             languageBtn.classList.remove('active');
             dropdownContent.classList.remove('active');
         }
