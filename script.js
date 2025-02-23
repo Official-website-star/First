@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const languageDropdown = document.querySelector('.language-dropdown');
-    const languageBtn = document.querySelector('.language-btn');
+    const languageBtn = document.querySelector('.language-btn span');
 
     // 创建遮罩层
     const overlay = document.createElement('div');
@@ -37,25 +37,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Language switcher
     const languageLinks = document.querySelectorAll('.dropdown-content a');
+
+    // 语言文本映射
+    const languageText = {
+        'en': 'Language',
+        'de': 'Sprache',
+        'ar': 'اللغة'
+    };
+
+    // 获取当前语言
+    const currentLang = document.documentElement.lang || 'en';
+    if (languageBtn) {
+        languageBtn.textContent = languageText[currentLang];
+    }
+
+    // 语言选项点击事件
     languageLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
-            const text = this.textContent;
-            
-            // 更新按钮文本（根据语言显示不同文本）
-            const languageTexts = {
-                'en': 'Language',
-                'de': 'Sprache',
-                'ar': 'اللغة'
-            };
-            languageBtn.querySelector('span').textContent = languageTexts[lang];
             
             // 更新语言
             document.documentElement.lang = lang;
             
-            // 关闭下拉菜单和导航菜单
-            languageDropdown.classList.remove('active');
+            // 更新按钮文本为对应语言的 "Language"
+            if (languageBtn) {
+                languageBtn.textContent = languageText[lang];
+            }
+            
+            // 关闭导航菜单
             navLinks.classList.remove('active');
             mobileMenuBtn.classList.remove('active');
         });
