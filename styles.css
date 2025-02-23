@@ -2899,8 +2899,7 @@ body {
     .nav-links {
         display: none;
         position: fixed;
-        top: 50%;  /* 从顶部50%开始 */
-        transform: translateY(-50%);  /* 垂直居中 */
+        top: 0;  /* 从顶部开始 */
         right: 0;  /* 靠右显示 */
         width: 50%;  /* 占屏幕宽度的50% */
         height: 66vh;  /* 占视口高度的2/3 */
@@ -2908,7 +2907,7 @@ body {
         padding: 2rem 0;
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
         z-index: 999;
-        border-radius: 12px 0 0 12px;  /* 左侧圆角 */
+        overflow-y: auto;  /* 内容过多时可滚动 */
     }
 
     .nav-links.active {
@@ -2920,11 +2919,11 @@ body {
     /* 导航项样式 */
     .nav-item {
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 1.2rem 2rem;
         color: #666;
         font-size: 1.2rem;
-        border: none;
         text-align: left;
+        border: none;
     }
 
     .nav-item:hover {
@@ -2937,13 +2936,14 @@ body {
         position: relative;
         border: none;
         margin-top: auto;  /* 将语言选择推到底部 */
+        background: #f5f5f5;
     }
 
     .language-btn {
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 1.2rem 2rem;
         text-align: left;
-        background: #f5f5f5;
+        background: none;
         border: none;
         color: #666;
         font-size: 1.2rem;
@@ -2970,9 +2970,9 @@ body {
     /* 语言选项下拉菜单 */
     .dropdown-content {
         display: none;
-        position: static;
         width: 100%;
         background: white;
+        border-top: 1px solid #eee;
     }
 
     .language-dropdown.active .dropdown-content {
@@ -2987,12 +2987,12 @@ body {
         display: block;
     }
 
-    .dropdown-content a:last-child {
-        border-bottom: none;
-    }
-
     .dropdown-content a:hover {
         background: #f5f5f5;
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
     }
 
     /* 遮罩层 */
@@ -3009,17 +3009,6 @@ body {
 
     .nav-overlay.active {
         display: block;
-    }
-
-    /* 关闭按钮样式 */
-    .close-btn {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        color: #666;
     }
 }
 
