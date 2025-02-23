@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 获取当前语言
     const currentLang = document.documentElement.lang || 'en';
+    
+    // 初始化语言按钮文本
     if (languageBtn) {
         languageBtn.textContent = languageText[currentLang];
     }

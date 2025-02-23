@@ -3011,47 +3011,37 @@ body {
     .nav-links.active {
         display: flex;
         flex-direction: column;
-        gap: 0;  /* 移除默认间距 */
     }
 
-    /* 导航项样式 */
-    .nav-item {
-        width: 100%;
-        padding: 9px 25px;  /* 从12px减少到9px */
-        color: #333;
-        font-size: 16px;
-        text-decoration: none;
-        border-bottom: 1px solid #eee;
-        transition: background 0.3s ease;
-    }
-
-    /* Language 部分样式 */
+    /* Language 部分样式简化 */
     .language-dropdown {
         width: 100%;
         border-bottom: 1px solid #eee;
     }
 
+    /* Language 按钮样式 */
     .language-btn {
         width: 100%;
-        padding: 9px 25px;  /* 从12px减少到9px */
+        padding: 15px 25px;
         text-align: left;
         background: none;
         border: none;
         color: #333;
         font-size: 16px;
-        pointer-events: none;
+        pointer-events: none; /* 禁用按钮点击 */
     }
 
-    /* 语言选项样式 */
+    /* 语言选项直接显示 */
     .dropdown-content {
-        display: block !important;
+        display: block !important; /* 强制显示 */
         width: 100%;
         background: white;
     }
 
+    /* 语言选项样式 */
     .dropdown-content a {
         display: block;
-        padding: 9px 35px;  /* 从12px减少到9px */
+        padding: 12px 35px;
         color: #333;
         font-size: 16px;
         border-top: 1px solid #eee;
@@ -3061,112 +3051,5 @@ body {
     .dropdown-content a:hover,
     .dropdown-content a:active {
         background: #f5f5f5;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Product 页面卡片布局 */
-    .product-card {
-        display: flex;
-        flex-direction: column;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        margin-bottom: 20px;
-        overflow: hidden;
-    }
-
-    /* 标题区域 */
-    .product-header {
-        background: var(--primary-color);
-        color: white;
-        padding: 20px;
-        position: relative;
-    }
-
-    .product-number {
-        font-size: 32px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .product-title {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
-    /* 内容区域 */
-    .product-content {
-        padding: 20px;
-    }
-
-    .product-description {
-        color: #666;
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-
-    /* 图片位置调整 */
-    .product-image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        margin-top: 15px;
-        order: 2; /* 确保图片在文字下方 */
-    }
-
-    /* 服务项目布局 */
-    .service-grid {
-        display: grid;
-        grid-template-columns: 1fr;  /* 单列布局 */
-        gap: 15px;
-        padding: 0 15px;
-    }
-
-    .service-item {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .service-title {
-        color: var(--primary-color);
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .service-description {
-        color: #666;
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
-    /* 整体容器调整 */
-    .product-container {
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    /* 轮播导航按钮调整 */
-    .carousel-nav {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-    .carousel-nav button {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid var(--primary-color);
-        background: white;
-        color: var(--primary-color);
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }
