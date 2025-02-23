@@ -141,31 +141,32 @@ document.addEventListener('DOMContentLoaded', function() {
     languageBtn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Language button clicked'); // 调试用
         languageDropdown.classList.toggle('active');
     });
 
     // 语言选项点击事件
-    document.querySelectorAll('.dropdown-content a').forEach(link => {
+    languageLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
+            
             const lang = this.getAttribute('data-lang');
             const text = this.textContent;
+            
+            // 更新按钮文本
+            languageBtn.querySelector('span').textContent = text;
             
             // 更新语言
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             
-            // 更新按钮文本
-            languageBtn.querySelector('span').textContent = text;
+            // 更新翻译
+            if (typeof updateTranslations === 'function') {
+                updateTranslations(lang);
+            }
             
             // 关闭下拉菜单
             languageDropdown.classList.remove('active');
-            
-            // 更新翻译
-            updateTranslations(lang);
-            
-            console.log('Language changed to:', lang); // 调试用
         });
     });
 
