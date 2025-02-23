@@ -16,10 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
         overlay.classList.toggle('active');
         
+        // 切换body滚动
         if (navLinks.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
+            // 关闭导航菜单时同时关闭语言下拉菜单
             languageDropdown.classList.remove('active');
         }
     });
@@ -143,15 +145,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 语言选择功能
+    // 点击语言选项时关闭下拉菜单
     document.querySelectorAll('.dropdown-content a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
-            changeLanguage(lang);
-            
-            // 关闭语言下拉菜单
-            languageDropdown.classList.remove('active');
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                languageDropdown.classList.remove('active');
+            }
         });
     });
 
@@ -278,12 +277,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 语言切换函数
 function changeLanguage(lang) {
+    // 保存选择的语言到 localStorage
     localStorage.setItem('selectedLanguage', lang);
+    
+    // 设置语言和方向
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    updateTranslations(lang);
+    
+    // 更新语言按钮文本
+    const languageBtn = document.querySelector('.language-btn span');
+    if (languageBtn) {
+        const translation = translations[lang].nav.language;
+        languageBtn.textContent = translation;
+    }
+    
+    // 更新所有翻译内容
+    updatePageContent(lang);
 }
 
 // 页面加载时初始化语言设置
@@ -328,11 +338,29 @@ function updatePageContent(lang) {
     });
 }
 
-// 为语言切换按钮添加事件监听
-document.querySelectorAll('.dropdown-content a[data-lang]').forEach(link => {
+// 语言切换功能
+document.querySelectorAll('.dropdown-content a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const lang = this.getAttribute('data-lang');
-        changeLanguage(lang);
+        
+        // 保存语言选择
+        localStorage.setItem('selectedLanguage', lang);
+        
+        // 更新页面语言
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        // 更新翻译
+        updateTranslations(lang);
+        
+        // 关闭导航菜单
+        const navLinks = document.querySelector('.nav-links');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const overlay = document.querySelector('.nav-overlay');
+        
+        navLinks.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        overlay.classList.remove('active');
     });
 }); 
