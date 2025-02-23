@@ -2512,38 +2512,35 @@ body {
 
 /* 移动端导航栏优化 */
 @media (max-width: 768px) {
-    .navbar {
-        height: 42px; /* 更小的导航栏高度 */
-        padding: 0 0.8rem;
-    }
-
     /* 汉堡菜单按钮样式优化 */
     .nav-toggle {
-        width: 16px;  /* 更窄的按钮 */
-        height: 10px; /* 更小的高度 */
+        width: 24px;  /* 调整按钮宽度 */
+        height: 20px; /* 调整按钮高度 */
         position: relative;
         background: transparent;
         border: none;
         cursor: pointer;
         padding: 0;
-        margin-right: 0.3rem;
+        margin-right: 0.5rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center; /* 居中对齐 */
+        gap: 6px; /* 线条间距 */
     }
 
     /* 汉堡菜单线条 */
     .nav-toggle span {
-        width: 16px; /* 线条宽度 */
-        height: 1px; /* 更细的线条 */
-        background-color: #006B3F;
+        display: block;
+        width: 24px; /* 线条宽度 */
+        height: 2px; /* 线条高度 */
+        background-color: #333; /* 深灰色线条 */
         border-radius: 1px;
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
     }
 
-    /* 汉堡菜单动画 */
+    /* 汉堡菜单激活状态动画 */
     .nav-toggle.active span:first-child {
-        transform: translateY(4.5px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
 
     .nav-toggle.active span:nth-child(2) {
@@ -2551,25 +2548,25 @@ body {
     }
 
     .nav-toggle.active span:last-child {
-        transform: translateY(-4.5px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     /* 导航菜单容器 */
     .nav-links {
         position: fixed;
         top: 42px;
-        right: -45%; /* 初始位置 */
-        width: 45%; /* 更窄的菜单宽度 */
+        right: -45%;
+        width: 45%;
         height: auto;
-        max-height: 50vh; /* 限制最大高度为屏幕高度的一半 */
+        max-height: 70vh; /* 增加高度以显示所有内容 */
         background: white;
         overflow: hidden;
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease;
         display: flex;
         flex-direction: column;
         z-index: 999;
         box-shadow: -1px 2px 4px rgba(0,0,0,0.08);
-        border-radius: 0 0 0 4px;
+        padding: 0.5rem 0; /* 减少整体内边距 */
     }
 
     .nav-links.active {
@@ -2579,66 +2576,50 @@ body {
     /* 导航链接样式 */
     .nav-item {
         width: 100%;
-        padding: 0.5rem 1rem; /* 更小的内边距 */
+        padding: 0.4rem 1rem; /* 减少上下内边距 */
         color: #333;
         text-decoration: none;
-        text-align: left;
-        font-size: 0.9rem; /* 更小的字体 */
-        border-bottom: 1px solid rgba(0,0,0,0.04);
+        text-align: right; /* 文字右对齐 */
+        font-size: 0.95rem;
+        border-bottom: 1px solid rgba(0,0,0,0.03); /* 更淡的分隔线 */
         transition: all 0.2s ease;
-        margin: 0;
+        margin: 0; /* 移除外边距 */
+        line-height: 1.2; /* 减少行高 */
     }
 
     .nav-item:hover {
         background: rgba(0,107,63,0.03);
         color: #006B3F;
-        padding-left: 1.2rem;
     }
 
     .nav-item.active {
         color: #006B3F;
         font-weight: 500;
-        background: rgba(0,107,63,0.05);
     }
 
     /* 语言选择器 */
     .language-dropdown {
         width: 100%;
-        padding: 0.5rem 1rem;
-        border-bottom: 1px solid rgba(0,0,0,0.04);
-        position: relative;
+        padding: 0.4rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.03);
     }
 
     .language-btn {
         width: 100%;
-        padding: 0.5rem 0;
-        text-align: left;
+        padding: 0;
+        text-align: right; /* 右对齐 */
         background: none;
         border: none;
         color: #333;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
-    .language-btn::after {
-        content: '▼';
-        font-size: 0.7rem;
-        transition: transform 0.2s ease;
-    }
-
-    .language-btn.active::after {
-        transform: rotate(180deg);
-    }
-
+    /* 语言下拉内容 */
     .dropdown-content {
         display: none;
         width: 100%;
         background: rgba(0,0,0,0.02);
-        border-radius: 4px;
-        overflow: hidden;
     }
 
     .dropdown-content.active {
@@ -2647,29 +2628,17 @@ body {
 
     .dropdown-content a {
         display: block;
-        padding: 0.5rem 1.2rem;
+        padding: 0.4rem 1rem;
         color: #333;
         text-decoration: none;
-        font-size: 0.9rem;
+        text-align: right; /* 右对齐 */
+        font-size: 0.95rem;
         transition: all 0.2s ease;
-        border-bottom: 1px solid rgba(0,0,0,0.04);
-    }
-
-    .dropdown-content a:last-child {
-        border-bottom: none;
     }
 
     .dropdown-content a:hover {
         background: rgba(0,107,63,0.03);
         color: #006B3F;
-        padding-left: 1.5rem;
-    }
-
-    /* 当前选中的语言 */
-    .dropdown-content a.active {
-        color: #006B3F;
-        font-weight: 500;
-        background: rgba(0,107,63,0.05);
     }
 }
 
