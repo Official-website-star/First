@@ -38,34 +38,25 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
             dropdownContent.classList.toggle('active');
         });
+
+        // 点击语言选项
+        const languageOptions = document.querySelectorAll('.dropdown-content a');
+        languageOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                languageBtn.textContent = this.textContent;
+                changeLanguage(lang);
+                dropdownContent.classList.remove('active');
+                languageBtn.classList.remove('active');
+            });
+        });
     }
 
-    // 语言选择事件
-    const languageLinks = document.querySelectorAll('.dropdown-content a');
-    languageLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
-            changeLanguage(lang);
-            
-            // 更新按钮文本
-            languageBtn.textContent = this.textContent;
-            
-            // 关闭下拉菜单
-            dropdownContent.classList.remove('active');
-            languageBtn.classList.remove('active');
-            
-            // 如果在移动端，同时关闭导航菜单
-            if (window.innerWidth <= 768) {
-                navToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
-        });
-    });
-
-    // 点击页面其他地方关闭语言下拉菜单
+    // 点击其他区域关闭语言选择器
     document.addEventListener('click', function(e) {
-        if (!languageBtn.contains(e.target)) {
+        if (languageBtn && !languageBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
             languageBtn.classList.remove('active');
             dropdownContent.classList.remove('active');
         }
