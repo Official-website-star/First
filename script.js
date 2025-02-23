@@ -140,7 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 语言按钮点击事件
     languageBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        e.stopPropagation(); // 阻止事件冒泡
+        e.stopPropagation();
+        console.log('Language button clicked'); // 调试用
         languageDropdown.classList.toggle('active');
     });
 
@@ -149,26 +150,26 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
+            const text = this.textContent;
             
             // 更新语言
-            changeLanguage(lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             
             // 更新按钮文本
-            const languageText = this.textContent;
-            languageBtn.querySelector('span').textContent = languageText;
+            languageBtn.querySelector('span').textContent = text;
             
             // 关闭下拉菜单
             languageDropdown.classList.remove('active');
             
-            // 如果在移动端，同时关闭导航菜单
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-            }
+            // 更新翻译
+            updateTranslations(lang);
+            
+            console.log('Language changed to:', lang); // 调试用
         });
     });
 
-    // 点击其他区域关闭语言下拉菜单
+    // 点击其他区域关闭下拉菜单
     document.addEventListener('click', function(e) {
         if (!languageDropdown.contains(e.target)) {
             languageDropdown.classList.remove('active');
