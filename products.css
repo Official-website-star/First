@@ -559,47 +559,94 @@
     }
 
     .service-header {
-        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-number {
+        font-size: 1.2rem;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: #006B3F;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
     }
 
     .service-header h3 {
         font-size: 1.4rem;
         color: #006B3F;
-        margin-bottom: 0.8rem;
+        margin: 0;
     }
 
-    .service-intro p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #666;
+    .service-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .service-intro {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
         margin-bottom: 1.5rem;
     }
 
+    .service-intro p {
+        flex: 1;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
     .service-image {
-        width: 100%;
-        margin: 1.5rem 0;
-        border-radius: 10px;
-        overflow: hidden;
+        flex: 1;
+        width: 50%;
+        margin: 0;
     }
 
     .service-img {
         width: 100%;
         height: auto;
-        display: block;
+        border-radius: 10px;
         object-fit: cover;
     }
 
-    .service-number {
+    .market-analysis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .analysis-card {
+        background: #f8f9fa;
+        padding: 1.2rem;
+        border-radius: 10px;
+    }
+
+    .analysis-card h4 {
+        color: #006B3F;
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .analysis-card p {
         font-size: 1rem;
-        width: 30px;
-        height: 30px;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
     }
 
     .service-details {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.2rem;
-        margin-top: 1.5rem;
     }
 
     .detail-block {
@@ -617,11 +664,23 @@
     .detail-block p {
         font-size: 1rem;
         line-height: 1.6;
-        color: #666;
+        color: #333;
+        margin: 0;
+    }
+}
+
+/* 超小屏幕特别优化 */
+@media (max-width: 480px) {
+    .service-intro {
+        flex-direction: column;  /* 在超小屏幕上改为垂直排列 */
     }
 
-    .service-header::before {
-        width: 3px;
+    .service-image {
+        width: 100%;
+    }
+
+    .market-analysis {
+        grid-template-columns: 1fr;  /* 在超小屏幕上改为单列 */
     }
 }
 
