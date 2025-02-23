@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 点击页面其他区域关闭语言下拉菜单
+    // 点击其他区域关闭语言下拉菜单
     document.addEventListener('click', function(e) {
-        if (!languageDropdown.contains(e.target) && window.innerWidth <= 768) {
+        if (!languageDropdown.contains(e.target) && !languageBtn.contains(e.target)) {
             languageDropdown.classList.remove('active');
         }
     });

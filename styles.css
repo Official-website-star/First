@@ -2900,13 +2900,14 @@ body {
         display: none;
         position: fixed;
         top: 0;
-        right: 0;
-        width: 70%;  /* 调整宽度以匹配截图 */
+        right: 0;  /* 确保靠右显示 */
+        width: 70%;  /* 占屏幕宽度的70% */
         height: 100vh;
         background: white;
-        padding-top: 70px;  /* 为顶部导航栏留出空间 */
+        padding-top: 70px;
         box-shadow: -4px 0 8px rgba(0,0,0,0.1);
         z-index: 999;
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -2936,10 +2937,28 @@ body {
         width: 100%;
         padding: 1.2rem 2rem;
         text-align: left;
-        background: #f5f5f5;  /* 匹配截图中的背景色 */
+        background: #f5f5f5;
         border: none;
         color: #666;
         font-size: 1.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 添加下拉箭头 */
+    .language-btn::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #666;
+        border-bottom: 2px solid #666;
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+    }
+
+    .language-dropdown.active .language-btn::after {
+        transform: rotate(-135deg);
     }
 
     /* 语言选项下拉菜单 */
@@ -2959,7 +2978,11 @@ body {
         padding: 1rem 2.5rem;
         color: #666;
         font-size: 1.1rem;
-        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
     }
 
     /* 遮罩层 */
@@ -2968,7 +2991,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        width: 30%;  /* 与导航菜单宽度对应 */
+        width: 30%;  /* 占屏幕宽度的30% */
         height: 100vh;
         background: rgba(0,0,0,0.3);
         z-index: 998;
@@ -3158,13 +3181,89 @@ body {
         display: none;
         position: fixed;
         top: 0;
-        right: 0;
-        width: 70%;
+        right: 0;  /* 确保靠右显示 */
+        width: 70%;  /* 占屏幕宽度的70% */
         height: 100vh;
         background: white;
         padding-top: 70px;
         box-shadow: -4px 0 8px rgba(0,0,0,0.1);
         z-index: 999;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 导航项样式 */
+    .nav-item {
+        width: 100%;
+        padding: 1.2rem 2rem;
+        color: #666;
+        font-size: 1.1rem;
+        border: none;
+        text-align: left;
+    }
+
+    /* Language Dropdown 样式 */
+    .language-dropdown {
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .language-btn {
+        width: 100%;
+        padding: 1.2rem 2rem;
+        text-align: left;
+        background: #f5f5f5;
+        border: none;
+        color: #666;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 添加下拉箭头 */
+    .language-btn::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #666;
+        border-bottom: 2px solid #666;
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+    }
+
+    .language-dropdown.active .language-btn::after {
+        transform: rotate(-135deg);
+    }
+
+    /* 语言选项下拉菜单 */
+    .dropdown-content {
+        display: none;
+        position: static;
+        width: 100%;
+        background: white;
+        box-shadow: none;
+    }
+
+    .language-dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 1rem 2.5rem;
+        color: #666;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
     }
 
     /* 遮罩层 */
@@ -3173,10 +3272,14 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        width: 30%;
+        width: 30%;  /* 占屏幕宽度的30% */
         height: 100vh;
         background: rgba(0,0,0,0.3);
         z-index: 998;
+    }
+
+    .nav-overlay.active {
+        display: block;
     }
 }
 
