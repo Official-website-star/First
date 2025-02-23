@@ -4,8 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
 
     mobileMenuBtn.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
         this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        
+        // 切换body滚动
+        if (navLinks.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     });
 
     // Language switcher
@@ -99,6 +106,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = '';
             }
         });
+    });
+
+    // 点击导航链接时关闭菜单
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // 获取语言下拉菜单
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const languageBtn = document.querySelector('.language-btn');
+
+    // 在移动端点击语言按钮时展开/收起语言选项
+    languageBtn.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            languageDropdown.classList.toggle('active');
+        }
+    });
+
+    // 点击语言选项时关闭下拉菜单
+    document.querySelectorAll('.dropdown-content a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                languageDropdown.classList.remove('active');
+            }
+        });
+    });
+
+    // 点击页面其他区域关闭语言下拉菜单
+    document.addEventListener('click', function(e) {
+        if (!languageDropdown.contains(e.target) && window.innerWidth <= 768) {
+            languageDropdown.classList.remove('active');
+        }
     });
 });
 

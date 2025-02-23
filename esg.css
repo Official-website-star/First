@@ -302,28 +302,141 @@
 }
 
 @media (max-width: 768px) {
+    /* Hero Section */
+    .esg-hero {
+        min-height: 25vh;
+        padding: 80px 1rem 2rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
-        white-space: normal;
+        margin-bottom: 1rem;
     }
 
     .hero-content p {
         font-size: 1rem;
-        white-space: normal;
+        line-height: 1.6;
+    }
+
+    /* ESG Content Section */
+    .esg-content {
+        padding: 2rem 1rem;
+    }
+
+    .esg-container {
+        grid-template-columns: 1fr;  /* 改为单列布局 */
+        gap: 2rem;
+    }
+
+    /* ESG Text Content */
+    .esg-text-content {
+        gap: 1.5rem;
     }
 
     .esg-item {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 1.5rem;
         gap: 1rem;
     }
 
-    .item-content h2 {
-        font-size: 1.2rem;
+    .check-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
     }
 
-    .logo img {
-        height: 35px;
+    .item-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .preview-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0.5rem 0;
+    }
+
+    .expanded-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0.8rem 0;
+    }
+
+    /* ESG Visual Content */
+    .esg-visual-content {
+        margin-top: 1rem;
+    }
+
+    .esg-logo {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .esg-logo-img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .vision-statement {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .vision-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* 展开/折叠按钮 */
+    .expand-toggle {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .toggle-icon {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* 超小屏幕特别优化 */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .esg-item {
+        padding: 1.2rem;
+    }
+
+    .item-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .check-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    .vision-statement {
+        padding: 1.2rem;
+    }
+
+    .expand-toggle {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
     }
 }
 

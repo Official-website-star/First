@@ -596,3 +596,162 @@
 [dir="rtl"] .modal-content {
     text-align: right;
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-section {
+        padding: 80px 1rem 2rem;
+    }
+
+    .hero-image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero-message {
+        padding: 1.2rem;
+        margin: 1rem;
+    }
+
+    .message-box, .action-box {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .main-question {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .sub-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Job Listings Section */
+    .job-listings-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .job-list {
+        gap: 1rem;
+    }
+
+    .job-item {
+        padding: 1.5rem;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .job-header h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .apply-btn {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .preview-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 1rem 0;
+    }
+
+    /* 展开内容样式 */
+    .expanded-content {
+        padding: 0;
+    }
+
+    .expanded-content h4 {
+        font-size: 1.2rem;
+        margin: 1.2rem 0 0.8rem;
+    }
+
+    .expanded-content ul {
+        padding-left: 1rem;
+    }
+
+    .expanded-content li {
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .expanded-content li strong {
+        margin-bottom: 0.3rem;
+    }
+
+    /* 展开按钮样式 */
+    .expand-toggle {
+        width: 100%;
+        padding: 0.8rem;
+        margin-top: 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* 模态框样式 */
+    .modal-content {
+        width: 90%;
+        max-width: none;
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .modal-message {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* 超小屏幕特别优化 */
+@media (max-width: 480px) {
+    .hero-message {
+        padding: 1rem;
+        margin: 0.8rem;
+    }
+
+    .main-question {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .job-item {
+        padding: 1.2rem;
+    }
+
+    .job-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .expanded-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .modal-content {
+        padding: 1.2rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.3rem;
+    }
+}

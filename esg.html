@@ -11,33 +11,33 @@
     <!-- 导航栏 -->
     <header>
         <nav class="navbar">
-            <div class="navbar-brand">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/logo.png.png" alt="Stratosphere Logo" class="nav-logo">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo2.png" alt="Stratosphere Logo">
                 </a>
             </div>
-            <!-- 汉堡菜单按钮 -->
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <!-- 导航链接容器 -->
             <div class="nav-links">
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="about.html" class="nav-item">About Us</a>
-                <a href="products.html" class="nav-item">Product & Services</a>
-                <a href="esg.html" class="nav-item active">ESG</a>
-                <a href="careers.html" class="nav-item">Careers</a>
-                <a href="contact.html" class="nav-item">Contact Us</a>
+                <a href="index.html" class="nav-item" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-item" data-i18n="nav.about">About Us</a>
+                <a href="products.html" class="nav-item" data-i18n="nav.products">Product & Services</a>
+                <a href="esg.html" class="nav-item active" data-i18n="nav.esg">ESG</a>
+                <a href="careers.html" class="nav-item" data-i18n="nav.careers">Careers</a>
+                <a href="contact.html" class="nav-item" data-i18n="nav.contact">Contact Us</a>
                 <div class="language-dropdown">
-                    <button class="language-btn">Language</button>
+                    <button class="language-btn">
+                        <span data-i18n="nav.language">Language</span>
+                    </button>
                     <div class="dropdown-content">
-                        <a href="#" data-lang="en">English</a>
-                        <a href="#" data-lang="de">Deutsch</a>
-                        <a href="#" data-lang="ar">العربية</a>
+                        <a href="#" onclick="changeLanguage('en'); return false;" data-lang="en">English</a>
+                        <a href="#" onclick="changeLanguage('de'); return false;" data-lang="de">Deutsch</a>
+                        <a href="#" onclick="changeLanguage('ar'); return false;" data-lang="ar">العربية</a>
                     </div>
                 </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
@@ -165,7 +165,7 @@
     </footer>
 
     <script src="translations.js"></script>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const expandButtons = document.querySelectorAll('.expand-toggle');
