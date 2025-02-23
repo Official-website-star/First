@@ -2747,3 +2747,74 @@ body {
         height: 35px;
     }
 }
+
+@media (max-width: 768px) {
+    /* Language Dropdown 样式 */
+    .language-dropdown {
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+
+    .language-btn {
+        width: 100%;
+        padding: 8px 25px;
+        text-align: left;
+        background: none;
+        border: none;
+        color: #333;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* 下拉箭头 */
+    .language-btn::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #333;
+        border-bottom: 2px solid #333;
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        margin-top: -5px;
+    }
+
+    .language-dropdown.active .language-btn::after {
+        transform: rotate(-135deg);
+    }
+
+    /* 语言选项下拉菜单 */
+    .dropdown-content {
+        display: none;
+        width: 100%;
+        background: #f5f5f5;
+    }
+
+    .language-dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 8px 35px;
+        color: #333;
+        font-size: 16px;
+        display: block;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+        background: #e5e5e5;
+    }
+}
