@@ -2525,6 +2525,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
     /* 汉堡菜单按钮 */
@@ -2540,11 +2541,10 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 6px;
+        gap: 5px;
         z-index: 1001;
     }
 
-    /* 汉堡菜单线条 */
     .nav-toggle span {
         display: block;
         width: 24px;
@@ -2569,13 +2569,18 @@ body {
         flex-direction: column;
         z-index: 999;
         box-shadow: -1px 2px 4px rgba(0,0,0,0.08);
-        padding: 0.1rem 0; /* 减少整体内边距 */
+        padding: 0.1rem 0;
+        transform: translateX(100%);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
     }
 
     /* 导航项目样式 */
     .nav-item {
         width: 100%;
-        padding: 0.15rem 0.8rem; /* 减少内边距 */
+        padding: 0.12rem 0.8rem;
         color: #333;
         text-decoration: none;
         text-align: left;
@@ -2583,7 +2588,7 @@ body {
         border-bottom: 1px solid rgba(0,0,0,0.02);
         transition: all 0.2s ease;
         margin: 0;
-        height: 24px; /* 减小高度 */
+        height: 22px;
         display: flex;
         align-items: center;
     }
@@ -2593,11 +2598,12 @@ body {
         width: 100%;
         padding: 0;
         margin: 0;
+        position: relative;
     }
 
     .language-btn {
         width: 100%;
-        height: 24px;
+        height: 22px;
         padding: 0 0.8rem;
         text-align: left;
         background: none;
@@ -2625,7 +2631,8 @@ body {
     .dropdown-content {
         display: none;
         width: 100%;
-        background: rgba(0,0,0,0.01);
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     .dropdown-content.active {
@@ -2635,13 +2642,17 @@ body {
     .dropdown-content a {
         display: flex;
         align-items: center;
-        height: 24px;
+        height: 22px;
         padding: 0 1rem;
         color: #333;
         text-decoration: none;
         font-size: 0.9rem;
-        transition: background 0.2s ease;
-        background: white;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid rgba(0,0,0,0.02);
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
     }
 
     .dropdown-content a:hover {
@@ -2650,10 +2661,14 @@ body {
     }
 
     /* 激活状态样式 */
-    .nav-item.active,
-    .nav-item:active {
+    .nav-item.active {
         color: #006B3F;
         font-weight: 500;
+    }
+
+    /* 确保内容区域不被导航栏遮挡 */
+    main {
+        padding-top: 42px;
     }
 }
 
