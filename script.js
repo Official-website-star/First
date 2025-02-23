@@ -158,15 +158,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 更新语言
             document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            
-            // 更新翻译
-            if (typeof updateTranslations === 'function') {
-                updateTranslations(lang);
-            }
             
             // 关闭下拉菜单
             languageDropdown.classList.remove('active');
+            
+            // 如果在移动端，同时关闭导航菜单
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
         });
     });
 
