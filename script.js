@@ -138,12 +138,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 语言按钮点击事件
-    languageBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        languageDropdown.classList.toggle('active');
-    });
+    if (languageBtn) {
+        languageBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            languageDropdown.classList.toggle('active');
+        });
+    }
 
-    // 点击语言选项时
+    // 点击语言选项
     document.querySelectorAll('.dropdown-content a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -155,9 +158,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 点击其他区域关闭语言下拉菜单
+    // 点击其他区域关闭下拉菜单
     document.addEventListener('click', function(e) {
-        if (!languageDropdown.contains(e.target) && !languageBtn.contains(e.target)) {
+        if (!languageDropdown.contains(e.target)) {
             languageDropdown.classList.remove('active');
         }
     });
