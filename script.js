@@ -139,18 +139,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 语言按钮点击事件
     languageBtn.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
-            e.preventDefault();
-            languageDropdown.classList.toggle('active');
-        }
+        e.preventDefault();
+        languageDropdown.classList.toggle('active');
     });
 
-    // 点击语言选项时关闭下拉菜单
+    // 点击语言选项时
     document.querySelectorAll('.dropdown-content a').forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                languageDropdown.classList.remove('active');
-            }
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            // 更新语言
+            document.documentElement.lang = lang;
+            // 关闭下拉菜单
+            languageDropdown.classList.remove('active');
         });
     });
 
