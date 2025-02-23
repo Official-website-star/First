@@ -2554,11 +2554,11 @@ body {
     /* 导航菜单容器 */
     .nav-links {
         position: fixed;
-        top: 42px;
+        top: 45px; /* 增加顶部距离，确保汉堡按钮完全显示 */
         right: -45%;
         width: 45%;
         height: auto;
-        max-height: 70vh; /* 增加高度以显示所有内容 */
+        max-height: 70vh;
         background: white;
         overflow: hidden;
         transition: transform 0.3s ease;
@@ -2566,7 +2566,7 @@ body {
         flex-direction: column;
         z-index: 999;
         box-shadow: -1px 2px 4px rgba(0,0,0,0.08);
-        padding: 0.5rem 0; /* 减少整体内边距 */
+        padding: 0.3rem 0; /* 减少整体内边距 */
     }
 
     .nav-links.active {
@@ -2576,15 +2576,17 @@ body {
     /* 导航链接样式 */
     .nav-item {
         width: 100%;
-        padding: 0.4rem 1rem; /* 减少上下内边距 */
+        padding: 0.35rem 1rem; /* 减少上下内边距 */
         color: #333;
         text-decoration: none;
-        text-align: right; /* 文字右对齐 */
-        font-size: 0.95rem;
-        border-bottom: 1px solid rgba(0,0,0,0.03); /* 更淡的分隔线 */
+        text-align: left; /* 文字左对齐 */
+        font-size: 0.92rem; /* 稍微减小字体 */
+        border-bottom: 1px solid rgba(0,0,0,0.03);
         transition: all 0.2s ease;
-        margin: 0; /* 移除外边距 */
-        line-height: 1.2; /* 减少行高 */
+        margin: 0;
+        line-height: 1.1; /* 减少行高 */
+        display: flex;
+        align-items: center; /* 垂直居中 */
     }
 
     .nav-item:hover {
@@ -2600,19 +2602,33 @@ body {
     /* 语言选择器 */
     .language-dropdown {
         width: 100%;
-        padding: 0.4rem 1rem;
+        padding: 0.35rem 1rem;
         border-bottom: 1px solid rgba(0,0,0,0.03);
     }
 
     .language-btn {
         width: 100%;
         padding: 0;
-        text-align: right; /* 右对齐 */
+        text-align: left; /* 左对齐 */
         background: none;
         border: none;
         color: #333;
-        font-size: 0.95rem;
+        font-size: 0.92rem;
         cursor: pointer;
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        justify-content: space-between; /* 在右侧添加箭头 */
+    }
+
+    .language-btn::after {
+        content: '▼';
+        font-size: 0.7rem;
+        margin-left: 0.5rem;
+        transition: transform 0.2s ease;
+    }
+
+    .language-btn.active::after {
+        transform: rotate(180deg);
     }
 
     /* 语言下拉内容 */
@@ -2628,12 +2644,13 @@ body {
 
     .dropdown-content a {
         display: block;
-        padding: 0.4rem 1rem;
+        padding: 0.35rem 1.2rem; /* 稍微缩进 */
         color: #333;
         text-decoration: none;
-        text-align: right; /* 右对齐 */
-        font-size: 0.95rem;
+        text-align: left;
+        font-size: 0.92rem;
         transition: all 0.2s ease;
+        line-height: 1.1;
     }
 
     .dropdown-content a:hover {
