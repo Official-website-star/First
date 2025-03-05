@@ -189,7 +189,7 @@ const translations = {
             whatWeDo: {
                 title: "What We Do",
                 text1: "Stratosphere Green Energy GmbH based in Germany, we harness state-of-the-art German engineering and an outstanding market reputation to develop sustainable and efficient energy solutions. With a strong foothold in key energy storage markets, including the Middle East and the United States, we are committed to accelerating the global shift towards clean energy.",
-                text2: "Our team of 200 skilled engineers manages and maintains approximately 5 GWh of energy storage assets globally, ensuring optimal performance, reliability, and efficiency across diverse energy infrastructures."
+                text2: "Our team of 200 skilled engineers manages and maintains approximately 10 GWh of energy storage assets globally, ensuring optimal performance, reliability, and efficiency across diverse energy infrastructures."
             },
             mission: {
                 title: "Our Mission",
@@ -651,7 +651,7 @@ const translations = {
             whatWeDo: {
                 title: "Was wir tun",
                 text1: "Die Stratosphere Green Energy GmbH mit Sitz in Deutschland nutzt modernste deutsche Ingenieurskunst und einen hervorragenden Marktauftritt, um nachhaltige und effiziente Energielösungen zu entwickeln. Mit einer starken Präsenz in wichtigen Energiespeichermärkten, einschließlich des Nahen Ostens und der Vereinigten Staaten, setzen wir uns für die Beschleunigung des globalen Übergangs zu sauberer Energie ein.",
-                text2: "Unser Team von 200 qualifizierten Ingenieuren verwaltet und wartet weltweit etwa 5 GWh an Energiespeicheranlagen und gewährleistet optimale Leistung, Zuverlässigkeit und Effizienz in verschiedenen Energieinfrastrukturen."
+                text2: "Unser Team von 200 qualifizierten Ingenieuren verwaltet und wartet weltweit etwa 10 GWh an Energiespeicheranlagen und gewährleistet optimale Leistung, Zuverlässigkeit und Effizienz in verschiedenen Energieinfrastrukturen."
             },
             mission: {
                 title: "Unsere Mission",
@@ -659,7 +659,7 @@ const translations = {
             },
             globalReach: {
                 title: "Unsere globale Reichweite",
-                text: "Stratosphere nutzt seine globale Präsenz, um mit regionalen Führungskräften zusammenzuarbeiten und verschiedene Marktbedürfnisse zu erfüllen. Unsere Joint Ventures in den Vereinigten Staaten, Saudi-Arabien, den VAE und Kuwait bieten maßgeschneiderte O&M-Dienstleistungen für erneuerbare Energieinfrastruktur und meistern lokale Herausforderungen bei der Bereitstellung erstklassiger Speicherlösungen."
+                text: "Stratosphere nutzt seine globale Präsenz, um mit regionalen Führungskräften zusammenzuarbeiten und verschiedene Marktbedürfnisse zu erfüllen. Unsere Joint Ventures in den Vereinigten Staaten, Saudi Arabia, den VAE und Kuwait bieten maßgeschneiderte O&M-Dienstleistungen für renewable energy infrastructure, overcoming local challenges while providing premium storage solutions."
             },
             expertise: {
                 title: "Unsere Expertise",
@@ -1121,7 +1121,7 @@ const translations = {
             whatWeDo: {
                 title: "ماذا نفعل",
                 text1: "شركة Stratosphere Green Energy GmbH ومقرها في ألمانيا، نستخدم أحدث التقنيات الهندسية الألمانية وسمعتنا المتميزة في السوق لتطوير حلول طاقة مستدامة وفعالة. مع وجودنا القوي في أسواق تخزين الطاقة الرئيسية، بما في ذلك الشرق الأوسط والولايات المتحدة، نحن ملتزمون بتسريع التحول العالمي نحو الطاقة النظيفة.",
-                text2: "يقوم فريقنا المكون من 200 مهندس متخصص بإدارة وصيانة ما يقرب من 5 جيجاواط ساعة من أصول تخزين الطاقة عالمياً، مما يضمن الأداء الأمثل والموثوقية والكفاءة عبر البنى التحتية للطاقة المتنوعة."
+                text2: "يقوم فريقنا المكون من 200 مهندس متخصص بإدارة وصيانة ما يقرب من 10 جيجاواط ساعة من أصول تخزين الطاقة عالمياً، مما يضمن الأداء الأمثل والموثوقية والكفاءة عبر البنى التحتية للطاقة المتنوعة."
             },
             mission: {
                 title: "مهمتنا",
@@ -1178,7 +1178,7 @@ const translations = {
                 title: "زيارة مواقعنا",
                 english: "الإنجليزية",
                 german: "الألمانية",
-                arabic: "العربية"
+                arabic: "Arabisch"
             },
             mainQuestion: {
                 title: "هل لديك أسئلة؟",
@@ -1236,7 +1236,7 @@ const translations = {
             intro: {
                 title: "شكّل المستقبل. ابتكر معنا.",
                 text1: "تقوم Stratosphere بإحداث ثورة في مشهد الطاقة من خلال حلول التخزين المتطورة. هدفنا هو تطوير البنية التحتية للطاقة للجيل القادم – ذكية وفعالة ومتكاملة بسلاسة مع أنظمة الطاقة المتجددة.",
-                text2: "يعمل فريقنا من المهندسين والمحللين في نقطة التقاء التكنولوجيا والاستدامة. نطور أنظمة محسنة تزود الصناعات والمدن والمناطق بأكملها بالطاقة المستدامة. إذا كنت ترغب في المساهمة في تشكيل مستقبل الطاقة، انضم إلى فريقنا الديناميكي."
+                text2: "يعمل فريقنا من المهندسين والمحللين على نقطة التقاء التكنولوجيا والاستدامة. نقوم بتطوير أنظمة محسنة لتزويد الصناعات والمدن والمناطق بأكملها بالطاقة المستدامة. إذا كنت ترغب في المساهمة في تشكيل مستقبل الطاقة، انضم إلى فريقنا الديناميكي."
             },
             positions: {
                 title: "الوظائف المتاحة",
