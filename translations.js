@@ -188,7 +188,7 @@ const translations = {
             intro: "We are a leading provider of innovative energy storage solutions, committed to driving the global transition to sustainable energy.",
             whatWeDo: {
                 title: "What We Do",
-                text1: "Stratosphere Green Energy GmbH based in Germany, we harness state-of-the-art German engineering and an outstanding market reputation to develop sustainable and efficient energy solutions. With a strong foothold in key energy storage markets, including the Middle East and the United States, we are committed to accelerating the global shift towards clean energy.",
+                text1: "Stratosphere Green Energy GmbH, based in Germany, harnesses state-of-the-art German engineering and an outstanding market reputation to develop sustainable and efficient energy solutions. With a strong foothold in key energy storage markets, including the Middle East and the United States, we are committed to accelerating the global shift towards clean energy.",
                 text2: "Our team of 200 skilled engineers manages and maintains approximately 10 GWh of energy storage assets globally, ensuring optimal performance, reliability, and efficiency across diverse energy infrastructures."
             },
             mission: {
@@ -650,8 +650,8 @@ const translations = {
             intro: "Wir sind ein führender Anbieter innovativer Energiespeicherlösungen und setzen uns für den globalen Übergang zu nachhaltiger Energie ein.",
             whatWeDo: {
                 title: "Was wir tun",
-                text1: "Die Stratosphere Green Energy GmbH mit Sitz in Deutschland nutzt modernste deutsche Ingenieurskunst und einen hervorragenden Marktauftritt, um nachhaltige und effiziente Energielösungen zu entwickeln. Mit einer starken Präsenz in wichtigen Energiespeichermärkten, einschließlich des Nahen Ostens und der Vereinigten Staaten, setzen wir uns für die Beschleunigung des globalen Übergangs zu sauberer Energie ein.",
-                text2: "Unser Team von 200 qualifizierten Ingenieuren verwaltet und wartet weltweit etwa 10 GWh an Energiespeicheranlagen und gewährleistet optimale Leistung, Zuverlässigkeit und Effizienz in verschiedenen Energieinfrastrukturen."
+                text1: "Stratosphere Green Energy GmbH mit Sitz in Deutschland nutzt modernste deutsche Ingenieurskunst und einen hervorragenden Marktruft, um nachhaltige und effiziente Energielösungen zu entwickeln. Mit einer starken Präsenz in wichtigen Energiespeichermärkten, einschließlich des Nahen Ostens und der Vereinigten Staaten, setzen wir uns für die Beschleunigung des globalen Wandels hin zu sauberer Energie ein.",
+                text2: "Unser Team aus 200 qualifizierten Ingenieuren verwaltet und wartet weltweit etwa 10 GWh an Energiespeicheranlagen und sorgt für optimale Leistung, Zuverlässigkeit und Effizienz in verschiedenen Energieinfrastrukturen."
             },
             mission: {
                 title: "Unsere Mission",
@@ -1120,8 +1120,8 @@ const translations = {
             intro: "نحن شركة رائدة في تقديم حلول تخزين الطاقة المبتكرة، ملتزمون بقيادة التحول العالمي نحو الطاقة المستدامة.",
             whatWeDo: {
                 title: "ماذا نفعل",
-                text1: "شركة Stratosphere Green Energy GmbH ومقرها في ألمانيا، نستخدم أحدث التقنيات الهندسية الألمانية وسمعتنا المتميزة في السوق لتطوير حلول طاقة مستدامة وفعالة. مع وجودنا القوي في أسواق تخزين الطاقة الرئيسية، بما في ذلك الشرق الأوسط والولايات المتحدة، نحن ملتزمون بتسريع التحول العالمي نحو الطاقة النظيفة.",
-                text2: "يقوم فريقنا المكون من 200 مهندس متخصص بإدارة وصيانة ما يقرب من 10 جيجاواط ساعة من أصول تخزين الطاقة عالمياً، مما يضمن الأداء الأمثل والموثوقية والكفاءة عبر البنى التحتية للطاقة المتنوعة."
+                text1: "شركة ستراتوسفير جرين إنرجي، ومقرها ألمانيا، تسخر الهندسة الألمانية المتطورة وسمعتها المتميزة في السوق لتطوير حلول طاقة مستدامة وفعالة. مع وجود موطئ قدم قوي في أسواق تخزين الطاقة الرئيسية، بما في ذلك الشرق الأوسط والولايات المتحدة، نحن ملتزمون بتسريع التحول العالمي نحو الطاقة النظيفة.",
+                text2: "يقوم فريقنا المكون من 200 مهندس ماهر بإدارة وصيانة ما يقرب من 10 جيجاواط ساعة من أصول تخزين الطاقة على مستوى العالم، مما يضمن الأداء الأمثل والموثوقية والكفاءة عبر البنى التحتية المتنوعة للطاقة."
             },
             mission: {
                 title: "مهمتنا",
